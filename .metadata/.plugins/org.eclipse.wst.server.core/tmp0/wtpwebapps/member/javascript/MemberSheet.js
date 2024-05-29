@@ -1,5 +1,9 @@
 
 $(function(){
+    setTimeout(() => {
+        $('.hint').hide();
+    }, 3000);
+
     $('tbody tr').click(function(){
         if($('.editing').length > 0){
             return;
@@ -46,17 +50,16 @@ $(function(){
     $('.update').click(function(){
         hideCRUDButton();
         showSubmit();
-        let id = Number($('tbody td').last().text())+1;
         let contain = `<tr class="editing">
-            <td><input type="text" name="id"></td>
+            <td>--<input type="text" name="id" style="display: none;></td>
             <td><input type="text" name="account" size="5"></td>
             <td><input type="text" name="password" size="5"></td>
             <td><input type="text" name="email" size="10"></td>
-            <td><input type="text" name="registDate" size="7"></td>
-            <td><input type="text" name="lastLogin" size="15"></td>
+            <td><input type="date" name="registDate" size="7"></td>
+            <td><input type="text" name="lastLogin" style="display: none;"></td>
             <td><input type="text" name="role" size="7"></td>
             <td><input type="text" name="consumption" size="5"></td>
-            <td>--<input type="text" name="level" size="2" style="display: none;"></td>
+            <td><input type="text" name="level" style="display: none;"></td>
             <td><input type="text" name="nickName" size="5"></td>
             <td><input type="text" name="memName" size="5"></td>
             <td><input type="date" name="birthday" size="7"></td>
@@ -69,8 +72,11 @@ $(function(){
         $('.selected').after(contain);
         $('.selected td').each(function(indx,elem){
             $('.editing td input').eq(indx).val($(this).text());
+            if (indx === 5 || indx === 8) {
+                $('.editing td').eq(indx).append($(this).text)
+            }
         })
-        $('.editing td input').first().after(id).hide();
+        
         $('form').attr('action','UpdateMember')
     })
 

@@ -6,19 +6,20 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="https"/>
+		<item key="selection" value="member"/>
 		<list key="findhistory">
+			<item value="emp"/>
+			<item value="EmpBean"/>
 			<item value="https"/>
 			<item value="http"/>
 			<item value="servdb"/>
-			<item value="emp"/>
 			<item value="employee"/>
 			<item value="empBean"/>
-			<item value="EmpBean"/>
 		</list>
 		<list key="replacehistory">
-			<item value="https"/>
 			<item value="member"/>
+			<item value="Member"/>
+			<item value="https"/>
 			<item value="members"/>
 			<item value="Members"/>
 		</list>

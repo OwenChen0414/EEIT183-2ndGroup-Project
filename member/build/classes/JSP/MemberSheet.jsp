@@ -8,6 +8,8 @@
 <link rel="stylesheet" href="/member/Styles/home.css">
 <link rel="stylesheet" media="screen and  (max-width: 780px)" href="/member/Styles/home780.css" />
 <link rel="stylesheet" href="/member/Styles/memberSheet.css">
+<script src="/member/javascript/jquery-3.7.1.min.js"></script>
+<script src="/member/javascript/MemberSheet.js"></script>
 <title>會員管理</title>
 </head>
 <body>
@@ -15,13 +17,13 @@
         <header>
             <nav>
                 <ul class="menu">
-                    <li><a href="/member/JSP/Home.jsp" class="active">會員管理</a></li>
+                    <li><a href="" class="active">會員管理</a></li>
                     <li><a href="">遊戲管理</a></li>
                     <li><a href="">交易管理</a></li>
                     <li><a href="">論壇管理</a></li>
                     <li><a href="">陪玩管理</a></li>
                     <li><a href="">活動管理</a></li>
-                    <li class="right"><a href="">回到首頁</a></li>
+                    <li class="right"><a href="/member/JSP/Home.jsp">回到首頁</a></li>
                 </ul>
             </nav>
         </header>
@@ -32,7 +34,7 @@
                     <table>
                         <thead>
                             <tr>
-                                <th>編號</th>
+                                <th>ID</th>
                                 <th>帳號</th>
                                 <th>密碼</th>
                                 <th>email</th>
@@ -79,6 +81,9 @@
                     <button type="submit" class="button submit">確定</button>
                     <button type="button" class="button cancel">取消</button>
                 </form>
+                <c:if test="${descript != null }">
+                    <h3 class="hint">123${descript}</h3>
+                </c:if>
             </article>
         </div>
 	</main>

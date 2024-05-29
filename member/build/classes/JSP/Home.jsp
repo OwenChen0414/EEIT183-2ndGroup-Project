@@ -21,11 +21,11 @@
                     <li><a href="">論壇</a></li>
                     <li><a href="">陪玩</a></li>
                     <li><a href="">活動</a></li>
-                    <c:if test="${role == 'manager' }">
-	                    <li><a href="">管理員入口</a></li>
+                    <c:if test="${member.role == 'manager' }">
+	                    <li><a href="/member/MemberManage">管理員入口</a></li>
                     </c:if>
                     <li class="right">
-                        <c:if test="${role == 'manager' || role == 'member'}" var="condition">
+                        <c:if test="${member.role == 'manager' || member.role == 'member'}" var="condition">
                         	<a href="/member/Logout">${member.account}登出</a>
                         </c:if>
                         <c:if test="${!condition}">

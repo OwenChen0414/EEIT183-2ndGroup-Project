@@ -32,6 +32,26 @@ public class GenerateMemberBean extends HttpServlet {
 		member.setLastLogin(request.getParameter("lastLogin"));
 		member.setRole(request.getParameter("role"));
 		member.setLevel(request.getParameter("level"));
+		
+		if (member.getRole().isEmpty()) {
+			member.setRole("member");
+		}
+		if (member.getAccount().isEmpty()) {
+			member.setAccount("defAcc");
+		}
+		if (member.getPassword().isEmpty()) {
+			member.setPassword("123");
+		}
+		if (member.getBirthday().isEmpty()) {
+			member.setBirthday(null);
+		}
+		if (member.getPhone().isEmpty()) {
+			member.setPhone(null);
+		}
+		if (member.getAccomAccount().isEmpty()) {
+			member.setAccomAccount(null);
+		}
+		
 		request.setAttribute("member",member);
 	}
 

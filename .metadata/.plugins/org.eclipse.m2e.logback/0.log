@@ -3391,3 +3391,10 @@ Caused by: java.lang.ClassNotFoundException: org.codehaus.plexus.components.io.r
 2024-05-29 14:07:06,962 [Worker-112: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
 2024-05-29 14:07:06,970 [Worker-112: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
 2024-05-29 14:07:06,970 [Worker-112: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 14:16:19,217 [Worker-109: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 14:16:19,219 [Worker-109: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 14:16:19,224 [Worker-109: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 14:16:19,225 [Worker-109: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 14:21:01,483 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-05-29 14:21:28,567 [Worker-20: https://download.eclipse.org/lsp4j/updates/releases/0.21.0/content.xml.xz] INFO  o.a.h.c.h.i.c.HttpRequestRetryExec - Recoverable I/O exception (java.net.SocketException) caught when processing request to {s}->https://download.eclipse.org:443
+2024-05-29 14:24:56,584 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.

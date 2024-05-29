@@ -36,3 +36,19 @@
 5月 29, 2024 13:47:01.08 Created TensorFlow Lite XNNPACK delegate for CPU.
 5月 29, 2024 13:59:44.83 Created TensorFlow Lite XNNPACK delegate for CPU.
 5月 29, 2024 14:04:32.00 Created TensorFlow Lite XNNPACK delegate for CPU.
+5月 29, 2024 14:16:47.32 Created TensorFlow Lite XNNPACK delegate for CPU.
+5月 29, 2024 14:17:16.30 Created TensorFlow Lite XNNPACK delegate for CPU.
+5月 29, 2024 14:17:33.59 Created TensorFlow Lite XNNPACK delegate for CPU.
+5月 29, 2024 14:19:28.71 Created TensorFlow Lite XNNPACK delegate for CPU.
+5月 29, 2024 14:19:51.71 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+5月 29, 2024 14:21:15.52 NEW SESSION
+5月 29, 2024 14:21:15.53 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+5月 29, 2024 14:25:52.37 NEW SESSION
+5月 29, 2024 14:25:52.38 Created TensorFlow Lite XNNPACK delegate for CPU.
+5月 29, 2024 14:26:00.67 [16132:8000:0529/142600.670:ERROR:get_updates_processor.cc(263)] PostClientToServerMessage() failed during GetUpdates with error Network error (ERR_ABORTED)
+5月 29, 2024 14:31:44.04 Created TensorFlow Lite XNNPACK delegate for CPU.
+5月 29, 2024 14:55:49.48 Created TensorFlow Lite XNNPACK delegate for CPU.
+5月 29, 2024 14:56:30.96 Created TensorFlow Lite XNNPACK delegate for CPU.
+5月 29, 2024 14:59:12.16 Created TensorFlow Lite XNNPACK delegate for CPU.

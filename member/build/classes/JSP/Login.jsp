@@ -20,7 +20,8 @@
                 <p>密碼:</p>
                 <input type="password" name="password" id="password" autofocus placeholder="輸入密碼" value="${param.password}">
                 <button type="submit" class="button">登入</button>
-                <button type="reset" class="button">取消</button>
+                <button type="reset" class="button">清空</button>
+                <a href="${lastPage}"><button type="button" class="button">取消</button></a>
             </form>
             <c:if test="${role == 'guest' }">
             	<h3 class="fail">帳號或密碼錯誤!</h3>

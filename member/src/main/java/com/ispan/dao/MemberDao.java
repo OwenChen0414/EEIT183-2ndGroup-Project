@@ -148,7 +148,7 @@ public class MemberDao {
 
 	// 查詢整張表
 	public List<Member> findAllMembers() {
-		String sqlCommon = "SELECT * FROM memview;";
+		String sqlCommon = "SELECT * FROM memview ORDER BY mem_id;";
 		List<Member> memberList = new ArrayList<Member>();
 		try (PreparedStatement statement = connection.prepareStatement(sqlCommon)) {
 			ResultSet result = statement.executeQuery();

@@ -7,9 +7,9 @@
     <fullyQualifiedTypeName name="com.ispan.bean.Members"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="com.ispan.util.CreateConnection"/>
-    <fullyQualifiedTypeName name="com.ispan.dao.MemberDao"/>
     <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="com.ispan.bean.Member"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+    <fullyQualifiedTypeName name="com.ispan.bean.Member"/>
+    <fullyQualifiedTypeName name="com.ispan.dao.MemberDao"/>
 </qualifiedTypeNameHistroy>
