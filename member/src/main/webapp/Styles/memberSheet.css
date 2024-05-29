@@ -3,4 +3,9 @@
 
 div.page{
     width: 100%;
+
+    h3.hint{
+        color: red;
+        font-weight: 600;
+    }
 }

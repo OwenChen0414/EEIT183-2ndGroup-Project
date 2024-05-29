@@ -25,7 +25,6 @@ public class MemberDao {
 
 	// 完善SQL指令
 	private void updateInfo(Member member, PreparedStatement statement) throws SQLException {
-		statement.setString(15, member.getId());
 		statement.setString(1, member.getAccount());
 		statement.setString(2, member.getPassword());
 		statement.setString(3, member.getEmail());
@@ -37,8 +36,11 @@ public class MemberDao {
 		statement.setString(9, member.getSso());
 		statement.setString(10, member.getAccomAccount());
 		statement.setString(11, member.getConsumption());
-		statement.setString(12, member.getRegistDate());
-		statement.setString(13, member.getLastLogin());
+		LocalDateTime now = LocalDateTime.now();
+        DateTimeFormatter formatDate = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+		statement.setString(12, now.format(formatDate));
+        DateTimeFormatter formatDateTime = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss.SSS");
+		statement.setString(13, now.format(formatDateTime));
 		statement.setString(14, member.getRole());
 	}
 
@@ -49,12 +51,12 @@ public class MemberDao {
 			return count;
 		}
 		String sqlCommon = String.format(
-					  "INSERT INTO members(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)" 
+					  "INSERT INTO members(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)" 
 					+ " VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?);",
 					columes[1], columes[2], columes[3], columes[4],
 					columes[5], columes[6], columes[7], columes[8],
 					columes[9], columes[10], columes[11], columes[12],
-					columes[13], columes[14], columes[0]);
+					columes[13], columes[14]);
 		try (PreparedStatement statement = connection.prepareStatement(sqlCommon)) {
 			updateInfo(member, statement);
 			statement.execute();
@@ -92,6 +94,7 @@ public class MemberDao {
 				columes[9], columes[10], columes[11], columes[12],
 				columes[13], columes[14], columes[0]);
 		try (PreparedStatement statement = connection.prepareStatement(sqlCommon)) {
+			statement.setString(15, member.getId());
 			updateInfo(member, statement);
 			statement.execute();
 			count++;
@@ -177,8 +180,8 @@ public class MemberDao {
 		}
 		
         LocalDateTime now = LocalDateTime.now();
-        DateTimeFormatter format = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss.SSS");
-		member.setLastLogin(now.format(format));
+        DateTimeFormatter formatDateTime = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss.SSS");
+		member.setLastLogin(now.format(formatDateTime));
 		updateMember(member);
 		return member;
 	}

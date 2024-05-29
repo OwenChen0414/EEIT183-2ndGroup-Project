@@ -3046,3 +3046,348 @@ Caused by: java.lang.ClassNotFoundException: org.codehaus.plexus.components.io.r
 2024-05-29 10:47:46,736 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\webapp to target\classes
 2024-05-29 10:47:46,738 [Worker-76: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
 2024-05-29 10:47:46,738 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 10:50:10,892 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-05-29 10:50:19,976 [Worker-20: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 10:50:19,981 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 10:50:19,992 [Worker-20: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 10:50:19,993 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 10:52:03,886 [Worker-12: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 10:52:03,890 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\webapp to target\classes
+2024-05-29 10:52:03,894 [Worker-12: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 10:52:03,895 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 10:54:00,330 [Worker-28: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 10:54:00,333 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\webapp to target\classes
+2024-05-29 10:54:00,337 [Worker-28: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 10:54:00,337 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 10:55:33,147 [Worker-5: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 10:55:33,149 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 10:55:33,156 [Worker-5: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 10:55:33,157 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 10:56:20,875 [Worker-12: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 10:56:20,877 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 10:56:20,884 [Worker-12: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 10:56:20,884 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 10:57:03,117 [Worker-11: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 10:57:03,120 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 10:57:03,126 [Worker-11: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 10:57:03,127 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 10:57:25,311 [Worker-10: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 10:57:25,312 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 10:57:25,319 [Worker-10: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 10:57:25,319 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 11:00:28,644 [Worker-7: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:00:28,646 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 11:00:28,653 [Worker-7: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:00:28,653 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 11:02:52,459 [Worker-29: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:02:52,461 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 11:02:52,467 [Worker-29: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:02:52,468 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 11:03:46,338 [Worker-31: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:03:46,340 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 11:03:46,346 [Worker-31: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:03:46,347 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 11:04:07,092 [Worker-29: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:04:07,095 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\webapp to target\classes
+2024-05-29 11:04:07,098 [Worker-29: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:04:07,099 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 11:04:24,685 [Worker-10: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:04:24,687 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\webapp to target\classes
+2024-05-29 11:04:24,690 [Worker-10: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:04:24,691 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 11:05:49,682 [Worker-33: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:05:49,685 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\webapp to target\classes
+2024-05-29 11:05:49,688 [Worker-33: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:05:49,689 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 11:07:11,244 [Worker-33: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:07:11,246 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 11:07:11,253 [Worker-33: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:07:11,253 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 11:10:22,776 [Worker-10: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:10:22,778 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 11:10:22,785 [Worker-10: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:10:22,785 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 11:12:07,248 [Worker-30: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:12:07,250 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 11:12:07,256 [Worker-30: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:12:07,257 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 11:13:58,277 [Worker-36: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:13:58,278 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 11:13:58,285 [Worker-36: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:13:58,285 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 11:33:29,018 [Worker-38: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:33:29,021 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\webapp to target\classes
+2024-05-29 11:33:29,024 [Worker-38: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:33:29,024 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 11:38:44,837 [Worker-44: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:38:44,840 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\webapp to target\classes
+2024-05-29 11:38:44,843 [Worker-44: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:38:44,843 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 11:40:58,415 [Worker-46: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:40:58,419 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\webapp to target\classes
+2024-05-29 11:40:58,421 [Worker-46: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:40:58,422 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 11:43:18,131 [Worker-41: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:43:18,131 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\webapp to target\classes
+2024-05-29 11:43:18,140 [Worker-41: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:43:18,140 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 11:52:52,659 [Worker-57: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:52:52,662 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\webapp to target\classes
+2024-05-29 11:52:52,667 [Worker-57: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:52:52,667 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 11:53:05,056 [Worker-55: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:53:05,058 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 11:53:05,064 [Worker-55: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:53:05,064 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 11:54:04,123 [Worker-59: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:54:04,125 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 11:54:04,131 [Worker-59: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:54:04,131 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 11:54:18,364 [Worker-56: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:54:18,366 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 11:54:18,372 [Worker-56: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:54:18,372 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 11:55:45,886 [Worker-57: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:55:45,889 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\webapp to target\classes
+2024-05-29 11:55:45,893 [Worker-57: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 11:55:45,894 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 12:01:44,917 [Worker-41: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:01:44,919 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 12:01:44,926 [Worker-41: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:01:44,926 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 12:03:16,201 [Worker-41: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:03:16,203 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 12:03:16,209 [Worker-41: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:03:16,210 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 12:03:27,384 [Worker-63: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:03:27,386 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 12:03:27,391 [Worker-63: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:03:27,392 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 12:03:56,355 [Worker-61: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:03:56,357 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 12:03:56,363 [Worker-61: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:03:56,363 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 12:04:02,244 [Worker-61: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:04:02,246 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 12:04:02,251 [Worker-61: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:04:02,252 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 12:24:14,683 [Worker-70: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:24:14,685 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 12:24:14,691 [Worker-70: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:24:14,692 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 12:26:14,658 [Worker-70: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:26:14,659 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 12:26:14,665 [Worker-70: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:26:14,665 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 12:29:22,069 [Worker-70: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:29:22,071 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 12:29:22,079 [Worker-70: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:29:22,080 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 12:29:32,481 [Worker-76: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:29:32,483 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 12:29:32,489 [Worker-76: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:29:32,490 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 12:31:38,366 [Worker-73: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:31:38,368 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 12:31:38,374 [Worker-73: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:31:38,374 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 12:33:14,681 [Worker-73: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:33:14,682 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 12:33:14,688 [Worker-73: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:33:14,688 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 12:33:33,524 [Worker-79: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:33:33,526 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 12:33:33,533 [Worker-79: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:33:33,534 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 12:34:26,605 [Worker-78: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:34:26,607 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 12:34:26,612 [Worker-78: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:34:26,613 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 12:34:54,674 [Worker-79: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:34:54,676 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 12:34:54,682 [Worker-79: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:34:54,682 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 12:37:40,832 [Worker-76: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:37:40,834 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 12:37:40,840 [Worker-76: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:37:40,840 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 12:38:12,680 [Worker-82: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:38:12,682 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 12:38:12,687 [Worker-82: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:38:12,688 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 12:38:20,368 [Worker-73: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:38:20,369 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 12:38:20,374 [Worker-73: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:38:20,374 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 12:38:38,587 [Worker-81: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:38:38,589 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 12:38:38,595 [Worker-81: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:38:38,595 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 12:39:00,094 [Worker-83: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:39:00,096 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 12:39:00,101 [Worker-83: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:39:00,101 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 12:39:23,535 [Worker-82: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:39:23,537 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 12:39:23,543 [Worker-82: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:39:23,543 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 12:39:38,068 [Worker-73: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:39:38,069 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 12:39:38,074 [Worker-73: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:39:38,074 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 12:39:53,318 [Worker-81: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:39:53,320 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 12:39:53,325 [Worker-81: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:39:53,326 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 12:40:07,305 [Worker-81: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:40:07,308 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 12:40:07,314 [Worker-81: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:40:07,314 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 12:41:21,805 [Worker-78: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:41:21,806 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 12:41:21,812 [Worker-78: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:41:21,812 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 12:41:26,573 [Worker-82: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:41:26,574 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 12:41:26,579 [Worker-82: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:41:26,579 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 12:45:54,508 [Worker-62: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:45:54,510 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 12:45:54,517 [Worker-62: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:45:54,517 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 12:54:12,528 [Worker-73: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:54:12,531 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\webapp to target\classes
+2024-05-29 12:54:12,535 [Worker-73: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:54:12,535 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 12:54:30,252 [Worker-84: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:54:30,255 [Worker-84: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\webapp to target\classes
+2024-05-29 12:54:30,258 [Worker-84: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:54:30,259 [Worker-84: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 12:55:55,891 [Worker-86: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:55:55,895 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\webapp to target\classes
+2024-05-29 12:55:55,897 [Worker-86: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:55:55,898 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 12:57:43,245 [Worker-88: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:57:43,248 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\webapp to target\classes
+2024-05-29 12:57:43,251 [Worker-88: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:57:43,251 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 12:58:40,814 [Worker-88: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:58:40,818 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\webapp to target\classes
+2024-05-29 12:58:40,821 [Worker-88: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 12:58:40,822 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 13:02:13,535 [Worker-89: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:02:13,538 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\webapp to target\classes
+2024-05-29 13:02:13,541 [Worker-89: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:02:13,541 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 13:02:28,347 [Worker-89: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:02:28,349 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 13:02:28,354 [Worker-89: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:02:28,355 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 13:02:31,890 [Worker-89: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:02:31,892 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 13:02:31,897 [Worker-89: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:02:31,898 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 13:02:43,838 [Worker-88: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:02:43,842 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\webapp to target\classes
+2024-05-29 13:02:43,844 [Worker-88: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:02:43,844 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 13:06:45,883 [Worker-88: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:06:45,885 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 13:06:45,891 [Worker-88: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:06:45,891 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 13:11:06,976 [Worker-93: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:11:06,980 [Worker-93: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\webapp to target\classes
+2024-05-29 13:11:06,983 [Worker-93: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:11:06,983 [Worker-93: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 13:11:20,738 [Worker-93: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:11:20,741 [Worker-93: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\webapp to target\classes
+2024-05-29 13:11:20,744 [Worker-93: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:11:20,745 [Worker-93: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 13:11:37,982 [Worker-92: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:11:37,986 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\webapp to target\classes
+2024-05-29 13:11:37,989 [Worker-92: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:11:37,989 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 13:11:59,272 [Worker-95: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:11:59,274 [Worker-95: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\webapp to target\classes
+2024-05-29 13:11:59,276 [Worker-95: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:11:59,277 [Worker-95: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 13:12:57,140 [Worker-94: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:12:57,143 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\webapp to target\classes
+2024-05-29 13:12:57,145 [Worker-94: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:12:57,146 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 13:22:02,292 [Worker-94: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:22:02,296 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\webapp to target\classes
+2024-05-29 13:22:02,299 [Worker-94: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:22:02,299 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 13:27:44,529 [Worker-94: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:27:44,531 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 13:27:44,537 [Worker-94: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:27:44,537 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 13:27:48,021 [Worker-95: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:27:48,022 [Worker-95: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 13:27:48,028 [Worker-95: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:27:48,028 [Worker-95: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 13:28:04,348 [Worker-97: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:28:04,349 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 13:28:04,355 [Worker-97: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:28:04,355 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 13:28:15,567 [Worker-97: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:28:15,570 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 13:28:15,575 [Worker-97: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:28:15,575 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 13:37:20,348 [Worker-99: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:37:20,350 [Worker-99: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 13:37:20,356 [Worker-99: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:37:20,356 [Worker-99: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 13:40:57,299 [Worker-99: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:40:57,303 [Worker-99: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\webapp to target\classes
+2024-05-29 13:40:57,305 [Worker-99: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:40:57,306 [Worker-99: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 13:41:38,703 [Worker-101: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:41:38,707 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\webapp to target\classes
+2024-05-29 13:41:38,709 [Worker-101: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:41:38,709 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 13:42:28,179 [Worker-101: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:42:28,183 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\webapp to target\classes
+2024-05-29 13:42:28,186 [Worker-101: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:42:28,186 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 13:44:22,121 [Worker-92: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:44:22,133 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\webapp to target\classes
+2024-05-29 13:44:22,136 [Worker-92: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:44:22,136 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 13:46:33,232 [Worker-103: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:46:33,235 [Worker-103: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\webapp to target\classes
+2024-05-29 13:46:33,237 [Worker-103: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:46:33,238 [Worker-103: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 13:46:42,512 [Worker-103: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:46:42,516 [Worker-103: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\webapp to target\classes
+2024-05-29 13:46:42,518 [Worker-103: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:46:42,518 [Worker-103: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 13:51:03,639 [Worker-108: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:51:03,641 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 13:51:03,648 [Worker-108: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:51:03,648 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 13:57:22,097 [Worker-103: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:57:22,100 [Worker-103: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\webapp to target\classes
+2024-05-29 13:57:22,103 [Worker-103: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:57:22,103 [Worker-103: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 13:59:08,078 [Worker-106: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:59:08,082 [Worker-106: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\webapp to target\classes
+2024-05-29 13:59:08,084 [Worker-106: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:59:08,085 [Worker-106: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 13:59:17,284 [Worker-108: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:59:17,288 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\webapp to target\classes
+2024-05-29 13:59:17,291 [Worker-108: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 13:59:17,291 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 14:04:20,793 [Worker-111: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 14:04:20,797 [Worker-111: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\webapp to target\classes
+2024-05-29 14:04:20,799 [Worker-111: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 14:04:20,800 [Worker-111: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 14:07:04,458 [Worker-108: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 14:07:04,460 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 14:07:04,501 [Worker-108: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 14:07:04,502 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources
+2024-05-29 14:07:06,960 [Worker-112: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 14:07:06,962 [Worker-112: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\webapp to target\classes
+2024-05-29 14:07:06,970 [Worker-112: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (MS950 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-29 14:07:06,970 [Worker-112: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\middleProjectWorkspace\member\src\test\resources

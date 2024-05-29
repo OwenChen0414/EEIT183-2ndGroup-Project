@@ -26,9 +26,9 @@ public class LastPageFilter extends HttpFilter implements Filter {
 		String lastPage = httpServletRequest.getHeader("Referer");
 		if (lastPage!=null) {
 			lastPage = lastPage.substring(lastPage.lastIndexOf("member/")+7);
-			System.out.println(lastPage);
+			System.out.println("lastPage = "+lastPage);
 			if (!lastPage.contains("Login")) {
-				System.out.println(lastPage);
+				System.out.println("lastPage => "+lastPage);
 				session.setAttribute("lastPage", lastPage);
 			}
 		}

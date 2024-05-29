@@ -10,7 +10,7 @@ import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
 import jakarta.servlet.annotation.WebFilter;
 
-@WebFilter("/*")
+@WebFilter("/0")
 public class AuthenticationFilter extends HttpFilter implements Filter {
 	private static final long serialVersionUID = 1L;
 

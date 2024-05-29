@@ -34,7 +34,7 @@
                     <table>
                         <thead>
                             <tr>
-                                <th>編號</th>
+                                <th>ID</th>
                                 <th>帳號</th>
                                 <th>密碼</th>
                                 <th>email</th>
@@ -81,6 +81,9 @@
                     <button type="submit" class="button submit">確定</button>
                     <button type="button" class="button cancel">取消</button>
                 </form>
+                <c:if test="${descript != null }">
+                    <h3 class="hint">123${descript}</h3>
+                </c:if>
             </article>
         </div>
 	</main>

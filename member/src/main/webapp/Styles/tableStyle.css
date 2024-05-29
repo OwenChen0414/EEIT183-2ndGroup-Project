@@ -8,6 +8,7 @@ article {
     padding: 10px;
     font-size: 24px;
     align-content: center;
+    overflow-x: auto;
 
     .update,.delete,
     .submit,.cancel{
@@ -49,4 +50,11 @@ table tbody tr.selected,
 table tbody tr.action{
     background-color: aqua;
     border-radius: 3px;
+}
+table{
+    width: 100%;
+    
+    th,td{
+        text-align: center;
+    }
 }

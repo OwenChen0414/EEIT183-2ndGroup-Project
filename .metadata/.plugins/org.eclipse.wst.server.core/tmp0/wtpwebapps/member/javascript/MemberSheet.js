@@ -21,45 +21,66 @@ $(function(){
     $('.insert').click(function(){
         hideCRUDButton();
         showSubmit();
+        $('.selected').removeClass('selected');
         $('tbody').append(`<tr class="editing">
-            <td><input type="text" name="empno" size="10"></td>
-            <td><input type="text" name="ename" size="15"></td>
-            <td><input type="text" name="hiredate" size="15"></td>
-            <td><input type="text" name="salary" size="10"></td>
-            <td><input type="text" name="deptno" size="10"></td>
-            <td><input type="text" name="title" size="15"></td>
+        <td>${Number($('tbody td').last().text())+1}</td>
+        <td><input type="text" name="account" size="5"></td>
+        <td><input type="text" name="password" size="5"></td>
+        <td><input type="text" name="email" size="10"></td>
+        <td>--<input type="text" name="registDate" size="7" style="display: none;"></td>
+        <td>--<input type="text" name="lastLogin" size="15" style="display: none;"></td>
+        <td><input type="text" name="role" size="7"></td>
+        <td>--<input type="text" name="consumption" size="5" style="display: none;"></td>
+        <td>--<input type="text" name="level" size="2" style="display: none;"></td>
+        <td><input type="text" name="nickName" size="5"></td>
+        <td><input type="text" name="memName" size="5"></td>
+        <td><input type="date" name="birthday" size="7"></td>
+        <td><input type="text" name="phone" size="7"></td>
+        <td><input type="text" name="address" size="20"></td>
+        <td><input type="text" name="sso" size="2"></td>
+        <td><input type="text" name="accomAccount" size="2"></td>
             </tr>`);
-            $('form').attr('action','InsertEmp')
+            $('form').attr('action','InsertMember')
     })
         
     $('.update').click(function(){
         hideCRUDButton();
         showSubmit();
+        let id = Number($('tbody td').last().text())+1;
         let contain = `<tr class="editing">
-            <td><input type="text" name="empno"></td>
-            <td><input type="text" name="ename" size="15""></td>
-            <td><input type="text" name="hiredate" size="15"}"></td>
-            <td><input type="text" name="salary" size="10"}"></td>
-            <td><input type="text" name="deptno" size="10"}"></td>
-            <td><input type="text" name="title" size="15"}"></td>
+            <td><input type="text" name="id"></td>
+            <td><input type="text" name="account" size="5"></td>
+            <td><input type="text" name="password" size="5"></td>
+            <td><input type="text" name="email" size="10"></td>
+            <td><input type="text" name="registDate" size="7"></td>
+            <td><input type="text" name="lastLogin" size="15"></td>
+            <td><input type="text" name="role" size="7"></td>
+            <td><input type="text" name="consumption" size="5"></td>
+            <td>--<input type="text" name="level" size="2" style="display: none;"></td>
+            <td><input type="text" name="nickName" size="5"></td>
+            <td><input type="text" name="memName" size="5"></td>
+            <td><input type="date" name="birthday" size="7"></td>
+            <td><input type="text" name="phone" size="7"></td>
+            <td><input type="text" name="address" size="20"></td>
+            <td><input type="text" name="sso" size="2"></td>
+            <td><input type="text" name="accomAccount" size="2"></td>
             </tr>`;
         $('.selected').hide();
         $('.selected').after(contain);
         $('.selected td').each(function(indx,elem){
             $('.editing td input').eq(indx).val($(this).text());
         })
-        $('.editing td input').first().after('<input type="text" name="empnoShow" size="10" disabled>').hide();
-        $('.editing td input').eq(1).val($('.selected td').first().text());
-        $('form').attr('action','UpdateEmp')
+        $('.editing td input').first().after(id).hide();
+        $('form').attr('action','UpdateMember')
     })
 
     $('.delete').click(function(){
         hideCRUDButton();
         showSubmit();
         let value = $('.selected td').first().text();
-        $('.selected td').first().append('<input type="text" name="empno">');
+        $('.selected td').first().append('<input type="text" name="id">');
         $('.selected td input').hide().val(value).addClass('editing');
-        $('form').attr('action','DelectEmp')
+        $('form').attr('action','DelectMember')
     })
         
     $('.cancel').click(function(){
