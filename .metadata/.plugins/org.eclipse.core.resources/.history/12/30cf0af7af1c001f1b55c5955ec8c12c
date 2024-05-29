@@ -1,0 +1,43 @@
+package com.ispan.servlet;
+
+import java.io.IOException;
+
+import com.ispan.bean.Member;
+import com.ispan.dao.MemberDao;
+import com.ispan.util.CreateConnection;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
+@WebServlet("/Login")
+public class Login extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		Member member = new Member();
+		member.setAccount(request.getParameter("account"));
+		member.setPassword(request.getParameter("password"));
+		HttpSession session = request.getSession();
+		String role;
+		
+		try (CreateConnection createConnection = new CreateConnection()) {
+			MemberDao memberDao = new MemberDao(createConnection);
+			role = memberDao.checkRole(member);
+		}
+		session.setAttribute("role", role);
+		if (role=="guest") {
+			request.getRequestDispatcher("/JSP/Login.jsp")
+			.forward(request, response);
+		}
+		response.sendRedirect("/member/JSP/Home.jsp");
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
+	}
+
+}

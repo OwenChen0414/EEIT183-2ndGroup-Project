@@ -1,0 +1,28 @@
+1716794512991	Extract local variable 'createConnection'
+1716794529653	Extract local variable 'memberDao'
+1716797125784	Extract local variable 'members'
+1716797157380	Rename type 'Members'
+1716798506160	Delete element
+1716798576702	Extract local variable 'statement'
+1716798688641	Extract local variable 'result'
+1716798879030	Extract local variable 'hasAccount'
+1716798905039	Extract local variable 'session'
+1716861875462	Delete element
+1716861905262	Delete element
+1716876902692	Copy file
+1716876909776	Rename resource 'memberSheet.jsp'
+1716882280799	Copy compilation unit
+1716882320346	Extract local variable 'session'
+1716882378569	Extract local variable 'role'
+1716882596145	Extract local variable 'account'
+1716882609032	Extract local variable 'password'
+1716945924401	Copy compilation unit
+1716946044571	Extract local variable 'createConnection'
+1716946067722	Extract local variable 'memberDao'
+1716946094461	Extract local variable 'member'
+1716950073674	Rename method 'deleteMembers'
+1716950080518	Rename method 'updateMembers'
+1716950089777	Rename method 'getMembers'
+1716950094517	Rename method 'selectMembers'
+1716950567410	Rename local variable 'formatter'
+1716952422641	Extract local variable 'session'

@@ -1,0 +1,148 @@
+package com.ispan.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.ispan.bean.Member;
+import com.ispan.util.Check;
+import com.ispan.util.CreateConnection;
+
+public class MemberDao {
+	private Connection connection;
+	private static final String[] columes = { "mem_id", "account", "passwords", "email", "nickname", "mem_name",
+			"birthday", "phone", "addres", "sso", "accom_acnt", "consumption", "regist_date", "last_login_time" ,"roles" };
+
+	public MemberDao(CreateConnection createConnection) {
+		connection = createConnection.getConnection();
+	}
+
+	// 完善SQL指令
+	private void updateInfo(Member member, PreparedStatement statement) throws SQLException {
+		statement.setString(6, member.getId());
+		statement.setString(1, member.getAccount());
+		statement.setString(2, member.getPassword());
+		statement.setString(3, member.getEmail());
+		statement.setString(4, member.getRegistDate());
+		statement.setString(5, member.getLastLogin());
+	}
+
+	// 新增方法
+	public int saveMembers(Member member) {
+		int count = 0;
+		if (selectMembers(columes[0], member.getId()) != null) {
+			return count;
+		}
+		String sqlCommon = String.format("INSERT INTO members(%s,%s,%s,%s,%s,%s)" + " VALUES(?,?,?,?,?,?);", columes[1],
+				columes[2], columes[3], columes[12], columes[13], columes[0]);
+		try (PreparedStatement statement = connection.prepareStatement(sqlCommon)) {
+			updateInfo(member, statement);
+			statement.execute();
+			count++;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return count;
+	}
+
+	// 刪除特定條件下的資料
+	public int deleteMembers(String colume, String value) {
+		int count = 0;
+		if (!Check.containsColume(columes, colume)) {
+			return count;
+		}
+		String sqlCommon = String.format("DELETE FROM members WHERE %s = ?;", colume);
+		try (PreparedStatement statement = connection.prepareStatement(sqlCommon)) {
+			statement.setString(1, value);
+			statement.execute();
+			count++;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return count;
+	}
+
+	// 更新單筆資料
+	public int updateMembers(Member member) {
+		int count = 0;
+		String sqlCommon = String.format("UPDATE members SET %s=?,%s=?,%s=?,%s=?,%s=? WHERE %s=?;", columes[1],
+				columes[2], columes[3], columes[12], columes[13], columes[0]);
+		try (PreparedStatement statement = connection.prepareStatement(sqlCommon)) {
+			updateInfo(member, statement);
+			statement.execute();
+			count++;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return count;
+	}
+
+	// 產生Members物件
+	private Member getMembers(ResultSet result) throws SQLException {
+		Member member = new Member();
+		member.setId(result.getString(columes[0]));
+		member.setAccount(result.getString(columes[1]));
+		member.setPassword(result.getString(columes[2]));
+		member.setEmail(result.getString(columes[3]));
+		member.setRegistDate(result.getString(columes[5]));
+		member.setLastLogin(result.getString(columes[4]));
+		return member;
+	}
+
+	// 查詢單筆資料
+	public Member selectMembers(String colume, String value) {
+		if (!Check.containsColume(columes, colume)) {
+			return null;
+		}
+		String sqlCommon = String.format("SELECT * FROM members WHERE %s = ?;", colume);
+		Member member = null;
+		try (PreparedStatement statement = connection.prepareStatement(sqlCommon)) {
+			statement.setString(1, value);
+			try (ResultSet result = statement.executeQuery()) {
+				if (result.next()) {
+					member = getMembers(result);
+				}
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return member;
+	}
+
+	// 查詢整張表
+	public List<Member> findAllMembers() {
+		String sqlCommon = "SELECT * FROM members;";
+		List<Member> memberList = new ArrayList<Member>();
+		try (PreparedStatement statement = connection.prepareStatement(sqlCommon)) {
+			ResultSet result = statement.executeQuery();
+			while (result.next()) {
+				memberList.add(getMembers(result));
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return memberList;
+	}
+	
+	//登入確認
+	public String checkRole(Member member) {
+		List<Member> memberList = new ArrayList<Member>();
+		String sqlCommon = "SELECT * From members Where %s = ? AND %s = ?;";
+		sqlCommon = String.format(sqlCommon, columes[1], columes[2]);
+		try (PreparedStatement statement = connection.prepareStatement(sqlCommon)) {
+			statement.setString(1, member.getAccount());
+			statement.setString(2, member.getPassword());
+			ResultSet result = statement.executeQuery();
+			if (result.next()) {
+				memberList.add(getMembers(result));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return memberList;
+	}
+}

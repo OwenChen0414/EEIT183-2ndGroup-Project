@@ -1,0 +1,6 @@
+@import url("webPage.css");
+@import url("tableStyle.css");
+
+div.page{
+    width: 100%;
+}
