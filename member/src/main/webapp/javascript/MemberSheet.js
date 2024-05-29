@@ -51,7 +51,7 @@ $(function(){
         hideCRUDButton();
         showSubmit();
         let contain = `<tr class="editing">
-            <td>--<input type="text" name="id" style="display: none;></td>
+            <td>--<input type="text" name="id" style="display: none;"></td>
             <td><input type="text" name="account" size="5"></td>
             <td><input type="text" name="password" size="5"></td>
             <td><input type="text" name="email" size="10"></td>
@@ -73,7 +73,7 @@ $(function(){
         $('.selected td').each(function(indx,elem){
             $('.editing td input').eq(indx).val($(this).text());
             if (indx === 5 || indx === 8) {
-                $('.editing td').eq(indx).append($(this).text)
+                $('.editing td input').eq(indx).after($(this).text())
             }
         })
         
