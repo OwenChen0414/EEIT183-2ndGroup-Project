@@ -1,9 +1,37 @@
 
 $(function(){
+    let page = 1;
+    let count = 9;
     setTimeout(() => {
         $('.hint').hide();
     }, 3000);
+    let switchPage = function(){
+        $('.selected').removeClass('selected');
+        $('button.page').prop('disabled',false);
+        $('tbody tr').hide();
+        $('tbody tr').each(function(indx,elem) {
+            if (indx >= ((page-1)*count) && indx <= (page*count-1)) {
+                $(this).show();
+                if (indx === 0) {
+                    $('button.last.page').prop('disabled',true);
+                }else if (indx === $('tbody tr').length-1) {
+                    $('button.next.page').prop('disabled',true);
+                }
+            }
+        });
+    }
+    switchPage();
+    
+    $('.next.page').click(function(){
+        page += 1;
+        switchPage();
+    })
 
+    $('.last.page').click(function(){
+        page -= 1;
+        switchPage();
+    })
+    
     $('tbody tr').click(function(){
         if($('.editing').length > 0){
             return;
@@ -36,7 +64,7 @@ $(function(){
         showSubmit();
         $('.selected').removeClass('selected');
         $('tbody').append(`<tr class="editing">
-        <td>${Number($('tbody td').last().text())+1}</td>
+        <td>--</td>
         <td><input type="text" name="account" size="5"></td>
         <td><input type="text" name="password" size="5"></td>
         <td><input type="text" name="email" size="10"></td>
@@ -60,7 +88,7 @@ $(function(){
         hideCRUDButton();
         showSubmit();
         let contain = `<tr class="editing">
-            <td>--<input type="text" name="id" style="display: none;"></td>
+            <td><input type="text" name="id" style="display: none;"></td>
             <td><input type="text" name="account" size="5"></td>
             <td><input type="text" name="password" size="5"></td>
             <td><input type="text" name="email" size="10"></td>
@@ -85,7 +113,7 @@ $(function(){
                 $('.editing td input').eq(indx).after($(this).text())
             }
         })
-        
+        $('.editing td').first().append($('.selected td').first().text());
         $('form').attr('action','UpdateMember')
     })
 
@@ -106,7 +134,7 @@ $(function(){
         } else {
             $('.insert').show();
         }
-        $('tr.editing').remove();
+        $('.editing').remove();
         $('form').removeAttr('action');
     })
     

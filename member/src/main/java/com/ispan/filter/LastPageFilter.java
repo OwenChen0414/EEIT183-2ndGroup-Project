@@ -15,7 +15,7 @@ import jakarta.servlet.http.HttpFilter;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 
-@WebFilter("/*")
+@WebFilter("/0")
 public class LastPageFilter extends HttpFilter implements Filter {
 	private static final long serialVersionUID = 1L;
 

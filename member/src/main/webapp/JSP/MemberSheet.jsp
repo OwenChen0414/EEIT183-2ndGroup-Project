@@ -97,6 +97,10 @@
                         </c:forEach>
                         </tbody>
                     </table>
+                    <div class="pagebtns">
+                        <button type="button" class="button last page">上一頁</button>
+                        <button type="button" class="button next page">下一頁</button>
+                    </div>
                 </article>
                 <div class="buttons">
                     <button type="button" class="button insert">新增</button>

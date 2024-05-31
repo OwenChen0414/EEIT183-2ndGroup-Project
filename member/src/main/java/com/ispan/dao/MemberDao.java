@@ -153,32 +153,39 @@ public class MemberDao {
 	public List<Member> selectMembers(Map<String, String> searchList) {
 		String sqlCommon = "SELECT * FROM memview WHERE";
 		List<String> list = Arrays.asList("account","email","nickname","mem_name","phone","addres");
+		boolean hasCond = false;
 		for(Object entry : searchList.entrySet()) {
 			Entry e = (Entry) entry;
-			if (e.getValue() == null) {
+			if (e.getValue() == null || e.getValue().equals("")) {
 				continue;
 			} else if (list.contains(e.getKey())) {
-				sqlCommon += String.format(" %s", e.getKey()+" LIKE('%?%')");
+				sqlCommon += String.format(" %s LIKE(?) AND", e.getKey());
+				hasCond = true;
 				continue;
 			}
-			sqlCommon += String.format(" %s = ?", e.getKey());
+			sqlCommon += String.format(" %s = ? AND", e.getKey());
+			hasCond = true;
 		}
-		
+		sqlCommon = sqlCommon.substring(0,sqlCommon.lastIndexOf(hasCond?"AND":"WHERE"));
 		sqlCommon += " ORDER BY mem_id;";
+		System.out.println(sqlCommon);
 		
 		List<Member> memberList = new ArrayList<Member>();
 		try (PreparedStatement statement = connection.prepareStatement(sqlCommon)) {
-			ResultSet result = statement.executeQuery();
 			
-			int n = 1;
+			 int n=1;
 			for(Object entry : searchList.entrySet()) {
 				Entry e = (Entry) entry;
-				if (e.getValue() == null) {
+				if (e.getValue() == null || e.getValue().equals("")) {
+					continue;
+				} else if (list.contains(e.getKey())) {
+					statement.setString(n++, "%"+(String)e.getValue()+"%");
 					continue;
 				}
 				statement.setString(n++, (String)e.getValue());
 			}
 			
+			ResultSet result = statement.executeQuery();
 			while (result.next()) {
 				memberList.add(getMember(result));
 			}
