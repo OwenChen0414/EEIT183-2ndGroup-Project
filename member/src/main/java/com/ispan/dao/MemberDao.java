@@ -7,7 +7,11 @@ import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 
 import com.ispan.bean.Member;
 import com.ispan.util.Check;
@@ -144,6 +148,44 @@ public class MemberDao {
 			e.printStackTrace();
 		}
 		return member;
+	}
+	// 多條件查詢
+	public List<Member> selectMembers(Map<String, String> searchList) {
+		String sqlCommon = "SELECT * FROM memview WHERE";
+		List<String> list = Arrays.asList("account","email","nickname","mem_name","phone","addres");
+		for(Object entry : searchList.entrySet()) {
+			Entry e = (Entry) entry;
+			if (e.getValue() == null) {
+				continue;
+			} else if (list.contains(e.getKey())) {
+				sqlCommon += String.format(" %s", e.getKey()+" LIKE('%?%')");
+				continue;
+			}
+			sqlCommon += String.format(" %s = ?", e.getKey());
+		}
+		
+		sqlCommon += " ORDER BY mem_id;";
+		
+		List<Member> memberList = new ArrayList<Member>();
+		try (PreparedStatement statement = connection.prepareStatement(sqlCommon)) {
+			ResultSet result = statement.executeQuery();
+			
+			int n = 1;
+			for(Object entry : searchList.entrySet()) {
+				Entry e = (Entry) entry;
+				if (e.getValue() == null) {
+					continue;
+				}
+				statement.setString(n++, (String)e.getValue());
+			}
+			
+			while (result.next()) {
+				memberList.add(getMember(result));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return memberList;
 	}
 
 	// 查詢整張表

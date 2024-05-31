@@ -21,6 +21,15 @@ $(function(){
     // $('tbody tr').hover(function(){
     //     $(this).toggleClass('action');
     // })
+
+    let dialog = document.querySelector("dialog");
+    $('.search').click(function(){
+        dialog.showModal();
+    })
+
+    $('.hideDialog').click(function(){
+        dialog.close();
+    })
     
     $('.insert').click(function(){
         hideCRUDButton();

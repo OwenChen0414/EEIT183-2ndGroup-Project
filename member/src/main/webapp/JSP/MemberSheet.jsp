@@ -5,19 +5,40 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="/member/Styles/home.css">
-<link rel="stylesheet" media="screen and  (max-width: 780px)" href="/member/Styles/home780.css" />
 <link rel="stylesheet" href="/member/Styles/memberSheet.css">
+<link rel="stylesheet" media="screen and  (max-width: 780px)" href="/member/Styles/home780.css" />
 <script src="/member/javascript/jquery-3.7.1.min.js"></script>
 <script src="/member/javascript/MemberSheet.js"></script>
 <title>會員管理</title>
 </head>
 <body>
+    <dialog>
+        <h3>查詢</h3>
+        <form action="SearchMember" method="post">
+            id: <input type="text" name="id"><br>
+            帳號: <input type="text" name="account"><br>
+            密碼: <input type="text" name="password"><br>
+            email: <input type="text" name="email"><br>
+            暱稱: <input type="text" name="nickName"><br>
+            姓名: <input type="text" name="memName"><br>
+            生日: <input type="text" name="birthday"><br>
+            手機: <input type="text" name="phone"><br>
+            地址: <input type="text" name="address"><br>
+            消費金額: <input type="number" name="consumption"><br>
+            註冊日期: <input type="date" name="registDate"><br>
+            上次登入: <input type="datetime-local" name="lastLogin"><br>
+            身分: <input type="text" name="role"><br>
+            等級: <input type="text" name="level"><br>
+            <button type="submit" class="button">查詢</button>
+            <button type="reset" class="button">清空</button>
+            <button type="button" class="button hideDialog">取消</button>
+        </form>
+    </dialog>
     <main id="allpage">
         <header>
             <nav>
                 <ul class="menu">
-                    <li><a href="" class="active">會員管理</a></li>
+                    <li><a href="/member/MemberManage" class="active">會員管理</a></li>
                     <li><a href="">遊戲管理</a></li>
                     <li><a href="">交易管理</a></li>
                     <li><a href="">論壇管理</a></li>
@@ -28,9 +49,10 @@
             </nav>
         </header>
         <div class="page" align="center">
+            <form action="" method="post">
             <h1>員工資料</h1>
+            <button type="button" class="button search">查詢</button>
             <article>
-                <form action="" method="post">
                     <table>
                         <thead>
                             <tr>
@@ -75,16 +97,18 @@
                         </c:forEach>
                         </tbody>
                     </table>
+                </article>
+                <div class="buttons">
                     <button type="button" class="button insert">新增</button>
                     <button type="button" class="button update">更新</button>
                     <button type="button" class="button delete">刪除</button>
                     <button type="submit" class="button submit">確定</button>
                     <button type="button" class="button cancel">取消</button>
-                </form>
-                <c:if test="${descript != null }">
-                    <h3 class="hint">123${descript}</h3>
-                </c:if>
-            </article>
+                </div>
+            </form>
+            <c:if test="${descript != null }">
+                <h3 class="hint">${descript}</h3>
+            </c:if>
         </div>
 	</main>
 </body>

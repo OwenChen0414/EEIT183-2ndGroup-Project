@@ -1,6 +1,8 @@
 package com.ispan.filter;
 
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 
 import jakarta.servlet.Filter;
 import jakarta.servlet.FilterChain;
@@ -21,13 +23,15 @@ public class LastPageFilter extends HttpFilter implements Filter {
 	}
 
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+		System.out.println("filter.run()");
+		List<String> URL_LIST = Arrays.asList("Login","UpdateMember","InsertMember","DelectMember");
 		HttpServletRequest httpServletRequest = (HttpServletRequest)request;
 		HttpSession session = httpServletRequest.getSession();
 		String lastPage = httpServletRequest.getHeader("Referer");
 		if (lastPage!=null) {
 			lastPage = lastPage.substring(lastPage.lastIndexOf("member/")+7);
 			System.out.println("lastPage = "+lastPage);
-			if (!lastPage.contains("Login")) {
+			if (!URL_LIST.contains(lastPage)) {
 				System.out.println("lastPage => "+lastPage);
 				session.setAttribute("lastPage", lastPage);
 			}
