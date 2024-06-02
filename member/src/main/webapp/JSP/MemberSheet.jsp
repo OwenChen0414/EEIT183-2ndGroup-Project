@@ -52,6 +52,7 @@
             <form action="" method="post">
             <h1>員工資料</h1>
             <button type="button" class="button search">查詢</button>
+            <span class="lines">每頁顯示 <input type="number" class="lines" min="3" max="9" value="9"> 筆資料</span>
             <article>
                     <table>
                         <thead>
@@ -97,11 +98,11 @@
                         </c:forEach>
                         </tbody>
                     </table>
-                    <div class="pagebtns">
-                        <button type="button" class="button last page">上一頁</button>
-                        <button type="button" class="button next page">下一頁</button>
-                    </div>
                 </article>
+                <div class="pagebtns">
+                    <button type="button" class="button last page">上一頁</button>
+                    <button type="button" class="button next page">下一頁</button>
+                </div>
                 <div class="buttons">
                     <button type="button" class="button insert">新增</button>
                     <button type="button" class="button update">更新</button>

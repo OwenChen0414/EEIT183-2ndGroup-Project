@@ -1,16 +1,18 @@
 
 $(function(){
     let page = 1;
-    let count = 9;
+    let lines = 9;
     setTimeout(() => {
         $('.hint').hide();
     }, 3000);
-    let switchPage = function(){
+    switchPage();
+
+    function switchPage(){
         $('.selected').removeClass('selected');
         $('button.page').prop('disabled',false);
         $('tbody tr').hide();
         $('tbody tr').each(function(indx,elem) {
-            if (indx >= ((page-1)*count) && indx <= (page*count-1)) {
+            if (indx >= ((page-1)*lines) && indx <= (page*lines-1)) {
                 $(this).show();
                 if (indx === 0) {
                     $('button.last.page').prop('disabled',true);
@@ -20,14 +22,28 @@ $(function(){
             }
         });
     }
-    switchPage();
+
+    $('input.lines').change(function(){
+        if ($('.editing').length > 0) {
+            $(this).val(lines);
+            return;
+        }
+        lines = Number($(this).val());
+        switchPage();
+    })
     
     $('.next.page').click(function(){
+        if ($('.editing').length > 0) {
+            return;
+        }
         page += 1;
         switchPage();
     })
 
     $('.last.page').click(function(){
+        if ($('.editing').length > 0) {
+            return;
+        }
         page -= 1;
         switchPage();
     })

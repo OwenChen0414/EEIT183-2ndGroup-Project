@@ -41,7 +41,8 @@ div.page{
     }
 
     button.button{
-        margin-top: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     button.search{
@@ -65,8 +66,19 @@ dialog{
 
 div.pagebtns{
     width: 100%;
-    height: 30px;
+    /* height: 30px; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    position: relative;
+    bottom: 0;
+}
+span.lines{
+    position: absolute;
+    right: 15vw;
+    color: gray;
+
+    input.lines{
+        width: 25px;
+    }
 }

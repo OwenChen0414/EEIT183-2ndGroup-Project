@@ -16,7 +16,7 @@ public class CreateConnection implements Closeable {
 	public CreateConnection() {
 		try {
 			InitialContext initialContext = new InitialContext();
-			DataSource ds = (DataSource)initialContext.lookup("java:/comp/env/jdbc/servdb");
+			DataSource ds = (DataSource)initialContext.lookup("java:/comp/env/jdbc/db11");
 			do {
 				this.connection = ds.getConnection();
 			} while (this.connection == null);

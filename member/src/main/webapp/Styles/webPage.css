@@ -10,7 +10,7 @@ body {
 div.page {
     box-sizing: border-box;
     width: 80%;
-    min-width: 550px;
+    /* min-width: 550px; */
     margin: 10px auto;
     /* height: 900px; */
     /* border: 1px solid black; */
