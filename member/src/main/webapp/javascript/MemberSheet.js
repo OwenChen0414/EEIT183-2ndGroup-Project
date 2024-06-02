@@ -9,6 +9,8 @@ $(function(){
 
     function switchPage(){
         $('.selected').removeClass('selected');
+        hideCRUDButton();
+        $('.insert').show();
         $('button.page').prop('disabled',false);
         $('tbody tr').hide();
         $('tbody tr').each(function(indx,elem) {
