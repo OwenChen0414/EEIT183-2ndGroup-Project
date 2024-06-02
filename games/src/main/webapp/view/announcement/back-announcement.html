@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../../css/mainStyle.css">
+    <link rel="stylesheet" href="../../css/announcement/back-announcement.css">
+    <style>
+
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="../../images/logo3.png" alt="" id="logo1">
+            <span id="navText">Game Fighter</span>
+            <ul class="menu1">
+                <li>會員中心<i class="fa-solid fa-caret-down"></i>
+                    <ul class="menu2">
+                        <li>遊戲發表會</li>
+                        <li>功能介紹</li>
+                        <li>你在哪哩拉哈哈</li>
+                    </ul>
+                </li>
+                <li>遊戲商店<i class="fa-solid fa-caret-down"></i>
+                    <ul class="menu2">
+                        <li>遊戲發表會</li>
+                        <li>功能介紹</li>
+                        <li>你在哪哩拉哈哈</li>
+                    </ul>
+                </li>
+                <li>遊戲物品交易<i class="fa-solid fa-caret-down"></i>
+                    <ul class="menu2">
+                        <li>遊戲發表會</li>
+                        <li>功能介紹</li>
+                        <li>你在哪哩拉哈哈</li>
+                    </ul>
+                </li>
+                <li>討論區<i class="fa-solid fa-caret-down"></i>
+                    <ul class="menu2">
+                        <li>遊戲發表會</li>
+                        <li>功能介紹</li>
+                        <li>你在哪哩拉哈哈</li>
+                    </ul>
+                </li>
+                <li>尋找玩伴<i class="fa-solid fa-caret-down"></i>
+                    <ul class="menu2">
+                        <li>遊戲發表會</li>
+                        <li>功能介紹</li>
+                        <li>你在哪哩拉哈哈</li>
+                    </ul>
+                </li>
+                <li>活動<i class="fa-solid fa-caret-down"></i>
+                    <ul class="menu2">
+                        <li>遊戲發表會</li>
+                        <li>功能介紹</li>
+                        <li>你在哪哩拉哈哈</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <aside id="contentTag">
+        <ul id="leftList">
+            <li id="selected">公告管理</li>
+            <li>會員管理</li>
+            <li>討論區文章管理</li>
+            <li>討論區留言管理</li>
+            <li>遊戲商店管理</li>
+            <li>遊戲物品交易管理</li>
+            <li>尋找玩伴管理</li>
+            <li>活動管理</li>
+        </ul>
+    </aside>
+    <main>
+        <article>
+            <section id="announcement">
+                <div id="content">
+                    <table>
+                        <c:forEach var="anno" items="${announcements}">
+                            <tr>
+                                <td><a href="">${anno.title}</a></td>
+                                <td>${anno.createDate}
+                                <td>
+                                <td><a href="">修改</a>
+                                <td>
+                                <td><a href="">刪除</a>
+                                <td>
+                            </tr>
+                            <tr>
+                                <td><a href="">${anno.title}</a></td>
+                                <td>${anno.createDate}
+                                <td>
+                                <td><a href="">修改</a>
+                                <td>
+                                <td><a href="">刪除</a>
+                                <td>
+                            </tr>
+                        </c:forEach>
+                    </table>
+                </div>
+                <a href="" id="plus"><i class="fa-solid fa-plus"></i></a>
+            </section>
+        </article>
+    </main>
+
+    <script src="../../js/jquery-3.7.1.js"></script>
+    <script src="../../js/mouse.js"></script>
+</body>
+
+</html>
