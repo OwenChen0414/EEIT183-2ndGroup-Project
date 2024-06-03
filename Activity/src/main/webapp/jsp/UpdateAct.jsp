@@ -17,15 +17,16 @@
 </script>
 </head>
 <body>
-	<!-- 其他功能的連結 -->
-	<div class="box">
-		<div class="btn-group">
-			<a href="/Activity/AddAct">新增活動</a> 
-			<a href="/Activity/DeleteAct">刪除活動</a>
-			<a href="/Activity/GetAct">查詢活動</a> 
-			<a href="/Activity/GetAllAct">查詢所有活動</a>
-		</div>
-	</div>
+      <!-- 其他功能的連結 -->
+      <div class="box">
+     	<div class="btn-group">
+            <a href="/Activity/GetAllAct">所有活動</a>
+     		<a href="/Activity/AddAct">新增活動</a>
+            <a href="/Activity/UpdateAct">修改活動</a>
+            <a href="/Activity/DeleteAct">刪除活動</a>
+            <a href="/Activity/GetAct">查詢活動</a>
+        </div>
+      </div>
 	<div class="container">
 		<h2 style="animation: pulse 1s infinite alternate;">修改活動</h2>
 		<form action="/Activity/UpdateAct" method="post">

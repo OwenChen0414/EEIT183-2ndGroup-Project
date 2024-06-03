@@ -39,11 +39,11 @@
             <nav>
                 <ul class="menu">
                     <li><a href="/member/MemberManage" class="active">會員管理</a></li>
-                    <li><a href="">遊戲管理</a></li>
-                    <li><a href="/Martket/GetAllGames">交易管理</a></li>
-                    <li><a href="">論壇管理</a></li>
-                    <li><a href="">陪玩管理</a></li>
-                    <li><a href="">活動管理</a></li>
+                    <li><a target="_blank" href="/games/Homepage">遊戲管理</a></li>
+                    <li><a target="_blank" href="/Martket/GetAllGames">交易管理</a></li>
+                    <li><a target="_blank" href="/texts/html/GetText.html">論壇管理</a></li>
+                    <li><a target="_blank" href="/playWithOthers/AllUsers">伴遊管理</a></li>
+                    <li><a target="_blank" href="/Activity/GetAllAct">活動管理</a></li>
                     <li class="right"><a href="/member/JSP/Home.jsp">回到首頁</a></li>
                 </ul>
             </nav>

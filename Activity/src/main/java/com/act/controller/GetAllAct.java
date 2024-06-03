@@ -64,7 +64,6 @@ public class GetAllAct extends HttpServlet {
         if (message != null) {
             request.setAttribute("message", message);
         }
-        // 將請求轉發到對應的 JSP 頁面
         request.getRequestDispatcher("/jsp/GetAllAct.jsp").forward(request, response);
     }
 
@@ -73,3 +72,6 @@ public class GetAllAct extends HttpServlet {
         doGet(request, response);
     }
 }
+
+
+

@@ -26,7 +26,7 @@ public class GetAct extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String searchQuery = request.getParameter("searchQuery");
-        String searchCriteria = request.getParameter("searchCriteria"); // 新增的查詢條件
+        String searchCriteria = request.getParameter("searchCriteria");
         Connection conn = null;
         PreparedStatement stmt = null;
         ResultSet rs = null;
@@ -124,7 +124,7 @@ public class GetAct extends HttpServlet {
         if (message != null) {
             request.setAttribute("message", message);
         }
-        request.getRequestDispatcher("/jsp/GetAct.jsp").forward(request, response);
+        request.getRequestDispatcher("//jsp/GetAct.jsp").forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

@@ -14,7 +14,7 @@
             max-height: 200px; /* 這裡可以調整最大高度 */
         }
     </style>
-     <script type="text/javascript">
+  <script type="text/javascript">
         window.onload = function() {
             var message = "<%= request.getAttribute("message") != null ? request.getAttribute("message") : "" %>";
             if (message.trim() !== "") {
@@ -24,15 +24,16 @@
     </script>
 </head>
 <body>
-       <!-- 其他功能的連結 -->
-       <div class="box">
-        <div class="btn-group">
-        	<a href="/Activity/AddAct">新增活動</a>
+      <!-- 其他功能的連結 -->
+      <div class="box">
+     	<div class="btn-group">
+            <a href="/Activity/GetAllAct">所有活動</a>
+     		<a href="/Activity/AddAct">新增活動</a>
             <a href="/Activity/UpdateAct">修改活動</a>
             <a href="/Activity/DeleteAct">刪除活動</a>
             <a href="/Activity/GetAct">查詢活動</a>
-            </div>
-       </div>
+        </div>
+      </div>
     <div class="container">
         <h2>活動管理</h2>
         <c:if test="${not empty activities}">

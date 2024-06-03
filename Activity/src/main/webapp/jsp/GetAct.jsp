@@ -9,15 +9,16 @@
     <link rel="stylesheet" type="text/css" href="/Activity/styles/styledark.css">
 </head>
 <body>
-       <!-- 其他功能的連結 -->
-       <div class="box">
-        <div class="btn-group">
-            <a href="/Activity/AddAct">新增活動</a>
+      <!-- 其他功能的連結 -->
+      <div class="box">
+     	<div class="btn-group">
+            <a href="/Activity/GetAllAct">所有活動</a>
+     		<a href="/Activity/AddAct">新增活動</a>
             <a href="/Activity/UpdateAct">修改活動</a>
             <a href="/Activity/DeleteAct">刪除活動</a>
-            <a href="/Activity/GetAllAct">查詢所有活動</a>
+            <a href="/Activity/GetAct">查詢活動</a>
         </div>
-       </div>
+      </div>
     <div class="container">
         <h2 style="animation: pulse 1s infinite alternate;">活動資料查詢</h2>
        <form action="/Activity/GetAct" method="get">

@@ -20,7 +20,6 @@ public class UpdateAct extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // 表單提交，更新資料庫等操作
         String activityno = request.getParameter("activityno");
         String name = request.getParameter("name");
         String description = request.getParameter("description");
@@ -32,9 +31,7 @@ public class UpdateAct extends HttpServlet {
         PreparedStatement stmt = null;
         String message = "";
 
-        // 確認是否有更改
         if (name == null && description == null && date == null && location == null && organizer == null) {
-            // 如果沒有任何更改，直接返回
             request.getRequestDispatcher("/jsp/UpdateAct.jsp").forward(request, response);
             return;
         }
@@ -53,21 +50,17 @@ public class UpdateAct extends HttpServlet {
             stmt.setString(6, activityno);
             int rowsAffected = stmt.executeUpdate();
             if (rowsAffected > 0) {
-                // 修改成功
                 message = "修改成功";
                 request.setAttribute("message", message);
             } else {
-                // 修改失敗
                 message = "修改失敗：未進行任何更改";
                 request.setAttribute("message", message);
             }
         } catch (Exception e) {
             e.printStackTrace();
-            // 出現異常，設置錯誤訊息
             message = "修改失敗：" + e.getMessage();
             request.setAttribute("message", message);
         } finally {
-            // 關閉資源
             try {
                 if (stmt != null) {
                     stmt.close();
@@ -79,14 +72,11 @@ public class UpdateAct extends HttpServlet {
                 e.printStackTrace();
             }
         }
-
-        // 重定向回到更新頁面
         request.getRequestDispatcher("/GetAllAct").forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // 支援 POST 方法，呼叫 doGet 方法
         doGet(request, response);
     }
 }

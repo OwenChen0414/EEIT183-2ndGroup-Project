@@ -40,7 +40,6 @@ public class Login extends HttpServlet {
 			.forward(request, response);
 		}
 		member.setPassword("*****");
-//		session.setAttribute("role", role);
 		session.setAttribute("member", member);
 		response.sendRedirect("/member/JSP/Home.jsp");
 	}
