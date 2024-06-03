@@ -189,7 +189,7 @@
 	                        </a>
                             </c:if>
 	                        </c:if>
-                            <c:if test="${true}">
+                            <c:if test="${false}">
                             <span class="btn">下載</span>
                             </c:if>
                         </td>

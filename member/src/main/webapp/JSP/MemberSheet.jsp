@@ -40,7 +40,7 @@
                 <ul class="menu">
                     <li><a href="/member/MemberManage" class="active">會員管理</a></li>
                     <li><a href="">遊戲管理</a></li>
-                    <li><a href="">交易管理</a></li>
+                    <li><a href="/Martket/GetAllGames">交易管理</a></li>
                     <li><a href="">論壇管理</a></li>
                     <li><a href="">陪玩管理</a></li>
                     <li><a href="">活動管理</a></li>

@@ -1,0 +1,195 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(242, 246, 252);
+  color: rgb(0, 0, 0);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+.search {
+  padding: 1rem;
+  color: rgb(58, 52, 58);
+  background-color: rgba(104, 125, 157, 0.197);
+}
+
+.search h1 {
+  font-size: 2rem;
+}
+
+.search form {
+  margin: 0.25rem 0rem 0rem 0rem;
+}
+
+header {
+  margin: 0rem 10rem;
+}
+
+header nav ul {
+  display: flex;
+  list-style-type: none;
+  border-bottom: 2px solid black;
+}
+
+header nav ul li {
+  padding: 0.2rem 1rem;
+  border-radius: 12%;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: rgba(17, 14, 14, 0.86);
+}
+
+header nav ul li:hover {
+  background-color: #2c6f8246;
+}
+
+.data {
+  display: flex;
+  justify-content: center;
+  background-color: aliceblue;
+  padding: 0.2rem;
+  margin-bottom: 2rem;
+}
+
+.data table {
+  width: 100%;
+  max-width: 1200px;
+  border-collapse: collapse;
+  text-align: center;
+  background-color: white;
+}
+
+.data table th,
+.data table td {
+  min-width: 8rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+
+.data table th {
+  background-color: #607d8b;
+  color: white;
+  font-weight: bold;
+}
+
+.data table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.data table tr:nth-child(odd) {
+  background-color: #e9ecef;
+}
+
+.data table img {
+  max-width: 65px;
+  max-height: 90px;
+}
+
+.data table td form input[type="submit"] {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.data table td form input[type="submit"]:hover {
+  background-color: #d32f2f;
+}
+
+.data h3 {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+input[type="submit"] {
+  padding: 0.2rem;
+  margin: 0 0.2rem;
+  background-color: rgb(20, 135, 163);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: rgba(20, 134, 163, 0.603);
+}
+
+#create {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid #f8f8f8;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  background-color: #2b8566;
+  float: right;
+  margin-top: -2rem;
+  /* 往上移 1rem (16px) */
+}
+
+#create:hover {
+  background-color: rgba(43, 133, 102, 0.8);
+}
+
+.totalRecord {
+  display: flex;
+  justify-content: right;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 0rem;
+  padding-bottom: 0rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.title2 {
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  color: #fbfbfb;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 2rem;
+  background-color: #0e4857;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.changeOrder {
+  background-color: #f44336db; /* 綠色背景 */
+  border: none; /* 移除邊框 */
+  color: white; /* 白色文字 */
+  padding: 0.5rem 1.5rem; /* 增加內邊距 */
+  text-align: center; /* 居中文字 */
+  text-decoration: none; /* 移除底線 */
+  display: inline-block; /* 設置為行內塊元素 */
+  font-size: 1rem; /* 調整字體大小 */
+  margin: 0; /* 增加外邊距 */
+  cursor: pointer; /* 滑鼠變為手指指標 */
+  border-radius: 4px; /* 添加圓角 */
+  transition: background-color 0.3s ease; /* 添加漸變效果 */
+  position: fixed; /* 固定定位 */
+  bottom: 0; /* 距離底部20px */
+  left: 50%; /* 水平居中 */
+  transform: translateX(-50%); /* 水平居中 */
+  z-index: 2; /* 确保在最上层 */
+}
+
+button.changeOrder:hover {
+  background-color: #f44336a0; /* 滑過時變暗的綠色 */
+}

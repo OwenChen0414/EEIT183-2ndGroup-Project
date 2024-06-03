@@ -29,7 +29,7 @@ public class DeleteGame extends HttpServlet {
 		DiscountDAO discountDAO = new DiscountDAO();
 		int gameId = Integer.parseInt(request.getParameter("id"));
 		Game game = gamesDAO.getOne(gameId);
-		String filePath = "D:\\Servlet\\workspace\\Project2\\src\\main\\webapp\\" + game.getPhotoPath();
+		String filePath = "D:\\testWorkspace\\games\\src\\main\\webapp\\" + game.getPhotoPath();
 		File file = new File(filePath);
 		file.delete();
 		photosDAO.deletePhotoLib(game.getPhotoPath());
