@@ -1,0 +1,168 @@
+.leftMenu {
+    background-color: #d5e7ff;
+    width: 12%;
+    height: auto;
+    position: absolute;
+    border-radius: 15px;
+}
+
+.leftMenu h2 {
+    font-weight: 500;
+    text-align: center;
+}
+
+.leftMenu ul {
+    list-style: none;
+}
+
+.leftMenu ul li {
+    margin-top: 5%;
+    color: blue;
+    margin-left: 23%;
+}
+
+.content h2 {
+    padding: 10px 0;
+    font-weight: 600;
+    text-align: center;
+}
+
+.content {
+    position: relative;
+    width: 80%;
+    background-color: bisque;
+    left: 16%;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.gamePhoto {
+    width: 400px;
+    height: 200px;
+}
+
+.gameInfo {
+    font-weight: 500;
+    font-size: 26px;
+    padding-left: 20px;
+}
+
+.gameList {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.spacing {
+    height: 10px;
+}
+
+.top {
+    position: fixed;
+    bottom: 2%;
+    right: .5%;
+    font-size: 40px;
+    background-color: #e28fb8;
+    padding: 10px 15px;
+    border-radius: 50%;
+    color: black;
+}
+
+.lastTD {
+    text-align: right;
+    width: 50%;
+    padding-top: 10px;
+    padding-right: 20px;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.btn {
+    display: inline-block;
+    margin-left: 5px;
+    background-color: #00ff37;
+    user-select: none;
+    border: 1px solid black;
+    padding: 5px 10px;
+    width: 180px;
+    text-align: center;
+}
+
+.price {
+    display: inline-block;
+    margin-left: 5px;
+    background-color: #6c5d5d;
+    padding: 5px 10px;
+    color: #41ff41;
+    width: 100px;
+    text-align: center;
+}
+
+.priceTop {
+    display: inline-block;
+    margin-left: 5px;
+    background-color: #6c5d5d;
+    padding: 5px 10px;
+    color: lightgray;
+    width: 100px;
+    text-align: center;
+    position: relative;
+    top: 5px;
+    left: -30px;
+    height: 20px;
+    font-size: 16px;
+    text-decoration: line-through;
+}
+
+.space1 {
+    padding: 5px 10px;
+    text-align: center;
+    display: inline-block;
+    margin-left: 5px;
+    width: 62px;
+}
+
+.space2 {
+    padding: 5px 10px;
+    text-align: center;
+    display: inline-block;
+    margin-left: 5px;
+    width: 152px;
+}
+
+.discount {
+    text-align: center;
+    display: inline-block;
+    margin-left: 5px;
+    background-color: #1f940b;
+    padding: 5px 10px;
+    color: #41ff41;
+    width: 60px;
+}
+
+tr {
+    background-color: aquamarine;
+    margin: 10px;
+}
+
+.td1 {
+    padding-top: 3px;
+    font-size: 26px;
+    font-weight: 500;
+    padding-left: 5px;
+}
+
+.td2 {
+    width: 40%;
+    padding-top: 10px;
+    padding-left: 20px;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.categorys {
+    background-color: #d5e7ff;
+    padding: 5px;
+    margin-top: 10px;
+    user-select: none;
+    font-size: 16px;
+}

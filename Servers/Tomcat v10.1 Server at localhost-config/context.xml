@@ -21,19 +21,12 @@
     <WatchedResource>WEB-INF/web.xml</WatchedResource>
     <WatchedResource>WEB-INF/tomcat-web.xml</WatchedResource>
     <WatchedResource>${catalina.base}/conf/web.xml</WatchedResource>
-    
-    <ResourceLink type="javax.sql.DataSource" global="jdbc/db11" name="jdbc/db11" />
-    <ResourceLink type="javax.sql.DataSource" global="jdbc/db29" name="jdbc/db29"/>
-    <ResourceLink 
-    type="javax.sql.DataSource" 
-    global="jdbc/servdb" 
-    name="jdbc/servdb"/>
-    <ResourceLink
-    	type="javax.sql.DataSource"
-    	global="jdbc/db37"
-    	name="jdbc/db37"/>
-    <ResourceLink type="javax.sql.DataSource" global="jdbc/db20" name="jdbc/db20"/>
-    <ResourceLink type="javax.sql.DataSource" global="jdbc/db38" name="jdbc/db38"/>
+	<ResourceLink type="javax.sql.DataSource" global="jdbc/db11" name="jdbc/db11"/>
+	<ResourceLink type="javax.sql.DataSource" global="jdbc/db29" name="jdbc/db29"/>
+	<ResourceLink type="javax.sql.DataSource" global="jdbc/servdb" name="jdbc/servdb"/>
+	<ResourceLink type="javax.sql.DataSource" global="jdbc/db37" name="jdbc/db37"/>
+	<ResourceLink type="javax.sql.DataSource" global="jdbc/db20" name="jdbc/db20"/>
+	<ResourceLink type="javax.sql.DataSource" global="jdbc/db38" name="jdbc/db38"/>
 
     <!-- Uncomment this to enable session persistence across Tomcat restarts -->
     <!--

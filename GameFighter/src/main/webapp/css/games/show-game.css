@@ -1,0 +1,164 @@
+.container {
+    position: relative;
+    width: 60%;
+    left: 20%;
+    padding: 20px;
+    background-color: #b1dddf;
+    border-radius: 15px;
+}
+
+img {
+    width: 660px;
+    height: 450px;
+    padding: 5px;
+    background-color: rgb(76, 81, 150);
+}
+
+.title {
+    margin-bottom: 2%;
+    text-align: left;
+}
+
+.innerBox1 {
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    width: 40%;
+    font-size: 20px;
+}
+
+.p1 {
+
+    position: absolute;
+    top: 170px;
+}
+
+.p2 {
+    position: absolute;
+    top: 210px;
+}
+
+.p3 {
+    position: absolute;
+    top: 250px;
+}
+
+.p4 {
+    position: absolute;
+    top: 290px;
+}
+
+.p6 {
+    position: absolute;
+    top: 330px;
+}
+
+.introduction {
+    font-size: 14px;
+    padding-top: 10px;
+    height: 180px;
+}
+
+.innerBox2 {
+    margin-top: 2%;
+}
+
+.description {
+    padding-top: 3%;
+}
+
+.categorys {
+    display: inline-block;
+    background-color: #d5e7ff;
+    padding: 5px;
+    user-select: none;
+    margin-top: 3px;
+    font-size: 16px;
+}
+
+.btn {
+    display: inline-block;
+    margin-left: 5px;
+    background-color: #00ff37;
+    user-select: none;
+    cursor: pointer;
+    border: 1px solid black;
+    padding: 5px 10px;
+    width: 150px;
+    text-align: center;
+}
+
+.price {
+    display: inline-block;
+    margin-left: 5px;
+    background-color: #6c5d5d;
+    padding: 5px 10px;
+    color: #41ff41;
+    width: 100px;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+}
+
+.priceTop {
+    display: inline-block;
+    margin-left: 5px;
+    background-color: #6c5d5d;
+    padding: 5px 10px;
+    color: lightgray;
+    width: 100px;
+    text-align: center;
+    position: relative;
+    top: 5px;
+    height: 20px;
+    /* left: -30px; */
+    font-size: 16px;
+    text-decoration: line-through;
+    position: relative;
+}
+
+.space1 {
+    padding: 5px 10px;
+    text-align: center;
+    display: inline-block;
+    margin-left: 5px;
+    width: 62px;
+}
+
+.space2 {
+    padding: 5px 10px;
+    text-align: center;
+    display: inline-block;
+    margin-left: 5px;
+    width: 152px;
+}
+
+.discount {
+    text-align: center;
+    display: inline-block;
+    margin-left: 5px;
+    background-color: #1f940b;
+    padding: 5px 10px;
+    color: #41ff41;
+    width: 60px;
+}
+
+.buyGame {
+    position: relative;
+    top: -35px;
+    font-size: 24px;
+}
+
+.buy {
+    width: 670px;
+    background-color: blanchedalmond;
+}
+
+.lastTD {
+    width: 70%;
+    text-align: right;
+}
+
+.td1 {
+    width: 38.5%;
+}
