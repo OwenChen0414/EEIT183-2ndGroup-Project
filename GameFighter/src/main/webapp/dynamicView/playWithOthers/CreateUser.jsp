@@ -7,7 +7,7 @@
 		<title>填寫用戶資料</title>
 		
 		
-		    <link rel="stylesheet" type="text/css" href="CreateUser.css">
+		    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/playWithOthers/CreateUser.css">
 		
 	</head>
 
@@ -32,7 +32,7 @@
 		</script>
 		<div class="outside">
 			<h2>創建伴遊者資料</h2>
-			<form method="post" action="../CreateUser" enctype="multipart/form-data">
+			<form method="post" action="/GameFighter/CreateUser" enctype="multipart/form-data">
 				<label for="nickname">伴遊者暱稱:</label>
 				<input type="text" id="nickname" name="nickname" required><br>
 

@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <jsp:include page="/AllUsers" />
+<%--     <jsp:include page="/AllUsers" /> --%>
 
 
 	

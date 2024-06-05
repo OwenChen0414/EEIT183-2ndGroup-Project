@@ -1,4 +1,4 @@
-package com.market.bean;
+package com.ispan.bean.market;
 
 import java.io.Serializable;
 

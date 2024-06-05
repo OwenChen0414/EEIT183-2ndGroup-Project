@@ -1,4 +1,4 @@
-package com.market.controller;
+package com.ispan.controller.market;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import com.market.bean.GameBean;
+import com.ispan.bean.market.GameBean;
 @WebServlet("/GetAllGames")
 
 public class GetAllGames extends HttpServlet {
@@ -24,7 +24,7 @@ public class GetAllGames extends HttpServlet {
 		games.addAll(Arrays.asList(yuGiOhDuelLinks, cs2));
 		HttpSession session = request.getSession();
 		session.setAttribute("games", games);
-		request.getRequestDispatcher("/jsp/index.jsp").forward(request, response);
+		request.getRequestDispatcher("/dynamicView/market/index.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

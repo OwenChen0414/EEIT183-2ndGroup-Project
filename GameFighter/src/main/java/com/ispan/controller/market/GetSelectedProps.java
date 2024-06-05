@@ -1,4 +1,4 @@
-package com.market.controller;
+package com.ispan.controller.market;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -17,9 +17,9 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import javax.naming.NamingException;
-import com.market.bean.PropBean;
-import com.market.dao.PropDao;
-import com.market.util.JndiToJdbc;
+import com.ispan.bean.market.PropBean;
+import com.ispan.dao.market.PropDao;
+import com.ispan.util.market.JndiToJdbc;
 
 @WebServlet("/GetSelectedProps")
 
@@ -47,7 +47,7 @@ public class GetSelectedProps extends HttpServlet {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		request.getRequestDispatcher("/jsp/getAllProps.jsp").forward(request, response);
+		request.getRequestDispatcher("/dynamicView/market/getAllProps.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)

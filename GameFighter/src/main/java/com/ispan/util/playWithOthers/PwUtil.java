@@ -1,4 +1,4 @@
-package com.ispan.util.project1crud;
+package com.ispan.util.playWithOthers;
 
 import java.sql.Connection;
 import java.sql.SQLException;

@@ -1,4 +1,4 @@
-package com.ispan.dao.project1crud;
+package com.ispan.dao.playWithOthers;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -7,7 +7,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.ispanwei.bean.PlayUserBean;
+import com.ispan.bean.playWithOthers.PlayUserBean;
+import com.ispan.util.playWithOthers.PwUtil;
 
 public class PwDAO {
 	String selectAll = "SELECT * FROM pwUser";

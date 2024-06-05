@@ -1,4 +1,4 @@
-package com.market.controller;
+package com.ispan.controller.market;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.servlet.annotation.WebServlet;
@@ -13,8 +13,8 @@ import java.sql.SQLException;
 import java.util.Map;
 
 import javax.naming.NamingException;
-import com.market.bean.PropBean;
-import com.market.util.JndiToJdbc;
+import com.ispan.bean.market.PropBean;
+import com.ispan.util.market.JndiToJdbc;
 @WebServlet("/GetPropForUpdate")
 @MultipartConfig
 
@@ -39,7 +39,7 @@ public class GetPropForUpdate extends HttpServlet {
 		request.setAttribute("propDescription", propDescription);
 		request.setAttribute("propImagePath", propImagePath);
 		request.setAttribute("gameId", gameId);
-		request.getRequestDispatcher("/jsp/updateProp.jsp").forward(request, response);
+		request.getRequestDispatcher("/dynamicView/market/updateProp.jsp").forward(request, response);
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);

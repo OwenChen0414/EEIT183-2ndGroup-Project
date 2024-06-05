@@ -1,4 +1,4 @@
-package com.market.controller;
+package com.ispan.controller.market;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -15,10 +15,10 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.naming.NamingException;
 
-import com.market.bean.MarketOrderBean;
-import com.market.bean.PropBean;
-import com.market.dao.MarketDao;
-import com.market.util.JndiToJdbc;
+import com.ispan.bean.market.MarketOrderBean;
+import com.ispan.bean.market.PropBean;
+import com.ispan.dao.market.MarketDao;
+import com.ispan.util.market.JndiToJdbc;
 @WebServlet("/GetSelectedMarketOrders")
 
 public class GetSelectedMarketOrders extends HttpServlet {
@@ -34,7 +34,7 @@ public class GetSelectedMarketOrders extends HttpServlet {
 			HttpSession SessionOfMarket = request.getSession();
 			session.setAttribute("SeletedGameMrketOrders", selectedMarketOrders);
 			session.setAttribute("SelectedProps", selectedMarketProps);
-			request.getRequestDispatcher("/jsp/getSelectedMarketOrders.jsp").forward(request, response);
+			request.getRequestDispatcher("/dynamicView/market/getSelectedMarketOrders.jsp").forward(request, response);
 		}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

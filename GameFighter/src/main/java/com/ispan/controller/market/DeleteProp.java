@@ -1,4 +1,4 @@
-package com.market.controller;
+package com.ispan.controller.market;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.servlet.annotation.WebServlet;
@@ -21,9 +21,9 @@ import java.util.List;
 
 import javax.naming.NamingException;
 
-import com.market.bean.GameBean;
-import com.market.dao.PropDao;
-import com.market.util.JndiToJdbc;
+import com.ispan.bean.market.GameBean;
+import com.ispan.dao.market.PropDao;
+import com.ispan.util.market.JndiToJdbc;
 @WebServlet("/DeleteProp")
 @MultipartConfig
 

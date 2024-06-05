@@ -1,10 +1,11 @@
-package com.ispan.controller.project1crud;
+package com.ispan.controller.playWithOthers;
 
 
 
 import java.io.IOException;
-import com.ispanwei.bean.PlayUserBean;
 
+import com.ispan.bean.playWithOthers.PlayUserBean;
+import com.ispan.dao.playWithOthers.PwDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -27,7 +28,7 @@ public class fuzzySearch extends HttpServlet {
 		}
 
 		request.setAttribute("user", user);
-		request.getRequestDispatcher("/Project1/SelectOneUser.jsp").forward(request, response);
+		request.getRequestDispatcher("/dynamicView/playWithOthers/SelectOneUser.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)

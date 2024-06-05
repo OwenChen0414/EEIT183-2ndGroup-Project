@@ -1,8 +1,6 @@
-package com.ispan.controller.project1crud;
+package com.ispan.controller.playWithOthers;
 
 
-
-import com.ispanwei.bean.PlayUserBean;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -10,7 +8,8 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.SQLException;
+import com.ispan.bean.playWithOthers.PlayUserBean;
+import com.ispan.dao.playWithOthers.PwDAO;
 
 @WebServlet("/UpdateUser")
 public class UpdateUser extends HttpServlet {
@@ -28,7 +27,7 @@ public class UpdateUser extends HttpServlet {
 		}
 
 		request.setAttribute("user", user);
-		request.getRequestDispatcher("/Project1/UpdateUser.jsp").forward(request, response);
+		request.getRequestDispatcher("/dynamicView/playWithOthers/UpdateUser.jsp").forward(request, response);
 	}
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

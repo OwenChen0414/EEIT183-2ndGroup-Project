@@ -203,8 +203,8 @@
     <a href="#"><i class="fa-solid fa-arrow-up top"></i></a>
 
 
-    <script src="${pageContext.request.contextPath}/js/jquery-3.7.1.js?v=1.0"></script>
-    <script src="${pageContext.request.contextPath}/js/mouse.js?v=1.0"></script>
+    <script src="${pageContext.request.contextPath}/javascript/jquery-3.7.1.min.js?v=1.0"></script>
+    <script src="${pageContext.request.contextPath}/javascript/games/mouse.js?v=1.0"></script>
 </body>
 
 </html>

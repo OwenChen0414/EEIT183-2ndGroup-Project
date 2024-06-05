@@ -1,5 +1,5 @@
 		<%@page import="java.util.*" %>
-		<%@page import="com.ispanwei.bean.PlayUserBean" %>
+		<%@page import="com.ispan.bean.playWithOthers.PlayUserBean" %>
 		<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 		<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
@@ -241,8 +241,7 @@ body {
 							</svg>
 						</div>
 						<ul>
-							<li><a href="${pageContext.request.contextPath}/Project1/CreateUser.jsp">新增人員資料</a></li>
-							<li><a href="${pageContext.request.contextPath}/Project1/index.html">返回前頁</a></li>
+							<li><a href="${pageContext.request.contextPath}/dynamicView/playWithOthers/CreateUser.jsp">新增人員資料</a></li>
 						</ul>
 					</div>
 					<h1>伴遊資料管理</h1>
@@ -254,7 +253,7 @@ body {
 								<input class="selectButton" type="submit" value="查詢" />
 							</form>
 
-							<form method="post" action="${pageContext.request.contextPath}/Project1/CreateUser.jsp">
+							<form method="post" action="${pageContext.request.contextPath}/dynamicView/playWithOthers/CreateUser.jsp">
 								<input class="createButton" type="submit" value="新增資料" />
 							</form>
 						</div>
@@ -278,7 +277,7 @@ body {
 									<th>交易狀態</th>
 									<th></th>
 								</tr>
-								<c:set var="imagePath" value="${pageContext.request.contextPath}/image/" />
+								<c:set var="imagePath" value="${pageContext.request.contextPath}/images/playWithOthers/" />
 
 								<c:forEach items="${users}" var="user">
 									<tr>

@@ -1,4 +1,4 @@
-package com.market.dao;
+package com.ispan.dao.market;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -6,9 +6,9 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.market.bean.MarketOrderBean;
-import com.market.bean.PropBean;
-import com.market.util.JndiToJdbc;
+import com.ispan.bean.market.MarketOrderBean;
+import com.ispan.bean.market.PropBean;
+import com.ispan.util.market.JndiToJdbc;
 
 public class MarketDao {
     private static final String GET_SELECTED_MARKET_ORDERS = "SELECT allProps.gameId, "

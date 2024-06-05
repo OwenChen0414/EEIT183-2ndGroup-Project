@@ -10,7 +10,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
     <title>遊戲道具交易後台</title>
     <link
       rel="stylesheet"
-      href="${pageContext.request.contextPath}/css/style.css"
+      href="${pageContext.request.contextPath}/css/market/style.css"
     />
   </head>
   <body>
@@ -30,7 +30,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
       </div>
       <nav>
         <ul>
-         <li><a href="http://localhost:8080/Martket/GetSelectedProps?game=${props[0].gameId}">道具總覽</a></li>
+         <li><a href="http://localhost:8080/GameFighter/dynamicView/market/GetSelectedProps?game=${props[0].gameId}">道具總覽</a></li>
          <li><a href="">拍賣場</a></li>
          <li><a href="">成交紀錄</a></li>
          <li><a href="" id="">我的倉庫</a></li>

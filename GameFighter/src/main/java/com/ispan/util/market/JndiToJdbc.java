@@ -1,4 +1,4 @@
-package com.market.util;
+package com.ispan.util.market;
 
 import java.sql.Connection;
 import java.sql.SQLException;

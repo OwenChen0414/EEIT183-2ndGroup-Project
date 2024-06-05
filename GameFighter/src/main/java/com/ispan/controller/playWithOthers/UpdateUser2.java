@@ -1,4 +1,4 @@
-package com.ispan.controller.project1crud;
+package com.ispan.controller.playWithOthers;
 
 
 
@@ -41,9 +41,10 @@ public class UpdateUser2 extends HttpServlet {
         PreparedStatement stmt = null;
         try {
             context = new InitialContext();
-            DataSource ds = (DataSource) context.lookup("java:/comp/env/jdbc/playGame");
+            DataSource ds = (DataSource) context.lookup("java:/comp/env/jdbc/db38");
             conn = ds.getConnection();
 
+            System.out.println(sql);
             stmt = conn.prepareStatement(sql);
             stmt.setString(1, nickname);
             stmt.setString(2, gameId);
@@ -54,9 +55,9 @@ public class UpdateUser2 extends HttpServlet {
             stmt.setString(7, transactionStatus);
             stmt.setString(8, description);
             stmt.setString(9, id);
-            stmt.executeUpdate();
+            System.out.println("關了嗎"+stmt.isClosed());
+            stmt.execute();
 
-            request.getRequestDispatcher("/Project1//UpdateUser2.jsp").forward(request, response);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -74,6 +75,7 @@ public class UpdateUser2 extends HttpServlet {
                 e.printStackTrace();
             }
         }
+        request.getRequestDispatcher("/dynamicView/playWithOthers/UpdateUser2.jsp").forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

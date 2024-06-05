@@ -11,7 +11,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
     <title>遊戲道具交易後台</title>
     <link
       rel="stylesheet"
-      href="${pageContext.request.contextPath}/css/style.css"
+      href="${pageContext.request.contextPath}/css/market/style.css"
     />
   </head>
   <body>
@@ -33,7 +33,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
   			<input type="text"  id="searchPropName" name="searchPropName" required>
   			<input type="submit" value="確認"></button>
 		</form>   
-			<a id="create" href="http://localhost:8080/Martket/jsp/createProp.jsp">新增道具</a>
+			<a id="create" href="http://localhost:8080/GameFighter/dynamicView/createProp.jsp">新增道具</a>
       </div>
       
  	<%-- 因道具表單沒有設計遊戲名稱欄位，只能拿遊戲ID編號來一一比對取得遊戲名稱 --%>
@@ -51,7 +51,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
       <nav>
      	<h2 class="title2">${selectName}</h2>
         <ul>
-          <li><a href="http://localhost:8080/Martket/GetSelectedProps?gameId=${props[0].gameId}">道具總覽</a></li>
+          <li><a href="http://localhost:8080/GameFighter/dynamicView/market/GetSelectedProps?gameId=${props[0].gameId}">道具總覽</a></li>
           <li><a href="${pageContext.request.contextPath}/GetSelectedMarketOrders">拍賣場</a></li>
           <li><a href="">成交紀錄</a></li>
           <li><a href="" id="">我的倉庫</a></li>
@@ -77,7 +77,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
               <tr>
                 <td>${searchOKprops.propId}</td>
                 <td>${searchOKprops.propName}</td>
-                <td><img src="images/${searchOKprops.propImagePath}"  alt="${searchOKprops.propImagePath}" width="65" height="90"></td>
+                <td><img src="images/market/${searchOKprops.propImagePath}"  alt="${searchOKprops.propImagePath}" width="65" height="90"></td>
                 <td>${searchOKprops.propType}</td>
                 <td>${searchOKprops.propRarity}</td>
                 <td>${searchOKprops.propDescription}</td>

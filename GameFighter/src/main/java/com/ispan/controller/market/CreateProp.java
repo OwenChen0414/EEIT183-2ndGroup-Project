@@ -1,4 +1,4 @@
-package com.market.controller;
+package com.ispan.controller.market;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.servlet.annotation.WebServlet;
@@ -9,6 +9,7 @@ import jakarta.servlet.http.HttpSession;
 import jakarta.servlet.http.Part;
 import jakarta.websocket.Session;
 
+import java.io.Console;
 import java.io.IOException;
 import java.sql.Timestamp;
 import java.sql.Connection;
@@ -21,10 +22,10 @@ import java.util.List;
 
 import javax.naming.NamingException;
 
-import com.market.bean.GameBean;
-import com.market.bean.PropBean;
-import com.market.dao.PropDao;
-import com.market.util.JndiToJdbc;
+import com.ispan.bean.market.GameBean;
+import com.ispan.bean.market.PropBean;
+import com.ispan.dao.market.PropDao;
+import com.ispan.util.market.JndiToJdbc;
 @WebServlet("/CreateProp")
 @MultipartConfig
 
@@ -55,7 +56,7 @@ public class CreateProp extends HttpServlet {
 		//上傳圖片
 		String filename =part.getSubmittedFileName();
 		response.getWriter().write(filename);
-		String uploadDir = "D:\\ServletProject2Workspace\\Martket\\src\\main\\webapp\\images\\";
+		String uploadDir = "D:\\ProjectWorkspace\\GameFighter\\src\\main\\webapp\\images\\market\\";
 		part.write(uploadDir + filename);
         prop.setPropImagePath(filename);
         //呼叫DAO

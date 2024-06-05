@@ -1,14 +1,7 @@
-package com.ispan.controller.project1crud;
+package com.ispan.controller.playWithOthers;
 
 import java.io.IOException;
-import java.sql.Connection;
-import javax.naming.InitialContext;
-import java.sql.PreparedStatement;
-import javax.sql.DataSource;
-
-import com.ispanwei.bean.PlayUserBean;
-
-import javax.naming.Context;
+import com.ispan.dao.playWithOthers.PwDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -26,7 +19,7 @@ public class DeleteUser extends HttpServlet {
 
 		try {
 			pwDAO.deleteUser(id);
-			request.getRequestDispatcher("/Project1/DeleteUser2.jsp").forward(request, response);
+			request.getRequestDispatcher("/dynamicView/playWithOthers/DeleteUser2.jsp").forward(request, response);
 
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -1,7 +1,4 @@
-package com.ispan.bean.PlayUserBean;
-
-
-import java.sql.*;
+package com.ispan.bean.playWithOthers;
 
 public class PlayUserBean implements java.io.Serializable {
 	private static final long serialVersionUID = 1L;
@@ -86,6 +83,7 @@ public class PlayUserBean implements java.io.Serializable {
 	public void setPlayerPhoto(String playerPhoto) {
 		this.playerPhoto = playerPhoto;
 	}
+	
 
 
 }

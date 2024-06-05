@@ -47,7 +47,7 @@ public class GamesDAO {
 		PreparedStatement preparedStatement = null;
 		try {
 			Context context = new InitialContext();
-			DataSource dataSource = (DataSource) context.lookup("java:/comp/env/jdbc/servdb");
+			DataSource dataSource = (DataSource) context.lookup("java:/comp/env/jdbc/db16");
 			connection =  dataSource.getConnection();
 			preparedStatement = connection.prepareStatement(INSERT);
 			preparedStatement.setString(1,game.getGameName());
@@ -76,7 +76,7 @@ public class GamesDAO {
 		PreparedStatement preparedStatement = null;
 		try {
 			Context context = new InitialContext();
-			DataSource dataSource = (DataSource) context.lookup("java:/comp/env/jdbc/servdb");
+			DataSource dataSource = (DataSource) context.lookup("java:/comp/env/jdbc/db16");
 			connection =  dataSource.getConnection();
 			preparedStatement = connection.prepareStatement(INSERT_CATEGORY);
 			preparedStatement.setInt(1,categorys.getGameId());
@@ -102,7 +102,7 @@ public class GamesDAO {
 		int id = 0;
 		try {
 			Context context = new InitialContext();
-			DataSource dataSource = (DataSource) context.lookup("java:/comp/env/jdbc/servdb");
+			DataSource dataSource = (DataSource) context.lookup("java:/comp/env/jdbc/db16");
 			connection =  dataSource.getConnection();
 			preparedStatement = connection.prepareStatement(GET_CATEGORY_ID);
 			preparedStatement.setString(1, name);
@@ -131,7 +131,7 @@ public class GamesDAO {
 		String name = "";
 		try {
 			Context context = new InitialContext();
-			DataSource dataSource = (DataSource) context.lookup("java:/comp/env/jdbc/servdb");
+			DataSource dataSource = (DataSource) context.lookup("java:/comp/env/jdbc/db16");
 			connection =  dataSource.getConnection();
 			preparedStatement = connection.prepareStatement(GET_CATEGORY_Name);
 			preparedStatement.setInt(1, id);
@@ -160,7 +160,7 @@ public class GamesDAO {
 		ResultSet resultSet = null;
 		try {
 			Context context = new InitialContext();
-			DataSource dataSource = (DataSource) context.lookup("java:/comp/env/jdbc/servdb");
+			DataSource dataSource = (DataSource) context.lookup("java:/comp/env/jdbc/db16");
 			connection =  dataSource.getConnection();
 			preparedStatement = connection.prepareStatement(GET_ALL);
 			resultSet = preparedStatement.executeQuery();
@@ -208,7 +208,7 @@ public class GamesDAO {
 		ResultSet resultSet = null;
 		try {
 			Context context = new InitialContext();
-			DataSource dataSource = (DataSource) context.lookup("java:/comp/env/jdbc/servdb");
+			DataSource dataSource = (DataSource) context.lookup("java:/comp/env/jdbc/db16");
 			connection =  dataSource.getConnection();
 			preparedStatement = connection.prepareStatement(GET_ALL_ON);
 			resultSet = preparedStatement.executeQuery();
@@ -256,7 +256,7 @@ public class GamesDAO {
 		Game game = new Game();
 		try {
 			Context context = new InitialContext();
-			DataSource dataSource = (DataSource) context.lookup("java:/comp/env/jdbc/servdb");
+			DataSource dataSource = (DataSource) context.lookup("java:/comp/env/jdbc/db16");
 			connection =  dataSource.getConnection();
 			preparedStatement = connection.prepareStatement(GET_ONE);
 			preparedStatement.setInt(1, id);
@@ -303,7 +303,7 @@ public class GamesDAO {
 		Game game = new Game();
 		try {
 			Context context = new InitialContext();
-			DataSource dataSource = (DataSource) context.lookup("java:/comp/env/jdbc/servdb");
+			DataSource dataSource = (DataSource) context.lookup("java:/comp/env/jdbc/db16");
 			connection =  dataSource.getConnection();
 			preparedStatement = connection.prepareStatement(GET_ONE_NAME);
 			preparedStatement.setString(1, name);
@@ -350,7 +350,7 @@ public class GamesDAO {
 		ResultSet resultSet = null;
 		try {
 			Context context = new InitialContext();
-			DataSource dataSource = (DataSource) context.lookup("java:/comp/env/jdbc/servdb");
+			DataSource dataSource = (DataSource) context.lookup("java:/comp/env/jdbc/db16");
 			connection =  dataSource.getConnection();
 			preparedStatement = connection.prepareStatement(GET_GAME_CATEGORYS);
 			preparedStatement.setInt(1, gameId);
@@ -382,7 +382,7 @@ public class GamesDAO {
 		ResultSet resultSet = null;
 		try {
 			Context context = new InitialContext();
-			DataSource dataSource = (DataSource) context.lookup("java:/comp/env/jdbc/servdb");
+			DataSource dataSource = (DataSource) context.lookup("java:/comp/env/jdbc/db16");
 			connection =  dataSource.getConnection();
 			preparedStatement = connection.prepareStatement(GET_ALL_CATEGORY);
 			resultSet = preparedStatement.executeQuery();
@@ -409,7 +409,7 @@ public class GamesDAO {
 		PreparedStatement preparedStatement = null;
 		try {
 			Context context = new InitialContext();
-			DataSource dataSource = (DataSource) context.lookup("java:/comp/env/jdbc/servdb");
+			DataSource dataSource = (DataSource) context.lookup("java:/comp/env/jdbc/db16");
 			connection =  dataSource.getConnection();
 			preparedStatement = connection.prepareStatement(UPDATE_ONMARKET);
 			preparedStatement.setInt(1,id);
@@ -433,7 +433,7 @@ public class GamesDAO {
 		PreparedStatement preparedStatement = null;
 		try {
 			Context context = new InitialContext();
-			DataSource dataSource = (DataSource) context.lookup("java:/comp/env/jdbc/servdb");
+			DataSource dataSource = (DataSource) context.lookup("java:/comp/env/jdbc/db16");
 			connection =  dataSource.getConnection();
 			preparedStatement = connection.prepareStatement(UPDATE_REMOVE_GAME);
 			preparedStatement.setInt(1,id);
@@ -457,7 +457,7 @@ public class GamesDAO {
 		PreparedStatement preparedStatement = null;
 		try {
 			Context context = new InitialContext();
-			DataSource dataSource = (DataSource) context.lookup("java:/comp/env/jdbc/servdb");
+			DataSource dataSource = (DataSource) context.lookup("java:/comp/env/jdbc/db16");
 			connection =  dataSource.getConnection();
 			preparedStatement = connection.prepareStatement(UPDATE_INFO);
 			preparedStatement.setString(1,game.getGameName());
@@ -487,7 +487,7 @@ public class GamesDAO {
 		PreparedStatement preparedStatement = null;
 		try {
 			Context context = new InitialContext();
-			DataSource dataSource = (DataSource) context.lookup("java:/comp/env/jdbc/servdb");
+			DataSource dataSource = (DataSource) context.lookup("java:/comp/env/jdbc/db16");
 			connection =  dataSource.getConnection();
 			preparedStatement = connection.prepareStatement(DELETE);
 			preparedStatement.setInt(1,id);
@@ -511,7 +511,7 @@ public class GamesDAO {
 		PreparedStatement preparedStatement = null;
 		try {
 			Context context = new InitialContext();
-			DataSource dataSource = (DataSource) context.lookup("java:/comp/env/jdbc/servdb");
+			DataSource dataSource = (DataSource) context.lookup("java:/comp/env/jdbc/db16");
 			connection =  dataSource.getConnection();
 			preparedStatement = connection.prepareStatement(DELETE_CATEGORY);
 			preparedStatement.setInt(1,id);

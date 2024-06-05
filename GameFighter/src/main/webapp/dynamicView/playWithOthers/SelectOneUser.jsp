@@ -1,3 +1,9 @@
+<%@page import="java.util.*"%>
+		<%@page import="com.ispan.bean.playWithOthers.PlayUserBean" %>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
+			<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+	
 <!DOCTYPE html>
 <html>
 
@@ -11,185 +17,196 @@
 </head>
 <style>
 body {
-	margin: 0;
-	padding: 0;
-	font-family: Arial, sans-serif;
-	background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-}
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+			background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+		}
 
-.sidebar {
-	background-color: #fff;
-	width: 200px;
-	height: 100vh;
-	position: fixed;
-	left: 0;
-	top: 0;
-	transition: margin-left 0.3s ease;
-}
+		.sidebar {
+			background-color: #fff;
+			width: 200px;
+			height: 100vh;
+			position: fixed;
+			left: 0;
+			top: 0;
+			transition: margin-left 0.3s ease;
+		}
 
-.content {
-	margin-left: 200px;
-	margin-right: 50px;
-	padding: 20px;
-}
+		.content {
+			margin-left: 200px;
+			margin-right: 50px;
+			padding: 20px;
+		}
 
-a {
-	text-decoration: none;
-	color: inherit;
-}
+		a {
+			text-decoration: none;
+			color: inherit;
+		}
 
-table {
-	width: 100%;
-	border-collapse: collapse;
-}
+		table {
+			width: 100%;
+			border-collapse: collapse;
+		}
 
-th, td {
-	padding: 8px;
-	text-align: center;
-	border: 1px solid #ddd;
-}
+		th,
+		td {
+			margin-top: 10px;
+			padding: 8px;
+			text-align: center;
+			border: 1px solid #ddd;
+		}
 
-tr {
-	border-radius: 10px;
-}
+		tr {
+			border-radius: 10px;
+		}
 
-th {
-	background-color: #f2f2f2;
-}
+		th {
+			background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+		}
 
-#nickname {
-	height: 25px;
-	width: 250px;
-	margin-top: 10px;
-	margin-bottom: 6px;
-	border-radius: 5px;
-}
+		#nickname {
+			height: 25px;
+			width: 250px;
+			margin-top: 10px;
+			margin-bottom: 6px;
+			border-radius: 5px;
+		}
 
-#nickname:hover {
-	border-color: rgba(0, 0, 0, 0.496);
-}
+		#nickname:hover {
+			border-color: rgba(0, 0, 0, 0.496);
+		}
 
-.outside {
-	padding: 20px;
-	/* 	border: 1px solid red; */
-	border-radius: 25px;
-	background-color: #fff;
-}
+		.selectButton {
+			height: 31px;
+			border-radius: 6px;
+		}
 
-.outside:hover {
-	box-shadow: 2px 2px 4px rgba(0, 0, 0, .6);
-	transition: 0.3s ease;
-}
+		.selectButton:hover {
+			border-color: rgba(0, 0, 0, 0.496);
+		}
 
-.buttonTool {
-	display: flex;
-	justify-content: space-between;
-}
 
-.selectButton {
-	height: 31px;
-	border-radius: 6px;
-}
+		.createButton {
+			right: 0px;
+			height: 31px;
+			width: 80px;
+			border-radius: 6px;
+			background-color: lightblue;
+		}
 
-.selectButton:hover {
-	border-color: rgba(0, 0, 0, 0.496);
-}
+		.createButton:hover {
+			box-shadow: 2px 2px 4px rgba(8, 190, 184, 0.55);
+		}
 
-.createButton {
-	right: 0px;
-	height: 31px;
-	width: 80px;
-	border-radius: 6px;
-	background-color: rgb(0, 255, 213);
-	border-color: rgba(0, 255, 255, 0.594);
-}
+		.outside {
+			padding: 20px;
+			/* border: 1px solid red; */
+			border-radius: 25px;
+			background-color: #fff;
 
-.createButton:hover {
-	border-color: rgba(0, 0, 0, 0.496);
-}
+		}
 
-.selectButtonDiv {
-	margin: 10px;
-	display: flex;
-	justify-content: space-between;
-}
+		.outside:hover {
+			box-shadow: 2px 2px 4px rgba(0, 0, 0, .6);
+			transition: 0.5s ease;
+		}
 
-.selectText {
-	width: 200px;
-	height: 25px;
-	border-radius: 8px;
-}
 
-.sidebar {
-	background-color: #fff;
-	width: 200px;
-	height: 100vh;
-	position: fixed;
-	left: 0;
-	top: 0;
-	transition: margin-left 0.3s ease;
-}
 
-.sidebar ul {
-	list-style-type: none;
-	padding: 0;
-	margin-top: 50px;
-}
+		.sidebar {
+			background-color: #fff;
+			width: 200px;
+			height: 100vh;
+			position: fixed;
+			left: 0;
+			top: 0;
+			transition: margin-left 0.3s ease;
+		}
 
-.sidebar li {
-	margin: 5px;
-	padding: 10px;
-	border-radius: 15px;
-	border: 2px solid #fff;
-}
+		.sidebar ul {
+			list-style-type: none;
+			padding: 0;
+			margin-top: 50px;
+		}
 
-.sidebar li a {
-	display: block;
-	width: 150px;
-	height: 20px;
-	text-decoration: none;
-	color: inherit;
-}
+		.sidebar li {
+			margin: 5px;
+			padding: 10px;
+			border-radius: 15px;
+			border: 2px solid #fff;
+		}
 
-.sidebar li:hover {
-	border: 2px solid rgba(144, 144, 144, 0.5);
-	transition: 1.5s ease;
-}
+		.sidebar li a {
+			display: block;
+			width: 150px;
+			height: 20px;
+			text-decoration: none;
+			color: inherit;
+		}
 
-.toggle-button {
-	position: absolute;
-	top: 10px;
-	left: 5px;
-	cursor: pointer;
-	transition: margin-left 0.9s ease;
-	border-radius: 25px;
-}
+		.sidebar li:hover {
+			border: 2px solid rgba(144, 144, 144, 0.5);
+			transition: 1.5s ease;
+		}
 
-.toggle-button:hover {
-	background-color: rgba(169, 169, 169, 0.138);
-}
+		.toggle-button {
+			position: absolute;
+			top: 10px;
+			left: 5px;
+			cursor: pointer;
+			transition: margin-left 0.9s ease;
+			border-radius: 25px;
+		}
 
-.createTd {
-	padding: 4px;
-	background-color: lightgreen;
-	border-radius: 8px;
-	font-family: Arial, sans-serif;
-}
+		.toggle-button:hover {
+			background-color: rgba(169, 169, 169, 0.138);
+		}
 
-.deleteTd {
-	padding: 4px;
-	background-color: coral;
-	border-radius: 8px;
-	font-family: Arial, sans-serif;
-}
+		img {
+			width: 68px;
+			height: 85px;
+		}
 
-.createTd:hover {
-	border: 1px solid gray;
-}
+		.selectButtonDiv {
+			margin: 10px;
+			display: flex;
+			justify-content: space-between;
+		}
 
-.deleteTd:hover {
-	border: 1px solid gray;
-}
+		.selectText {
+			width: 200px;
+			height: 25px;
+			border-radius: 8px;
+		}
+
+		.table {
+			border-radius: 10px;
+		}
+
+		.createTd {
+			padding: 4px;
+			background-color: lightgreen;
+			border-radius: 8px;
+			font-family: Arial, sans-serif;
+
+		}
+
+		.deleteTd {
+			padding: 4px;
+			background-color: coral;
+			border-radius: 8px;
+			font-family: Arial, sans-serif;
+
+		}
+
+		.createTd:hover {
+			border: 1px solid gray;
+		}
+
+		.deleteTd:hover {
+			border: 1px solid gray;
+		}
 </style>
 <body>
 	<script>
@@ -213,10 +230,7 @@ th {
 		});
 	</script>
 	<div class="content">
-		<%@page import="java.util.*"%>
-		<%@page import="com.ispanwei.bean.PlayUserBean"%>
-		<%@ page language="java" contentType="text/html; charset=utf-8"
-			pageEncoding="utf-8"%>
+
 
 		<div class="sidebar">
 			<div class="toggle-button">
@@ -228,7 +242,7 @@ th {
 			</div>
 			<ul>
 				<li><a
-					href="${pageContext.request.contextPath}/Project1/cms.jsp">返回前頁</a></li>
+					href="${pageContext.request.contextPath}/dynamicView/playWithOthers/cms.jsp">返回前頁</a></li>
 			</ul>
 		</div>
 		<h1>伴遊資料管理</h1>
@@ -236,12 +250,13 @@ th {
 			<div class="selectButtonDiv">
 				<form method="post"
 					action="${pageContext.request.contextPath}/fuzzySearch">
-					<input class="selectText" type="text" name="nickname" placeholder="搜尋資料">
-					<input class="selectButton" type="submit" value="查詢" />
+					<input class="selectText" type="text" name="nickname"
+						placeholder="搜尋資料"> <input class="selectButton"
+						type="submit" value="查詢" />
 				</form>
 
 				<form method="post"
-					action="${pageContext.request.contextPath}/Project1/CreateUser.jsp">
+					action="${pageContext.request.contextPath}/dynamicView/playWithOthers/CreateUser.jsp">
 					<input class="createButton" type="submit" value="新增資料" />
 				</form>
 			</div>
@@ -249,7 +264,7 @@ th {
 
 			<div align="center">
 				<jsp:useBean id="user" scope="request"
-					class="com.ispanwei.bean.PlayUserBean" />
+					class="com.ispan.bean.playWithOthers.PlayUserBean" />
 
 
 				<table border="1" style="background-color: white">
@@ -267,7 +282,8 @@ th {
 						<th></th>
 					</tr>
 
-					<c:set var="imagePath" value="${pageContext.request.contextPath}/image/" />
+					<c:set var="imagePath" value="${pageContext.request.contextPath}/images/playWithOthers/" />
+
 
 					<tr>
 						<td>${user.id}</td>

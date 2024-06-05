@@ -1,4 +1,4 @@
-package com.ispan.controller.project1crud;
+package com.ispan.controller.playWithOthers;
 
 
 
@@ -10,9 +10,8 @@ import java.sql.ResultSet;
 
 import javax.sql.DataSource;
 
-import com.ispanwei.bean.EmpBean;
-import com.ispanwei.bean.PlayUserBean;
-
+import com.ispan.bean.playWithOthers.PlayUserBean;
+import com.ispan.dao.playWithOthers.PwDAO;
 import javax.naming.Context;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;

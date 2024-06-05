@@ -1,5 +1,5 @@
 <%@page import="java.util.*"%>
-<%@page import="com.ispanwei.bean.EmpBean"%>
+<%@page import="com.ispan.bean.playWithOthers.PlayUserBean"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <!DOCTYPE html>

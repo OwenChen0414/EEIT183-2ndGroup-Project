@@ -1,4 +1,4 @@
-package com.market.controller;
+package com.ispan.controller.market;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
@@ -13,12 +13,12 @@ import java.sql.SQLException;
 
 import javax.naming.NamingException;
 
-import com.market.bean.PropBean;
-import com.market.dao.PropDao;
-import com.market.util.JndiToJdbc;
+import com.ispan.bean.market.PropBean;
+import com.ispan.dao.market.PropDao;
+import com.ispan.util.market.JndiToJdbc;
 
 @WebServlet("/UpdateProp")
-@MultipartConfig
+@MultipartConfig()
 public class UpdateProp extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
@@ -36,7 +36,7 @@ public class UpdateProp extends HttpServlet {
         Part part = request.getPart("propImagePath");
         String filename = part.getSubmittedFileName();
         prop.setPropImagePath(filename);
-        String uploadDir = "D:\\ServletProject2Workspace\\Martket\\src\\main\\webapp\\images\\";
+        String uploadDir = "D:\\ProjectWorkspace\\GameFighter\\src\\main\\webapp\\images\\market\\";
 
         try {
             if (!filename.isEmpty()) {

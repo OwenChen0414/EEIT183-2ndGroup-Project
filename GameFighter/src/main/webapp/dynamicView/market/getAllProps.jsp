@@ -8,7 +8,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>遊戲道具交易後台</title>
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css" />
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/market/style.css" />
 </head>
 <body>
   <header>
@@ -30,7 +30,7 @@
         <input type="text" id="searchPropName" name="searchPropName" required />
         <input type="submit" value="確認" />
       </form>
-      <a id="create" href="http://localhost:8080/Martket/jsp/createProp.jsp">新增道具</a>
+      <a id="create" href="http://localhost:8080/GameFighter/dynamicView/market/createProp.jsp">新增道具</a>
     </div>
 
     <%-- 因道具表單沒有設計遊戲名稱欄位，只能拿遊戲ID編號來一一比對取得遊戲名稱 --%>
@@ -48,7 +48,7 @@
     <nav>
       <h2 class="title2">${selectName}</h2>
       <ul>
-        <li><a href="http://localhost:8080/Martket/GetSelectedProps?gameId=${props[0].gameId}">道具總覽</a></li>
+        <li><a href="http://localhost:8080/GameFighter/GetSelectedProps?gameId=${props[0].gameId}">道具總覽</a></li>
         <li><a href="${pageContext.request.contextPath}/GetSelectedMarketOrders">拍賣場</a></li>
         <li><a href="#">成交紀錄</a></li>
         <li><a href="#">我的倉庫</a></li>
@@ -75,7 +75,7 @@
           <tr>
             <td>${prop.propId}</td>
             <td>${prop.propName}</td>
-            <td><img src="images/${prop.propImagePath}" alt="${prop.propImagePath}" width="65" height="90"></td>
+            <td><img src="images/market/${prop.propImagePath}" alt="${prop.propImagePath}" width="65" height="90"></td>
             <td>${prop.propType}</td>
             <td>${prop.propRarity}</td>
             <td>${prop.propDescription}</td>

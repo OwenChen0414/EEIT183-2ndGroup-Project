@@ -1,11 +1,12 @@
-package com.ispan.controller.project1crud;
+package com.ispan.controller.playWithOthers;
 
 
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-import com.ispanwei.bean.PlayUserBean;
+import com.ispan.bean.playWithOthers.PlayUserBean;
+import com.ispan.dao.playWithOthers.PwDAO;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -26,7 +27,7 @@ public class AllUsers extends HttpServlet {
             // 在PwDAO實例上調用getAllUsers方法
             List<PlayUserBean> users = pwDAO.getAllUsers();
             request.setAttribute("users", users);
-            request.getRequestDispatcher("/Project1/SelectAll.jsp").forward(request, response);
+            request.getRequestDispatcher("/dynamicView/playWithOthers/SelectAll.jsp").forward(request, response);
         } catch (SQLException e) {
             e.printStackTrace();
         }

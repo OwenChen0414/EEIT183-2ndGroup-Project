@@ -1,4 +1,4 @@
-package com.market.dao;
+package com.ispan.dao.market;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -11,8 +11,8 @@ import javax.naming.NamingException;
 
 import org.eclipse.tags.shaded.org.apache.bcel.verifier.exc.StaticCodeConstraintException;
 
-import com.market.bean.PropBean;
-import com.market.util.JndiToJdbc;
+import com.ispan.bean.market.PropBean;
+import com.ispan.util.market.JndiToJdbc;
 
 public class PropDao {
     private static final String GET_SELECTED_PROPS = "SELECT * FROM allProps WHERE gameId = ?";

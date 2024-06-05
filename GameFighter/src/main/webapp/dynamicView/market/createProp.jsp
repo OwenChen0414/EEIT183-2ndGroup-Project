@@ -8,11 +8,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>新增道具</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/create.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/market/create.css">
 </head>
 <body>
     <h2 class="center">新增道具</h2>
-    <form method="post" action="../CreateProp" class="center" enctype="multipart/form-data">
+    <form method="post" action="../../CreateProp" class="center" enctype="multipart/form-data">
         <label for="SelectGame">遊戲:</label>
         <select id="SelectGame" name="gameId" required>
             <option value=""></option>

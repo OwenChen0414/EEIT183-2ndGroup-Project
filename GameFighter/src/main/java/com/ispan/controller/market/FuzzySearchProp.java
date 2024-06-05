@@ -1,4 +1,4 @@
-package com.market.controller;
+package com.ispan.controller.market;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -18,8 +18,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import javax.naming.NamingException;
-import com.market.bean.PropBean;
-import com.market.util.JndiToJdbc;
+import com.ispan.bean.market.PropBean;
+import com.ispan.util.market.JndiToJdbc;
 @WebServlet("/FuzzySearchProp")
 
 public class FuzzySearchProp extends HttpServlet {
@@ -31,7 +31,7 @@ public class FuzzySearchProp extends HttpServlet {
         List<PropBean> props = (List<PropBean>) session.getAttribute("props");
         List<PropBean> searchOKprops = props.stream().filter(prop -> prop.getPropName().contains(searchPropName)).collect(Collectors.toList());
         request.setAttribute("searchOKprops", searchOKprops);
-		request.getRequestDispatcher("/jsp/fuzzySearchOkProp.jsp").forward(request, response);
+		request.getRequestDispatcher("/dynamicView/market/fuzzySearchOkProp.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

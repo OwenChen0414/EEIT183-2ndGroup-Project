@@ -1,8 +1,11 @@
 
-package com.ispan.controller.project1crud;
+package com.ispan.controller.playWithOthers;
 
 import java.io.IOException;
-import com.ispanwei.bean.PlayUserBean;
+
+import com.ispan.bean.playWithOthers.PlayUserBean;
+import com.ispan.dao.playWithOthers.PwDAO;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.servlet.annotation.WebServlet;
@@ -12,7 +15,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.Part;
 
 @WebServlet("/CreateUser")
-@MultipartConfig(location = "D:\\Servlet\\wordspace\\JSP\\src\\main\\webapp\\image")
+@MultipartConfig(location = "D:\\ProjectWorkspace\\GameFighter\\src\\main\\webapp\\images\\playWithOthers")
 public class CreateUser extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -52,7 +55,7 @@ public class CreateUser extends HttpServlet {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-        request.getRequestDispatcher("/Project1/CreateUser2.jsp").forward(request, response);
+        request.getRequestDispatcher("/dynamicView/playWithOthers/CreateUser2.jsp").forward(request, response);
 	}
 
 	private String getFileName(Part photo, String nickname) {
