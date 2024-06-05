@@ -1,35 +1,36 @@
-package com.ispan.controller.texts;
+package com.ispan.controller.project1crud;
 
 import java.io.IOException;
-import com.ispan.dao.texts.TextsDAO;
+import java.sql.Connection;
+import javax.naming.InitialContext;
+import java.sql.PreparedStatement;
+import javax.sql.DataSource;
+
+import com.ispanwei.bean.PlayUserBean;
+
+import javax.naming.Context;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/DeleteText")
-public class DeleteText extends HttpServlet {
+@WebServlet("/DeleteUser")
+public class DeleteUser extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private TextsDAO textsDAO = new TextsDAO();
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String textsId = request.getParameter("textsId");
+		String id = request.getParameter("id");
+		PwDAO pwDAO = new PwDAO();
 
 		try {
-			if (!textsDAO.existsById(textsId)) {
-                request.setAttribute("message", "編號不存在，請輸入正確編號");
-                request.getRequestDispatcher("/dynamicView/texts/DeleteText.jsp").forward(request, response);
-                return;
-			}
-			textsDAO.delete(textsId);
-			response.sendRedirect("GetAllTexts");
+			pwDAO.deleteUser(id);
+			request.getRequestDispatcher("/Project1/DeleteUser2.jsp").forward(request, response);
+
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new ServletException("數據刪除失敗", e);
 		}
-
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)

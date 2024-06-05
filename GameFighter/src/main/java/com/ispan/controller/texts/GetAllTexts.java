@@ -4,10 +4,8 @@ import java.io.IOException;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-
 import com.ispan.bean.texts.TextsBean;
 import com.ispan.dao.texts.TextsDAO;
-
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;

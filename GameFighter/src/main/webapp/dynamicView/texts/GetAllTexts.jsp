@@ -8,7 +8,12 @@
     <meta charset="UTF-8">
     <title>文章詳細資料(管理員)</title>
     <style type="text/css">
-         html, body {
+    @font-face {
+        font-family: 'PixelFont';
+        src: url('${pageContext.request.contextPath}/fonts/ark-pixel-12px-monospaced-zh_tw.ttf') format('truetype');
+    }
+              
+         html, body {            
             margin: 0;
             padding: 0;
             height: 100%;
@@ -16,11 +21,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-image: url('${pageContext.request.contextPath}/images/texts/123.jpg');
+            background-image: url('${pageContext.request.contextPath}/images/123.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
-            font-family: Arial, sans-serif;
+            font-family: 'PixelFont', Arial, sans-serif;
         }
 
         #d0 {

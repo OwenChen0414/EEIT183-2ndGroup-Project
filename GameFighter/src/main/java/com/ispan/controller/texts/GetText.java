@@ -1,10 +1,8 @@
 package com.ispan.controller.texts;
 
 import java.io.IOException;
-
 import com.ispan.bean.texts.TextsBean;
 import com.ispan.dao.texts.TextsDAO;
-
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -22,8 +20,8 @@ public class GetText extends HttpServlet {
 		try {
 			TextsBean txt = textsDAO.get(textId);
 			if (txt == null) {
-                request.setAttribute("message", "编号不存在，请输入正确的编号！");
-                request.getRequestDispatcher("dynamicView/texts/DeleteText.jsp").forward(request, response);
+                request.setAttribute("message", "編號不存在，請輸入正確編號");
+                request.getRequestDispatcher("/dynamicView/texts/DeleteText.jsp").forward(request, response);
                 return;
             }
 			request.setAttribute("txt", txt);

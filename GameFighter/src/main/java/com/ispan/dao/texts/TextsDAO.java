@@ -5,11 +5,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.naming.Context;
-import javax.naming.InitialContext;
 import javax.sql.DataSource;
-
+import javax.naming.InitialContext;
 import com.ispan.bean.texts.TextsBean;
 
 public class TextsDAO implements GenericDAO<TextsBean, String> {

@@ -1,10 +1,8 @@
 package com.ispan.controller.texts;
 
 import java.io.IOException;
-
 import com.ispan.bean.texts.TextsBean;
 import com.ispan.dao.texts.TextsDAO;
-
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -30,8 +28,15 @@ public class UpdateText extends HttpServlet {
 		txt.setUpdatedTime(request.getParameter("updatedTime").replace('T', ' '));
 		txt.setDoneTime(request.getParameter("doneTime").replace('T', ' '));
 
+		String textId = request.getParameter("textsId");
 		try {
 			textsDAO.update(txt);
+			TextsBean txts = textsDAO.get(textId);
+			if (txts == null) {
+                request.setAttribute("message", "編號不存在，請輸入正確編號");
+                request.getRequestDispatcher("/dynamicView/texts/DeleteText.jsp").forward(request, response);
+                return;
+            }
 			response.sendRedirect("GetAllTexts");
 		} catch (Exception e) {
 			e.printStackTrace();

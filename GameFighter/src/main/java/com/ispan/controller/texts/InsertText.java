@@ -2,10 +2,8 @@ package com.ispan.controller.texts;
 
 
 import java.io.IOException;
-
 import com.ispan.bean.texts.TextsBean;
 import com.ispan.dao.texts.TextsDAO;
-
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
