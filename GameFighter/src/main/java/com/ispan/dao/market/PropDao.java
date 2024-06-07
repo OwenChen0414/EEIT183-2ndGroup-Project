@@ -9,8 +9,6 @@ import java.util.List;
 
 import javax.naming.NamingException;
 
-import org.eclipse.tags.shaded.org.apache.bcel.verifier.exc.StaticCodeConstraintException;
-
 import com.ispan.bean.market.PropBean;
 import com.ispan.util.market.JndiToJdbc;
 

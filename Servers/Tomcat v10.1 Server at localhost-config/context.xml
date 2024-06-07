@@ -23,7 +23,7 @@
     <WatchedResource>${catalina.base}/conf/web.xml</WatchedResource>
 	<ResourceLink type="javax.sql.DataSource" global="jdbc/db11" name="jdbc/db11"/>
 	<ResourceLink type="javax.sql.DataSource" global="jdbc/db29" name="jdbc/db29"/>
-	<ResourceLink type="javax.sql.DataSource" global="jdbc/servdb" name="jdbc/servdb"/>
+	<ResourceLink type="javax.sql.DataSource" global="jdbc/db16" name="jdbc/db16"/>
 	<ResourceLink type="javax.sql.DataSource" global="jdbc/db37" name="jdbc/db37"/>
 	<ResourceLink type="javax.sql.DataSource" global="jdbc/db20" name="jdbc/db20"/>
 	<ResourceLink type="javax.sql.DataSource" global="jdbc/db38" name="jdbc/db38"/>

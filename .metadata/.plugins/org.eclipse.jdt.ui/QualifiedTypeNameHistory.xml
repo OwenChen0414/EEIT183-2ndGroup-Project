@@ -1,15 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="util.CreateConnection"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebFilter"/>
-    <fullyQualifiedTypeName name="member.beans.MemLevel"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebServlet"/>
-    <fullyQualifiedTypeName name="com.ispan.bean.Members"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
-    <fullyQualifiedTypeName name="com.ispan.util.CreateConnection"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
-    <fullyQualifiedTypeName name="com.ispan.bean.Member"/>
-    <fullyQualifiedTypeName name="com.ispan.dao.MemberDao"/>
-</qualifiedTypeNameHistroy>
+<qualifiedTypeNameHistroy/>

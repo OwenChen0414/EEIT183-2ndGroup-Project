@@ -26,13 +26,13 @@ public class LastPageFilter extends HttpFilter implements Filter {
 		System.out.println("filter.run()");
 		List<String> URL_LIST = Arrays.asList("Login","UpdateMember","InsertMember","DelectMember");
 		HttpServletRequest httpServletRequest = (HttpServletRequest)request;
-		HttpSession session = httpServletRequest.getSession();
 		String lastPage = httpServletRequest.getHeader("Referer");
 		if (lastPage!=null) {
 			lastPage = lastPage.substring(lastPage.lastIndexOf("member/")+7);
 			System.out.println("lastPage = "+lastPage);
 			if (!URL_LIST.contains(lastPage)) {
 				System.out.println("lastPage => "+lastPage);
+				HttpSession session = httpServletRequest.getSession();
 				session.setAttribute("lastPage", lastPage);
 			}
 		}

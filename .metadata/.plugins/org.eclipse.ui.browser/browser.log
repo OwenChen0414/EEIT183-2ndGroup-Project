@@ -1,55 +1,11 @@
 
-5月 28, 2024 15:29:28.46 NEW SESSION
-5月 28, 2024 15:29:28.46 Created TensorFlow Lite XNNPACK delegate for CPU.
-5月 28, 2024 15:35:55.44 Created TensorFlow Lite XNNPACK delegate for CPU.
-5月 28, 2024 15:36:17.99 Created TensorFlow Lite XNNPACK delegate for CPU.
-5月 28, 2024 15:52:15.52 Created TensorFlow Lite XNNPACK delegate for CPU.
-5月 28, 2024 15:54:02.39 Created TensorFlow Lite XNNPACK delegate for CPU.
-5月 28, 2024 15:54:48.90 [2716:12092:0528/155448.900:ERROR:sharing_service.cc(250)] Device un-registration failed with fatal error
-5月 28, 2024 15:55:59.35 Created TensorFlow Lite XNNPACK delegate for CPU.
-5月 28, 2024 15:56:44.14 Created TensorFlow Lite XNNPACK delegate for CPU.
+6月 04, 2024 13:13:15.95 NEW SESSION
+6月 04, 2024 13:13:15.96 Created TensorFlow Lite XNNPACK delegate for CPU.
+6月 04, 2024 13:13:34.85 Created TensorFlow Lite XNNPACK delegate for CPU.
+6月 04, 2024 13:36:14.55 Created TensorFlow Lite XNNPACK delegate for CPU.
+6月 04, 2024 13:36:54.48 Created TensorFlow Lite XNNPACK delegate for CPU.
+6月 04, 2024 14:03:01.39 Created TensorFlow Lite XNNPACK delegate for CPU.
+6月 04, 2024 14:06:14.39 Created TensorFlow Lite XNNPACK delegate for CPU.
 
-5月 28, 2024 16:02:40.43 NEW SESSION
-5月 28, 2024 16:02:40.44 Created TensorFlow Lite XNNPACK delegate for CPU.
-5月 28, 2024 16:03:51.07 Created TensorFlow Lite XNNPACK delegate for CPU.
-5月 28, 2024 16:04:33.95 Created TensorFlow Lite XNNPACK delegate for CPU.
-5月 28, 2024 16:07:39.13 Created TensorFlow Lite XNNPACK delegate for CPU.
-5月 28, 2024 16:17:57.64 Created TensorFlow Lite XNNPACK delegate for CPU.
-5月 28, 2024 16:24:07.91 Created TensorFlow Lite XNNPACK delegate for CPU.
-
-5月 29, 2024 09:02:42.82 NEW SESSION
-5月 29, 2024 09:02:42.83 Created TensorFlow Lite XNNPACK delegate for CPU.
-5月 29, 2024 10:00:35.06 [11104:356:0529/100035.062:ERROR:interface_endpoint_client.cc(722)] Message 5 rejected by interface blink.mojom.WidgetHost
-5月 29, 2024 10:04:57.35 [11104:356:0529/100457.357:ERROR:interface_endpoint_client.cc(722)] Message 5 rejected by interface blink.mojom.WidgetHost
-5月 29, 2024 10:17:12.09 Created TensorFlow Lite XNNPACK delegate for CPU.
-5月 29, 2024 10:17:22.71 Created TensorFlow Lite XNNPACK delegate for CPU.
-5月 29, 2024 10:18:20.82 Created TensorFlow Lite XNNPACK delegate for CPU.
-
-5月 29, 2024 10:55:51.80 NEW SESSION
-5月 29, 2024 10:55:51.80 Created TensorFlow Lite XNNPACK delegate for CPU.
-5月 29, 2024 11:02:56.03 Created TensorFlow Lite XNNPACK delegate for CPU.
-5月 29, 2024 12:43:05.87 Created TensorFlow Lite XNNPACK delegate for CPU.
-5月 29, 2024 12:47:22.35 [13880:7080:0529/124722.351:ERROR:device_event_log_impl.cc(195)] [12:47:22.346] Bluetooth: bluetooth_adapter_winrt.cc:1056 Getting Default Adapter failed.
-5月 29, 2024 13:13:40.72 Created TensorFlow Lite XNNPACK delegate for CPU.
-5月 29, 2024 13:23:47.87 Created TensorFlow Lite XNNPACK delegate for CPU.
-5月 29, 2024 13:44:38.23 Created TensorFlow Lite XNNPACK delegate for CPU.
-5月 29, 2024 13:47:01.08 Created TensorFlow Lite XNNPACK delegate for CPU.
-5月 29, 2024 13:59:44.83 Created TensorFlow Lite XNNPACK delegate for CPU.
-5月 29, 2024 14:04:32.00 Created TensorFlow Lite XNNPACK delegate for CPU.
-5月 29, 2024 14:16:47.32 Created TensorFlow Lite XNNPACK delegate for CPU.
-5月 29, 2024 14:17:16.30 Created TensorFlow Lite XNNPACK delegate for CPU.
-5月 29, 2024 14:17:33.59 Created TensorFlow Lite XNNPACK delegate for CPU.
-5月 29, 2024 14:19:28.71 Created TensorFlow Lite XNNPACK delegate for CPU.
-5月 29, 2024 14:19:51.71 Created TensorFlow Lite XNNPACK delegate for CPU.
-
-5月 29, 2024 14:21:15.52 NEW SESSION
-5月 29, 2024 14:21:15.53 Created TensorFlow Lite XNNPACK delegate for CPU.
-
-5月 29, 2024 14:25:52.37 NEW SESSION
-5月 29, 2024 14:25:52.38 Created TensorFlow Lite XNNPACK delegate for CPU.
-5月 29, 2024 14:26:00.67 [16132:8000:0529/142600.670:ERROR:get_updates_processor.cc(263)] PostClientToServerMessage() failed during GetUpdates with error Network error (ERR_ABORTED)
-5月 29, 2024 14:31:44.04 Created TensorFlow Lite XNNPACK delegate for CPU.
-5月 29, 2024 14:55:49.48 Created TensorFlow Lite XNNPACK delegate for CPU.
-5月 29, 2024 14:56:30.96 Created TensorFlow Lite XNNPACK delegate for CPU.
-5月 29, 2024 14:59:12.16 Created TensorFlow Lite XNNPACK delegate for CPU.
-5月 29, 2024 15:16:35.06 Created TensorFlow Lite XNNPACK delegate for CPU.
+6月 05, 2024 11:15:11.62 NEW SESSION
+6月 05, 2024 11:15:11.64 Created TensorFlow Lite XNNPACK delegate for CPU.

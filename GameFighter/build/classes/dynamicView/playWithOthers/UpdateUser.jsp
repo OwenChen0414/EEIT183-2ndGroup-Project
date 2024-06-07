@@ -123,7 +123,7 @@
 		</script>
 		<h2>資料修正</h2>
 		<% com.ispan.bean.playWithOthers.PlayUserBean user=(com.ispan.bean.playWithOthers.PlayUserBean) request.getAttribute("user"); %>
-			<form method="post" action="UpdateUser2" enctype="multipart/form-data">
+			<form method="post" action="/GameFighter/UpdateUser2" enctype="multipart/form-data">
 				<label for="nickname">伴遊者暱稱:</label>
 				<input type="text" id="nickname" name="nickname" value="${user.nickname}" required><br>
 

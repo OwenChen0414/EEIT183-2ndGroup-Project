@@ -5,6 +5,7 @@ package com.ispan.controller.playWithOthers;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
@@ -14,14 +15,19 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.Part;
 
 @WebServlet("/UpdateUser2")
 public class UpdateUser2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private int count = 0;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+		
+    	request.getParameterMap().forEach((key, value) -> extracted(count, key, value));
+    	System.out.printf("取得%d筆資料%n",count);
+    	
+    	
         String id = request.getParameter("id");
         String nickname = request.getParameter("nickname");
         String gameId = request.getParameter("gameId");
@@ -82,4 +88,9 @@ public class UpdateUser2 extends HttpServlet {
             throws ServletException, IOException {
         doGet(request, response);
     }
+
+	private void extracted(int count, String key, String[] value) {
+		this.count++;
+		System.out.println("Key: " + key + ", Value: " + String.join(", ", value));
+	}
 }
