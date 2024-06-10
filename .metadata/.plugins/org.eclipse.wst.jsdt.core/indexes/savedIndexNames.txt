@@ -1,8 +1,1 @@
-INDEX VERSION 1.4+D:\ProjectWorkspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-1831532453.index
-1618070774.index
-735621053.index
-3943148009.index
-683053561.index
-2651611122.index
-4029347164.index
+INDEX VERSION 1.4+H:\Java code learning\±M®×\EEIT183-middleProject2\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes

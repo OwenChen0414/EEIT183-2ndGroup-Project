@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Jun 10 13:32:29 CST 2024
+jakarta.servlet.jsp.jstl-3.0.1.jar>central=
+jakarta.servlet.jsp.jstl-3.0.1.pom>central=
+jakarta.servlet.jsp.jstl-3.0.1-sources.jar>central=
