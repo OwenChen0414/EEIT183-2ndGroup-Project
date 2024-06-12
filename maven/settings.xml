@@ -133,7 +133,7 @@ under the License.
     -->
   </servers>
 
-<localRepository>D:\Project\maven\repository</localRepository>
+<localRepository>D:\EEIT183-2ndGroup-Project\maven\repository</localRepository>
 
   <!-- mirrors
    | This is a list of mirrors to be used in downloading artifacts from remote repositories.
