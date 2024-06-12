@@ -22,7 +22,7 @@
             <img src="${pageContext.request.contextPath}/images/logo3.png" alt="" id="logo1">
             <span id="navText">Game Fighter</span>
             <ul class="menu1">
-                <c:if test="${empty loginMember}">
+                <c:if test="${empty member}">
                 <li>會員中心<i class="fa-solid fa-caret-down"></i>
                     <ul class="menu2">
                         <li><a href="${pageContext.request.contextPath}/view/members/login.html">會員登入</a></li>
@@ -31,7 +31,7 @@
                     </ul>
                 </li>
             </c:if>
-            <c:if test="${not empty loginMember}">
+            <c:if test="${not empty member}">
                 <li>${loginMember.memName}<i class="fa-solid fa-caret-down"></i>
                     <ul class="menu2">
                         <li><a href="${pageContext.request.contextPath}/ShowCart">購物車</a></li>
