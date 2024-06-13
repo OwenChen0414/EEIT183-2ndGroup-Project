@@ -20,14 +20,13 @@ import jakarta.persistence.Transient;
 
 @Entity @Table(name = "announcement")
 public class Announcement implements Serializable{
-	@Transient
 	private static final long serialVersionUID = 1L;
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int announcementId;
 	private String title;
 	private String content;
 	private Integer categoryId;
-	private Date createDate;
+	private Date createDate = new Date(System.currentTimeMillis());
 	private LocalDateTime lastEditTime;
 	@OneToOne(fetch = FetchType.LAZY)
 	@PrimaryKeyJoinColumn
