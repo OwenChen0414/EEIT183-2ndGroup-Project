@@ -33,8 +33,6 @@ public class BackAnnouncement extends HttpServlet {
         Session session = HibernateSession.getFactory().getCurrentSession();
 		AnnouncementDAO announcementDAO = new AnnouncementDAO(session);
 		List<Announcement> announcements = announcementDAO.getAll();
-		
-		
 		request.setAttribute("announcements", announcements);
 		request.getRequestDispatcher("/dynamicView/announcement/back-announcement.jsp").forward(request, response);
 	}

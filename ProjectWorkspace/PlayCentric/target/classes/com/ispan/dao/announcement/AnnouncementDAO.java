@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -16,7 +17,9 @@ import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
 import org.hibernate.Session;
+import org.hibernate.cache.spi.support.TimestampsRegionTemplate;
 import org.hibernate.query.Query;
+import org.hibernate.type.descriptor.jdbc.TimestampJdbcType;
 
 import com.ispan.bean.announcement.Announcement;
 import com.ispan.bean.announcement.AnnouncementCategory;
@@ -45,6 +48,7 @@ public class AnnouncementDAO {
 		int count = 0;
 		Announcement origin = session.get(Announcement.class, announcement.getAnnouncementId());
 		if (origin != null) {
+			announcement.setLastEditTime(new Timestamp(System.currentTimeMillis()));
 			session.merge(announcement);
 			session.flush();
 		}
