@@ -1,9 +1,8 @@
 package com.ispan.controller.announcement;
 
 import java.io.IOException;
-import java.util.ArrayList;
+import java.sql.Date;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -21,8 +20,8 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/BackAnnouncement")
-public class BackAnnouncement extends HttpServlet {
+@WebServlet("/DeleteAnnouncement")
+public class DeleteAnnouncement extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
@@ -32,9 +31,9 @@ public class BackAnnouncement extends HttpServlet {
         response.setHeader("Expires", "0");
         Session session = HibernateSession.getFactory().getCurrentSession();
 		AnnouncementDAO announcementDAO = new AnnouncementDAO(session);
+		announcementDAO.delete(Integer.parseInt(request.getParameter("id")));
 		List<Announcement> announcements = announcementDAO.getAll();
-		
-		
+		AnnouncementCategoryDAO categoryDAO = new AnnouncementCategoryDAO();
 		request.setAttribute("announcements", announcements);
 		request.getRequestDispatcher("/dynamicView/announcement/back-announcement.jsp").forward(request, response);
 	}

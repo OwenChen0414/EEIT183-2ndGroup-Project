@@ -1,11 +1,7 @@
 package com.ispan.controller.announcement;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 
 import org.hibernate.Session;
 
@@ -21,8 +17,8 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/BackAnnouncement")
-public class BackAnnouncement extends HttpServlet {
+@WebServlet("/GetUpdateAnnouncement")
+public class GetUpdateAnnouncement extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
@@ -32,11 +28,12 @@ public class BackAnnouncement extends HttpServlet {
         response.setHeader("Expires", "0");
         Session session = HibernateSession.getFactory().getCurrentSession();
 		AnnouncementDAO announcementDAO = new AnnouncementDAO(session);
-		List<Announcement> announcements = announcementDAO.getAll();
-		
-		
-		request.setAttribute("announcements", announcements);
-		request.getRequestDispatcher("/dynamicView/announcement/back-announcement.jsp").forward(request, response);
+		Announcement announcement = announcementDAO.getOne(Integer.parseInt(request.getParameter("id")));
+		request.setAttribute("announcement", announcement);
+		AnnouncementCategoryDAO announcementCategoryDAO = new AnnouncementCategoryDAO(session);
+		List<AnnouncementCategory> categorys = announcementCategoryDAO.getAll();
+		request.setAttribute("categorys", categorys);
+		request.getRequestDispatcher("/dynamicView/announcement/get-update-announcement.jsp").forward(request, response);
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)

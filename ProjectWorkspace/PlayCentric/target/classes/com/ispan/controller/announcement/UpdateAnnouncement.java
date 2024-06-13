@@ -1,19 +1,15 @@
 package com.ispan.controller.announcement;
 
 import java.io.IOException;
-import java.util.ArrayList;
+import java.sql.Date;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-
-import org.hibernate.Session;
 
 import com.ispan.bean.announcement.Announcement;
 import com.ispan.bean.announcement.AnnouncementCategory;
 import com.ispan.dao.announcement.AnnouncementCategoryDAO;
 import com.ispan.dao.announcement.AnnouncementDAO;
-import com.ispan.util.member.HibernateSession;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -21,8 +17,8 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/BackAnnouncement")
-public class BackAnnouncement extends HttpServlet {
+@WebServlet("/UpdateAnnouncement")
+public class UpdateAnnouncement extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
@@ -30,11 +26,20 @@ public class BackAnnouncement extends HttpServlet {
 		response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
         response.setHeader("Pragma", "no-cache");
         response.setHeader("Expires", "0");
-        Session session = HibernateSession.getFactory().getCurrentSession();
-		AnnouncementDAO announcementDAO = new AnnouncementDAO(session);
+		AnnouncementDAO announcementDAO = new AnnouncementDAO();
+		Announcement Announcement = announcementDAO.getOne(Integer.parseInt(request.getParameter("id")));
+		Announcement.setContent(request.getParameter("content"));
+		Announcement.setTitle(request.getParameter("title"));
+		Announcement.setCategoryId(Integer.parseInt(request.getParameter("categoryId")));
+		announcementDAO.update(Announcement);
 		List<Announcement> announcements = announcementDAO.getAll();
-		
-		
+		AnnouncementCategoryDAO categoryDAO = new AnnouncementCategoryDAO();
+		List<AnnouncementCategory> categorys = categoryDAO.getAll();
+		Map<Integer, String> categoryMap = new HashMap<Integer, String>();
+		for (AnnouncementCategory category : categorys) {
+			categoryMap.put(category.getCategoryId(), category.getCategoryName());
+		}
+		request.setAttribute("categoryMap", categoryMap);
 		request.setAttribute("announcements", announcements);
 		request.getRequestDispatcher("/dynamicView/announcement/back-announcement.jsp").forward(request, response);
 	}
