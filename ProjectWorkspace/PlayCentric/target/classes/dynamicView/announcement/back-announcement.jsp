@@ -83,7 +83,7 @@
                         <c:forEach var="anno" items="${announcements}">
                         <c:set var="key" value="${anno.categoryId}" />
                         <tr style="line-height: 2;">
-                            <td><a href="${pageContext.request.contextPath}/ShowAnnouncement?id=${anno.announcementId}">[${categoryMap[key]}]${anno.title}</a></td>
+                            <td><a href="${pageContext.request.contextPath}/ShowAnnouncement?id=${anno.announcementId}">[${anno.announcementCategory.categoryName}]${anno.title}</a></td>
                             <td class="right">建立時間：${anno.createDate}</td>
                             <td class="right"><a href="${pageContext.request.contextPath}/GetUpdateAnnouncement?id=${anno.announcementId}">修改</a></td>
                             <td class="right"><a href="${pageContext.request.contextPath}/DeleteAnnouncement?id=${anno.announcementId}">刪除</a></td>

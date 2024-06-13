@@ -13,6 +13,7 @@ import com.ispan.bean.buy.GameCart;
 import com.ispan.bean.buy.GameWithCart;
 import com.ispan.bean.games.Game;
 import com.ispan.bean.games.GameCategoryLib;
+import com.ispan.bean.member.Member;
 import com.ispan.bean.members.Members;
 import com.ispan.dao.announcement.AnnouncementCategoryDAO;
 import com.ispan.dao.announcement.AnnouncementDAO;
@@ -36,14 +37,14 @@ public class InsertCart extends HttpServlet {
         response.setHeader("Pragma", "no-cache");
         response.setHeader("Expires", "0");
         HttpSession session = request.getSession();
-        Members member = (Members) session.getAttribute("loginMember");
+        Member member = (Member) session.getAttribute("loginMember");
         if (member != null) {
 			int gameId = Integer.parseInt(request.getParameter("id"));
-			int memId = member.getMemId();
+			String memId = member.getMemId();
 			BuyGameDAO buyGameDAO = new BuyGameDAO();
 			GameCart gameCart = new GameCart();
 			gameCart.setGameId(gameId);
-			gameCart.setMemId(memId);
+			gameCart.setMemId(Integer.parseInt(memId));
 			buyGameDAO.insertCart(gameCart);
 			List<GameWithCart> cart = buyGameDAO.getCart(memId);
 			request.setAttribute("inCart", cart);

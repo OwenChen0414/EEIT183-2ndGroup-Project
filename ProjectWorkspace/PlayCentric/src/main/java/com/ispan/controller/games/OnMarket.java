@@ -36,7 +36,7 @@ public class OnMarket extends HttpServlet {
 			gamesDAO.updateRemove(id);
 		}
 		else if (game.getOnMarketTime() == null) {
-			gamesDAO.updateOnMarket(id);
+			gamesDAO.updateToRelease(id);
 		}
 		List<Game> games = gamesDAO.getAll();
 		request.setAttribute("games", games);

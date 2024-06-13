@@ -34,9 +34,8 @@ public class GamesDAO {
 	public GamesDAO() {
 	}
 
-	public int insert(Game game,List<GameCategoryLib> category) {
+	public int insert(Game game) {
 		int count = 0;
-		game.setGameCategoryLib(category);
 		session.persist(game);
 		session.flush();
 		count++;
@@ -44,13 +43,13 @@ public class GamesDAO {
 	}
 	
 	public List<Game> getAll() {
-		Query query = session.createQuery("from game",Game.class);
+		Query query = session.createQuery("from Game",Game.class);
 		return query.list();
 	}
 	
 	public List<Game> getAllOn() {
 		Query<Game> query = session.createQuery
-				("from game WHERE releaseAt IS NOT NULL",Game.class);
+				("from Game WHERE releaseAt IS NOT NULL",Game.class);
 		return query.list();
 	}
 	
@@ -59,139 +58,52 @@ public class GamesDAO {
 		return game;
 	}
 	
-	public Game getWithName(String name) {
-		Game game = new Game();
-		return game;
-	}
+//	public Game getWithName(String name) {
+//		Game game = new Game();
+//		return game;
+//	}
 	
 	public List<GameCategoryLib> getCategorys(int gameId) {
-		Query<GameCategoryLib> query = session.createQuery("from gameCategoryLib",GameCategoryLib.class);
+		Query<GameCategoryLib> query = session.createQuery("from GameCategoryLib",GameCategoryLib.class);
 		return query.list();
 	}
 	
 	
-	public int updateOnMarket(int id) {
+	public int updateToRelease(Game game) {
 		int count = 0;
-		Connection connection = null;
-		PreparedStatement preparedStatement = null;
-		try {
-			Context context = new InitialContext();
-			DataSource dataSource = (DataSource) context.lookup("java:/comp/env/jdbc/db16");
-			connection =  dataSource.getConnection();
-			preparedStatement = connection.prepareStatement(UPDATE_ONMARKET);
-			preparedStatement.setInt(1,id);
-			count = preparedStatement.executeUpdate();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}finally {
-				try {
-					if (connection != null) connection.close();
-					if (preparedStatement != null) preparedStatement.close();
-				} catch (SQLException e) {
-					e.printStackTrace();
-				}
-		}
+		game.setReleaseAt(LocalDateTime.now());
+		session.merge(game);
+		session.flush();
+		count++;
 		return count;
 	}
 	
-	public int updateRemove(int id) {
+	public int updateRemove(Game game) {
 		int count = 0;
-		Connection connection = null;
-		PreparedStatement preparedStatement = null;
-		try {
-			Context context = new InitialContext();
-			DataSource dataSource = (DataSource) context.lookup("java:/comp/env/jdbc/db16");
-			connection =  dataSource.getConnection();
-			preparedStatement = connection.prepareStatement(UPDATE_REMOVE_GAME);
-			preparedStatement.setInt(1,id);
-			count = preparedStatement.executeUpdate();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}finally {
-				try {
-					if (connection != null) connection.close();
-					if (preparedStatement != null) preparedStatement.close();
-				} catch (SQLException e) {
-					e.printStackTrace();
-				}
-		}
+		game.setReleaseAt(null);
+		session.merge(game);
+		session.flush();
+		count++;
 		return count;
 	}
 	
-	public int updateInfo(int id,Game game) {
+	public int updateGame(Game game) {
 		int count = 0;
-		Connection connection = null;
-		PreparedStatement preparedStatement = null;
-		try {
-			Context context = new InitialContext();
-			DataSource dataSource = (DataSource) context.lookup("java:/comp/env/jdbc/db16");
-			connection =  dataSource.getConnection();
-			preparedStatement = connection.prepareStatement(UPDATE_INFO);
-			preparedStatement.setString(1,game.getGameName());
-			preparedStatement.setInt(2, game.getPrice());
-			preparedStatement.setString(3, game.getDescription());
-			preparedStatement.setString(4, game.getDeveloper());
-			preparedStatement.setString(5, game.getPublisher());
-			preparedStatement.setString(6, game.getIntroduction());
-			preparedStatement.setInt(7,id);
-			count = preparedStatement.executeUpdate();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}finally {
-				try {
-					if (connection != null) connection.close();
-					if (preparedStatement != null) preparedStatement.close();
-				} catch (SQLException e) {
-					e.printStackTrace();
-				}
+		Game originGame = session.get(Game.class,game.getGameId());
+		if (originGame != null) {
+			session.merge(game);
+			session.flush();
+			count++;
 		}
 		return count;
 	}
 	
 	public int delete(int id) {
 		int count = 0;
-		Connection connection = null;
-		PreparedStatement preparedStatement = null;
-		try {
-			Context context = new InitialContext();
-			DataSource dataSource = (DataSource) context.lookup("java:/comp/env/jdbc/db16");
-			connection =  dataSource.getConnection();
-			preparedStatement = connection.prepareStatement(DELETE);
-			preparedStatement.setInt(1,id);
-			count = preparedStatement.executeUpdate();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}finally {
-				try {
-					if (connection != null) connection.close();
-					if (preparedStatement != null) preparedStatement.close();
-				} catch (SQLException e) {
-					e.printStackTrace();
-				}
-		}
-		return count;
-	}
-	
-	public int deleteCategory(int id) {
-		int count = 0;
-		Connection connection = null;
-		PreparedStatement preparedStatement = null;
-		try {
-			Context context = new InitialContext();
-			DataSource dataSource = (DataSource) context.lookup("java:/comp/env/jdbc/db16");
-			connection =  dataSource.getConnection();
-			preparedStatement = connection.prepareStatement(DELETE_CATEGORY);
-			preparedStatement.setInt(1,id);
-			count = preparedStatement.executeUpdate();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}finally {
-				try {
-					if (connection != null) connection.close();
-					if (preparedStatement != null) preparedStatement.close();
-				} catch (SQLException e) {
-					e.printStackTrace();
-				}
+		Game game = session.get(Game.class, id);
+		if (game != null) {
+			session.remove(game);
+			count++;
 		}
 		return count;
 	}

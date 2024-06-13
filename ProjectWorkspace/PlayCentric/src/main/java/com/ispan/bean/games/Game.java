@@ -1,6 +1,7 @@
 package com.ispan.bean.games;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,7 +31,7 @@ public class Game implements Serializable {
 	private int price;
 	private String description;
 	private int soldCount;
-	private String releaseAt;
+	private LocalDateTime releaseAt;
 	private String photoPath;
 	private String developer;
 	private String publisher;
@@ -47,6 +48,20 @@ public class Game implements Serializable {
 	@OneToMany(mappedBy = "game",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
 	private List<GameCart> gameCarts = new ArrayList<GameCart>();
 	
+	
+	
+	public Discount getDiscount() {
+		return discount;
+	}
+	public void setDiscount(Discount discount) {
+		this.discount = discount;
+	}
+	public List<GameCart> getGameCarts() {
+		return gameCarts;
+	}
+	public void setGameCarts(List<GameCart> gameCarts) {
+		this.gameCarts = gameCarts;
+	}
 	public int getGameId() {
 		return gameId;
 	}
@@ -77,10 +92,10 @@ public class Game implements Serializable {
 	public void setSoldCount(int soldCount) {
 		this.soldCount = soldCount;
 	}
-	public String getReleaseAt() {
+	public LocalDateTime getReleaseAt() {
 		return releaseAt;
 	}
-	public void setReleaseAt(String releaseAt) {
+	public void setReleaseAt(LocalDateTime releaseAt) {
 		this.releaseAt = releaseAt;
 	}
 	public String getPhotoPath() {

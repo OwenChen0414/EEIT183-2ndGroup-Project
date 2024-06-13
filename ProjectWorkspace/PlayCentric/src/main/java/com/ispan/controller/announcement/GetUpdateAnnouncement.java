@@ -3,10 +3,13 @@ package com.ispan.controller.announcement;
 import java.io.IOException;
 import java.util.List;
 
+import org.hibernate.Session;
+
 import com.ispan.bean.announcement.Announcement;
 import com.ispan.bean.announcement.AnnouncementCategory;
 import com.ispan.dao.announcement.AnnouncementCategoryDAO;
 import com.ispan.dao.announcement.AnnouncementDAO;
+import com.ispan.util.member.HibernateSession;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -23,10 +26,11 @@ public class GetUpdateAnnouncement extends HttpServlet {
 		response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
         response.setHeader("Pragma", "no-cache");
         response.setHeader("Expires", "0");
-		AnnouncementDAO announcementDAO = new AnnouncementDAO();
+        Session session = HibernateSession.getFactory().getCurrentSession();
+		AnnouncementDAO announcementDAO = new AnnouncementDAO(session);
 		Announcement announcement = announcementDAO.getOne(Integer.parseInt(request.getParameter("id")));
 		request.setAttribute("announcement", announcement);
-		AnnouncementCategoryDAO announcementCategoryDAO = new AnnouncementCategoryDAO();
+		AnnouncementCategoryDAO announcementCategoryDAO = new AnnouncementCategoryDAO(session);
 		List<AnnouncementCategory> categorys = announcementCategoryDAO.getAll();
 		request.setAttribute("categorys", categorys);
 		request.getRequestDispatcher("/dynamicView/announcement/get-update-announcement.jsp").forward(request, response);

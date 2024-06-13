@@ -4,7 +4,7 @@
 		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
 	<session-factory>
-
+	
 		<property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
 		<property name="hibernate.connection.datasource">
 			java:comp/env/connectSQLServer/SystemService</property>
@@ -16,6 +16,8 @@
 		<mapping class="com.ispan.bean.member.Member"/>
 		<mapping class="com.ispan.bean.member.MemView"/>
 		<mapping class="com.ispan.bean.member.MemLevel"/>
+		<mapping class="com.ispan.bean.announcement.Announcement"/>
+		<mapping class="com.ispan.bean.announcement.AnnouncementCategory"/>
 		
 	</session-factory>
 </hibernate-configuration>

@@ -2,6 +2,7 @@ package com.ispan.bean.announcement;
 
 import java.io.Serializable;
 import java.sql.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import jakarta.persistence.CascadeType;
@@ -10,11 +11,16 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.PrimaryKeyJoinColumn;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 
 @Entity @Table(name = "announcement")
 public class Announcement implements Serializable{
+	@Transient
 	private static final long serialVersionUID = 1L;
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int announcementId;
@@ -22,11 +28,18 @@ public class Announcement implements Serializable{
 	private String content;
 	private Integer categoryId;
 	private Date createDate;
-	private String lastEditTime;
-	@OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL,mappedBy = "announcement")
-	private List<AnnouncementCategory> announcementCategorys;
+	private LocalDateTime lastEditTime;
+	@OneToOne(fetch = FetchType.LAZY)
+	@PrimaryKeyJoinColumn
+	private AnnouncementCategory announcementCategory;
 	
 	
+	public AnnouncementCategory getAnnouncementCategory() {
+		return announcementCategory;
+	}
+	public void setAnnouncementCategory(AnnouncementCategory announcementCategorys) {
+		this.announcementCategory = announcementCategory;
+	}
 	public int getAnnouncementId() {
 		return announcementId;
 	}
@@ -57,10 +70,10 @@ public class Announcement implements Serializable{
 	public void setCreateDate(Date createDate) {
 		this.createDate = createDate;
 	}
-	public String getLastEditTime() {
+	public LocalDateTime getLastEditTime() {
 		return lastEditTime;
 	}
-	public void setLastEditTime(String lastEditTime) {
+	public void setLastEditTime(LocalDateTime lastEditTime) {
 		this.lastEditTime = lastEditTime;
 	}
 	public static long getSerialversionuid() {
