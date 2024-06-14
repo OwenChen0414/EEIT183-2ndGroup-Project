@@ -18,7 +18,7 @@
             <img src="${pageContext.request.contextPath}/images/logo3.png" alt="" id="logo1">
             <span id="navText">Game Fighter</span>
             <ul class="menu1">
-                <c:if test="${empty loginMember}">
+                <c:if test="${empty Member}">
                 <li>會員中心<i class="fa-solid fa-caret-down"></i>
                     <ul class="menu2">
                         <li><a href="${pageContext.request.contextPath}/view/members/login.html">會員登入</a></li>
@@ -27,7 +27,7 @@
                     </ul>
                 </li>
             </c:if>
-            <c:if test="${not empty loginMember}">
+            <c:if test="${not empty Member}">
                 <li>${loginMember.memName}<i class="fa-solid fa-caret-down"></i>
                     <ul class="menu2">
                         <li>個人資料</li>
@@ -77,7 +77,7 @@
     <main>
         <article>
             <section id="announcement">
-                <h1 id="title1">[${category.categoryName}]${announcement.title}</h1>
+                <h1 id="title1">[${announcement.announcementCategory.categoryName}]${announcement.title}</h1>
                 <div id="container">
                     <p>${announcement.content}</p>
                 <p id="lastEditTime">最近編輯時間：${announcement.lastEditTime}</p>

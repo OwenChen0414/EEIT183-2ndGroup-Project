@@ -3,10 +3,13 @@ package com.ispan.controller.announcement;
 import java.io.IOException;
 import java.util.List;
 
+import org.hibernate.Session;
+
 import com.ispan.bean.announcement.Announcement;
 import com.ispan.bean.announcement.AnnouncementCategory;
 import com.ispan.dao.announcement.AnnouncementCategoryDAO;
 import com.ispan.dao.announcement.AnnouncementDAO;
+import com.ispan.util.member.HibernateSession;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -23,7 +26,8 @@ public class GetInsertAnnouncement extends HttpServlet {
 		response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
         response.setHeader("Pragma", "no-cache");
         response.setHeader("Expires", "0");
-		AnnouncementCategoryDAO announcementCategoryDAO = new AnnouncementCategoryDAO();
+        Session session = HibernateSession.getFactory().getCurrentSession();
+		AnnouncementCategoryDAO announcementCategoryDAO = new AnnouncementCategoryDAO(session);
 		List<AnnouncementCategory> categorys = announcementCategoryDAO.getAll();
 		request.setAttribute("categorys", categorys);
 		request.getRequestDispatcher("/dynamicView/announcement/get-insert-announcement.jsp").forward(request, response);

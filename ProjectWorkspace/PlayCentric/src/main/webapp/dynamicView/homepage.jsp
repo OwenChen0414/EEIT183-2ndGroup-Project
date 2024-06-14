@@ -89,7 +89,7 @@
                         <c:forEach var="anno" items="${announcements}">
                         <c:set var="key" value="${anno.categoryId}" />
                         <tr style="line-height: 1.5;">
-                            <td><a href="${pageContext.request.contextPath}/ShowAnnouncement?id=${anno.announcementId}" style="text-decoration: none;">[${categoryMap[key]}]${anno.title}</a></td>
+                            <td><a href="${pageContext.request.contextPath}/ShowAnnouncement?id=${anno.announcementId}" style="text-decoration: none;">[${anno.announcementCategory.categoryName}]${anno.title}</a></td>
                             <td style="text-align:right;">${anno.createDate}<td>
                         </tr>
                         </c:forEach>

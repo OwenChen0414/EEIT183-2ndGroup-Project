@@ -17,5 +17,8 @@
 		<mapping class="com.ispan.bean.member.MemView"/>
 		<mapping class="com.ispan.bean.member.MemLevel"/>
 		
+		<mapping class="com.ispan.bean.announcement.Announcement"/>
+		<mapping class="com.ispan.bean.announcement.AnnouncementCategory"/>
+		
 	</session-factory>
 </hibernate-configuration>
