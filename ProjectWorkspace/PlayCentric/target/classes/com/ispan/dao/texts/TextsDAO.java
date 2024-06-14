@@ -1,129 +1,71 @@
 package com.ispan.dao.texts;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.ArrayList;
 import java.util.List;
-import javax.naming.Context;
-import javax.sql.DataSource;
-import javax.naming.InitialContext;
+
+import org.hibernate.Session;
+import org.hibernate.query.Query;
+
 import com.ispan.bean.texts.TextsBean;
 
-public class TextsDAO implements GenericDAO<TextsBean, String> {
+public class TextsDAO implements ITextsDao{
 
-	private Connection getConnection() throws Exception {
-		Context context = new InitialContext();
-		DataSource ds = (DataSource) context.lookup("java:/comp/env/jdbc/db29");
-		return ds.getConnection();
-
+	private Session session;
+	
+	public TextsDAO(Session session) {
+		this.session = session;
 	}
 
 	@Override
-	public void insert(TextsBean txt) throws Exception {
-		if (existsById(txt.getTextsId())) {
-	        throw new Exception("Text with ID " + txt.getTextsId() + " already exists.");
-	    }
-		String sql = "INSERT INTO texts(textsId, textsReportId, membersId, talkId, tagId, forumId, title, textContent, updatedTime, doneTime) VALUES(?,?,?,?,?,?,?,?,?,?)";
-		try (Connection conn = getConnection(); PreparedStatement stmt = conn.prepareStatement(sql)) {
-			stmt.setString(1, txt.getTextsId());
-			stmt.setString(2, txt.getTextsReportId());
-			stmt.setString(3, txt.getMembersId());
-			stmt.setString(4, txt.getTalkId());
-			stmt.setString(5, txt.getTagId());
-			stmt.setString(6, txt.getForumId());
-			stmt.setString(7, txt.getTitle());
-			stmt.setString(8, txt.getTextContent());
-			stmt.setString(9, txt.getUpdatedTime());
-			stmt.setString(10, txt.getDoneTime());
-			stmt.executeUpdate();
-		}
-
+	public TextsBean insert(TextsBean insertTxt) {
+		session.persist(insertTxt);
+		session.flush();
+		return insertTxt;
 	}
 
 	@Override
-	public TextsBean get(String textsId) throws Exception {
-		String sql = "SELECT * FROM texts WHERE textsId = ?";
-		TextsBean txt = null;
-		try (Connection conn = getConnection(); PreparedStatement stmt = conn.prepareStatement(sql)) {
-			stmt.setString(1, textsId);
-			ResultSet rs = stmt.executeQuery();
-			if (rs.next()) {
-				txt = new TextsBean();
-				txt.setTextsId(rs.getString("textsId"));
-				txt.setTextsReportId(rs.getString("textsReportId"));
-				txt.setMembersId(rs.getString("membersId"));
-				txt.setTalkId(rs.getString("talkId"));
-				txt.setTagId(rs.getString("tagId"));
-				txt.setForumId(rs.getString("forumId"));
-				txt.setTitle(rs.getString("title"));
-				txt.setTextContent(rs.getString("textContent"));
-				txt.setUpdatedTime(rs.getString("updatedTime"));
-				txt.setDoneTime(rs.getString("doneTime"));
-			}
-		}
-		return txt;
+	public TextsBean get(String textsId) {		
+		return session.get(TextsBean.class, textsId);
 	}
 
 	@Override
-	public void update(TextsBean txt) throws Exception {
-		String sql = "UPDATE texts SET textsReportId = ?, membersId = ?, talkId = ?, tagId = ?, forumId = ?, title = ?, textContent = ?, updatedTime = ?, doneTime = ? WHERE textsId = ?";
-		try (Connection conn = getConnection(); PreparedStatement stmt = conn.prepareStatement(sql)) {
-			stmt.setString(1, txt.getTextsReportId());
-			stmt.setString(2, txt.getMembersId());
-			stmt.setString(3, txt.getTalkId());
-			stmt.setString(4, txt.getTagId());
-			stmt.setString(5, txt.getForumId());
-			stmt.setString(6, txt.getTitle());
-			stmt.setString(7, txt.getTextContent());
-			stmt.setString(8, txt.getUpdatedTime());
-			stmt.setString(9, txt.getDoneTime());
-			stmt.setString(10, txt.getTextsId());
-			stmt.executeUpdate();
+	public TextsBean update(TextsBean updateTxt) {
+		TextsBean resultBean = session.get(TextsBean.class, updateTxt.getTextsId());
+		if (resultBean != null) {
+			resultBean.setTextsReportId(updateTxt.getTextsReportId());
+			resultBean.setMembersId(updateTxt.getMembersId());
+			resultBean.setTalkId(updateTxt.getTalkId());
+			resultBean.setTagId(updateTxt.getTagId());
+			resultBean.setForumId(updateTxt.getForumId());
+			resultBean.setTitle(updateTxt.getTitle());
+			resultBean.setTextContent(updateTxt.getTextContent());
+			resultBean.setUpdatedTime(updateTxt.getUpdatedTime());
+			resultBean.setDoneTime(updateTxt.getDoneTime());
 		}
+		return resultBean;
 	}
 
 	@Override
-	public void delete(String textsId) throws Exception {
-		String sql = "DELETE FROM texts WHERE textsId = ?";
-		try (Connection conn = getConnection(); PreparedStatement stmt = conn.prepareStatement(sql)) {
-			stmt.setString(1, textsId);
-			stmt.executeUpdate();
+	public boolean delete(String textsId) {
+		TextsBean deleteTxt = session.get(TextsBean.class, textsId);
+		if (deleteTxt != null) {
+			session.remove(deleteTxt);
+			session.flush();
+			return true;
 		}
+		return false;
 	}
 
 	@Override
-	public List<TextsBean> getAll() throws Exception {
-		String sql = "SELECT * FROM texts";
-		List<TextsBean> txts = new ArrayList<>();
-		try (Connection conn = getConnection();
-				PreparedStatement stmt = conn.prepareStatement(sql);
-				ResultSet rs = stmt.executeQuery()) {
-			while (rs.next()) {
-				TextsBean txt = new TextsBean();
-				txt.setTextsId(rs.getString("textsId"));
-				txt.setTextsReportId(rs.getString("textsReportId"));
-				txt.setMembersId(rs.getString("membersId"));
-				txt.setTalkId(rs.getString("talkId"));
-				txt.setTagId(rs.getString("tagId"));
-				txt.setForumId(rs.getString("forumId"));
-				txt.setTitle(rs.getString("title"));
-				txt.setTextContent(rs.getString("textContent"));
-				txt.setUpdatedTime(rs.getString("updatedTime"));
-				txt.setDoneTime(rs.getString("doneTime"));
-				txts.add(txt);
-			}
-			
-		}
-		return txts;
+	public List<TextsBean> getAll() {
+		Query<TextsBean> query = session.createQuery("from TextsBean", TextsBean.class);
+		return query.list();
 	}
 
-	public boolean existsById(String textsId) throws Exception {
-		String sql = "SELECT 1 FROM texts WHERE textsId = ?";
-		try (Connection conn = getConnection(); PreparedStatement stmt = conn.prepareStatement(sql)) {
-			stmt.setString(1, textsId);
-			ResultSet rs = stmt.executeQuery();
-			return rs.next();
-		}
-	}
+	public boolean existsById(String textsId) {       
+		
+        Query<TextsBean> query = session.createQuery("from TextsBean where textsId = :textsId", TextsBean.class);
+        query.setParameter("textsId", textsId);
+        return query.uniqueResult() != null;
+            
+    }
 }

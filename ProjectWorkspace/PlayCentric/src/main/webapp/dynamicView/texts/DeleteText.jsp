@@ -12,7 +12,7 @@
     }
 body {
             font-family: 'PixelFont', Arial, sans-serif;
-            background-image: url('${pageContext.request.contextPath}/images/123.jpg');
+            background-image: url('${pageContext.request.contextPath}/images/texts/123.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;

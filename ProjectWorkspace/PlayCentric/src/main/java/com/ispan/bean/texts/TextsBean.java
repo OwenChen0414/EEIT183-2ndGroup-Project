@@ -1,16 +1,45 @@
 package com.ispan.bean.texts;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity @Table(name = "texts")
 public class TextsBean implements java.io.Serializable {
 	private static final long serialVersionUID = 1L;
+	
+	@Id @Column(name = "textsId")
+	@GeneratedValue(strategy =  GenerationType.IDENTITY)
 	private String textsId;
+	
+	@Column(name = "textsReportId")
 	private String textsReportId;
+	
+	@Column(name = "membersId")
 	private String membersId;
+	
+	@Column(name = "talkId")
 	private String talkId;
+	
+	@Column(name = "tagId")
 	private String tagId;
+	
+	@Column(name = "forumId")
 	private String forumId;
+	
+	@Column(name = "title")
 	private String title;
+	
+	@Column(name = "textContent")
 	private String textContent;
+	
+	@Column(name = "updatedTime")
 	private String updatedTime;
+	
+	@Column(name = "doneTime")
 	private String doneTime;
 
 	public String getTextsId() {  return textsId;  }

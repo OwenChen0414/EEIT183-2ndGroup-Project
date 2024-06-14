@@ -20,5 +20,7 @@
 		<mapping class="com.ispan.bean.announcement.Announcement"/>
 		<mapping class="com.ispan.bean.announcement.AnnouncementCategory"/>
 		
+		<mapping class="com.ispan.bean.texts.TextsBean"/>
+		
 	</session-factory>
 </hibernate-configuration>

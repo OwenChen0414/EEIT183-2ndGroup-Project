@@ -7,7 +7,7 @@
 <title>單筆文章詳細資料(管理員)</title>
 <style type="text/css">
 body {
-            background-image: url('${pageContext.request.contextPath}/images/123.jpg');
+            background-image: url('${pageContext.request.contextPath}/images/texts/123.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
