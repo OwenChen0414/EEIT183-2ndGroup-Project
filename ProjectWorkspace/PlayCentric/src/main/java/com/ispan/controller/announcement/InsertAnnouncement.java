@@ -26,15 +26,32 @@ public class InsertAnnouncement extends HttpServlet {
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
+		
+		
+		
+		
+		
 		response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
         response.setHeader("Pragma", "no-cache");
         response.setHeader("Expires", "0");
+        
+        
+        
+        
         Session session = HibernateSession.getFactory().getCurrentSession();
 		AnnouncementDAO announcementDAO = new AnnouncementDAO(session);
 		
 		Announcement Announcement = new Announcement();
+		
+		
+		
 		Announcement.setContent(request.getParameter("content"));
 		Announcement.setTitle(request.getParameter("title"));
+		
+		
+		
+		
+		
 		Announcement.setCategoryId(Integer.parseInt(request.getParameter("categoryId")));
 		AnnouncementCategoryDAO categoryDAO = new AnnouncementCategoryDAO(session);
 		AnnouncementCategory category = categoryDAO.getOne(Integer.parseInt(request.getParameter("categoryId")));
