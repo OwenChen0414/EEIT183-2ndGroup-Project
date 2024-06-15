@@ -9,23 +9,26 @@
 		<property name="hibernate.connection.datasource">
 			java:comp/env/connectSQLServer/SystemService</property>
 		<property name="hibernate.current_session_context_class">thread</property>
-		
+
 		<property name="hibernate.show_sql">true</property>
 		<property name="hibernate.format_sql">true</property>
-		
-		<mapping class="com.ispan.bean.member.Member"/>
-		<mapping class="com.ispan.bean.member.MemView"/>
-		<mapping class="com.ispan.bean.member.MemLevel"/>
-		
-		<mapping class="com.ispan.bean.announcement.Announcement"/>
-		<mapping class="com.ispan.bean.announcement.AnnouncementCategory"/>
-		
-		<mapping class="com.ispan.bean.texts.TextsBean"/>
-		
-		<mapping class="com.ispan.bean.event.EventBean"/>
-		
-		<mapping class="com.ispan.bean.market.Game2"/>
-		<mapping class="com.ispan.bean.market.Prop"/>
-		
+
+		<mapping class="com.ispan.bean.member.Member" />
+		<mapping class="com.ispan.bean.member.MemView" />
+		<mapping class="com.ispan.bean.member.MemLevel" />
+
+		<mapping class="com.ispan.bean.announcement.Announcement" />
+		<mapping
+			class="com.ispan.bean.announcement.AnnouncementCategory" />
+
+		<mapping class="com.ispan.bean.texts.TextsBean" />
+
+		<mapping class="com.ispan.bean.event.EventBean" />
+
+		<mapping class="com.ispan.bean.market.Game2" />
+		<mapping class="com.ispan.bean.market.Prop" />
+
+		<mapping class="com.ispan.bean.playWithOthers.PwUser" />
+
 	</session-factory>
 </hibernate-configuration>

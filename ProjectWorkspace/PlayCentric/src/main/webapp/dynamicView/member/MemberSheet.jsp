@@ -41,9 +41,9 @@
                 <ul class="menu">
                     <li><a href="/PlayCentric/MemberManage" class="active">會員管理</a></li>
                     <li><a target="_blank" href="/PlayCentric/Homepage">遊戲管理</a></li>
-                    <li><a target="_blank" href="/PlayCentric/GetAllGames">交易管理</a></li>
+                    <li><a target="_blank" href="/PlayCentric/DemoGameServletAction">交易管理</a></li>
                     <li><a target="_blank" href="/PlayCentric/view/texts/GetText.html">論壇管理</a></li>
-                    <li><a target="_blank" href="/PlayCentric/AllUsers">伴遊管理</a></li>
+                    <li><a target="_blank" href="/PlayCentric/DemoPwFindAll">伴遊管理</a></li>
                     <li><a target="_blank" href="/PlayCentric/GetAllEvent">活動管理</a></li>
                     <li class="right"><a href="/PlayCentric/dynamicView/member/Home.jsp">回到首頁</a></li>
                 </ul>
