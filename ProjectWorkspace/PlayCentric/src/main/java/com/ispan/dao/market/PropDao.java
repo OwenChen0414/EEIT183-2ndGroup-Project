@@ -1,94 +1,74 @@
 package com.ispan.dao.market;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.naming.NamingException;
+import org.hibernate.Session;
+import org.hibernate.query.Query;
 
-import com.ispan.bean.market.PropBean;
-import com.ispan.util.market.JndiToJdbc;
+import com.ispan.bean.market.Prop;
 
-public class PropDao {
-    private static final String GET_SELECTED_PROPS = "SELECT * FROM allProps WHERE gameId = ?";
-    private static final String CREATE_PROP = "INSERT INTO allProps (gameId,propName,propType,propRarity,propDescription,propImagePath,createdTime) VALUES (?,?,?,?,?,?,GETDATE())";
-    private static final String DELETE_PROP = "DELETE FROM allProps WHERE propId = ?";
-    private static final String UPDATE_PROP = "UPDATE allProps SET propName=?, propType=?, propRarity=?, propDescription=?, propImagePath=?, updatedTime=GETDATE() WHERE propId=?";
+public class PropDao implements IPropDao{
+	private Session session;				
+
+	public PropDao(Session session) {
+		this.session= session;
+	
+	}
+	
+
+	
+	@Override
+	public List<Prop> findSelectedProps(int gameId) {
+	    Query<Prop> query = session.createQuery("FROM Prop WHERE gameId = :gameId", Prop.class);
+	    query.setParameter("gameId", gameId);
+	    System.out.println(query.list());
+	    return query.list();
+	}
+	@Override
+	public Prop findById(int id) {
+		return session.get(Prop.class, id);
+	}
+	
+	@Override
+	public Prop insert(Prop insertBean) {
+		session.persist(insertBean);
+		session.flush();
+		return insertBean;
+	}
+
+	@Override
+	public Prop update(Prop updateBean) {
+	    Prop resultBean = session.get(Prop.class, updateBean.getPropId());
+	    if (resultBean != null) {
+	        // 將 updateBean 的屬性值複製到 resultBean
+	    	updateBean.setCreatedTime(resultBean.getCreatedTime());
+			session.merge(updateBean);
+			session.flush();
+
+	        // 打印更新後的屬性
+	        System.out.println("看這裡2");
+	        System.out.println(updateBean.getGameId());
+	        System.out.println(updateBean.getGame2());
+	        System.out.println(updateBean.getPropDescription());
+	        System.out.println(updateBean.getPropId());
+	        System.out.println(updateBean.getPropImageName());
+	        System.out.println(updateBean.getPropName());
+	        System.out.println(updateBean.getPropRarity());
+	        System.out.println(updateBean.getPropType());
+	    }
+	    return resultBean;
+	}
 
 
-    //選擇遊戲後顯示道具資料
-    public static List<PropBean> getSelectedProps(int selectedGameId) throws SQLException {
-        JndiToJdbc jndiToJdbc = new JndiToJdbc();
-        List<PropBean> props = new ArrayList<>();
-        try (Connection conn = jndiToJdbc.getConnection("db37");
-             PreparedStatement stmt = conn.prepareStatement(GET_SELECTED_PROPS)) {
-            stmt.setInt(1, selectedGameId);
-            try (ResultSet rs = stmt.executeQuery()) {
-                while (rs.next()) {
-                    PropBean prop = new PropBean();
-                    prop.setGameId(rs.getInt("gameId"));
-                    prop.setPropId(rs.getInt("propId"));
-                    prop.setPropName(rs.getString("propName"));
-                    prop.setPropType(rs.getString("propType"));
-                    prop.setPropRarity(rs.getString("propRarity"));
-                    prop.setPropDescription(rs.getString("propDescription"));
-                    prop.setPropImagePath(rs.getString("propImagePath"));
-                    prop.setCreatedTime(rs.getTimestamp("createdTime"));
-                    prop.setUpdatedTime(rs.getTimestamp("updatedTime"));
-                    props.add(prop);
-                }
-            }
-        } catch (NamingException e) {
-            e.printStackTrace();
-        }
-        return props;
-    }
-
-    //創建道具
-    public static void createProp(int selectedGameId, PropBean prop) throws SQLException {
-        JndiToJdbc jndiToJdbc = new JndiToJdbc();
-        try (Connection conn = jndiToJdbc.getConnection("db37");
-             PreparedStatement stmt = conn.prepareStatement(CREATE_PROP)) {
-            stmt.setInt(1, selectedGameId);
-            stmt.setString(2, prop.getPropName());
-            stmt.setString(3, prop.getPropType());
-            stmt.setString(4, prop.getPropRarity());
-            stmt.setString(5, prop.getPropDescription());
-            stmt.setString(6, prop.getPropImagePath());
-            stmt.executeUpdate();
-        } catch (NamingException | SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
-    //刪除道具
-    public static void deleteProp(int propId) throws SQLException, NamingException {
-        JndiToJdbc jndiToJdbc = new JndiToJdbc();
-        try (Connection conn = jndiToJdbc.getConnection("db37");
-             PreparedStatement stmt = conn.prepareStatement(DELETE_PROP)) {
-            stmt.setInt(1, propId);
-            stmt.executeUpdate();
-        }
-    }
-    
-    //更新道具
-    public static void updateProp(PropBean prop) throws SQLException {
-        JndiToJdbc jndiToJdbc = new JndiToJdbc();
-        try (Connection conn = jndiToJdbc.getConnection("db37");
-             PreparedStatement stmt = conn.prepareStatement(UPDATE_PROP)) {
-            stmt.setString(1, prop.getPropName());
-            stmt.setString(2, prop.getPropType());
-            stmt.setString(3, prop.getPropRarity());
-            stmt.setString(4, prop.getPropDescription());
-            stmt.setString(5, prop.getPropImagePath());
-            stmt.setInt(6, prop.getPropId());
-            stmt.executeUpdate();
-        } catch (NamingException | SQLException e) {
-            e.printStackTrace();
-            throw new SQLException("Failed to update prop", e);//重新拋出異常
-        }
-    }
+	@Override
+	public boolean deleteById(int id) {
+		Prop deleteBean = session.get(Prop.class, id);
+		if(deleteBean!=null) {
+			session.remove(deleteBean);
+			session.flush();
+			return true;
+		}
+		return false;
+	}	
 }

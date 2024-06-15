@@ -15,7 +15,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
     <h2 class="center">修改道具</h2>
     <form
       method="post"
-      action="${pageContext.request.contextPath}/UpdateProp"
+      action="${pageContext.request.contextPath}/DemoUpdateServletAction2"
       class="center"
       enctype="multipart/form-data"
     >
@@ -38,9 +38,9 @@ uri="http://java.sun.com/jsp/jstl/core" %>
         >${propDescription}</textarea>
       </p>
       <input type="hidden"  name="gameId" value="${gameId}" required/> 
-      <input type="hidden"  name="defaultPropImagePath" value="${propImagePath}" required/> 
-      <label for="propImagePath">上傳圖片 :</label>
-      <input type="file" name="propImagePath" id="propImagePath" required/>
+      <input type="hidden"  name="defaultPropImageName" value="${propImageName}" required/> 
+      <label for="propImageName">上傳圖片 :</label>
+      <input type="file" name="propImageName" id="propImageName" required/>
       <input type="submit" value="確定修改" />
     </form>
   </body>
