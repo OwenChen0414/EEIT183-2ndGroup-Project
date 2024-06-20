@@ -1,4 +1,4 @@
-package com.ispan.dao.game.main;
+package com.ispan.dao.game.carts;
 
 import java.util.List;
 
@@ -9,28 +9,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.ispan.bean.game.Game;
-
+import com.ispan.bean.game.GameCarts;
 
 @Repository
 @Transactional
-public class GameDao implements GameDaoIf{
+public class GameCartsDao implements GameCartsDaoIf{
 	
 	@Autowired
 	private SessionFactory factory;
-	
-	@Override
-	public void insert(Game game) {
-		Session session = factory.openSession();
-		session.persist(game);
-		session.flush();
-		session.close();
-	}
 
 	@Override
-	public void update(Game game) {
+	public void insert(GameCarts gameCarts) {
 		Session session = factory.openSession();
-		session.merge(game);
+		session.persist(gameCarts);
 		session.flush();
 		session.close();
 	}
@@ -38,27 +29,27 @@ public class GameDao implements GameDaoIf{
 	@Override
 	public void delete(int id) {
 		Session session = factory.openSession();
-		Game game = findOne(id);
-		session.remove(game);
+		GameCarts result = findOne(id);
+		session.remove(result);
 		session.flush();
 		session.close();
 	}
 
 	@Override
-	public List<Game> findAll() {
+	public List<GameCarts> findAll() {
 		Session session = factory.openSession();
-		Query<Game> query = session.createQuery("from Game",Game.class);
+		Query<GameCarts> query = session.createQuery("from GameCarts",GameCarts.class);
 		session.close();
 		return query.list();
 	}
 
 	@Override
-	public Game findOne(int id) {
+	public GameCarts findOne(int id) {
 		Session session = factory.openSession();
-		Query<Game> query = session.createQuery("from Game where gameId = :id",Game.class);
+		Query<GameCarts> query = session.createQuery("from GameCarts where gameCatId = :id",GameCarts.class);
 		query.setParameter("id", id);
-		session.close();
 		return query.uniqueResult();
 	}
+	
 
 }

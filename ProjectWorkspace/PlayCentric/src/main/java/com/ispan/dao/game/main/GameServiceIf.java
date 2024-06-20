@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.ispan.bean.game.Game;
 
-public interface GameDaoInterface {
+public interface GameServiceIf {
 	public void insert(Game game);
 	public void update(Game game);
 	public void delete(int id);
