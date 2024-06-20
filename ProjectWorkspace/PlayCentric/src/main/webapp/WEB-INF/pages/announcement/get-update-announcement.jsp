@@ -66,7 +66,7 @@
     <main>
         <article>
             <section id="announcement">
-            <form method="post" action="${pageContext.request.contextPath}/UpdateAnnouncement">
+            <form method="post" action="${pageContext.request.contextPath}/updateAnnouncement.con">
                 <h1 id="title1">標題：<input id="text" type="text" name="title" value="${announcement.title}" /></h1>
                 <textarea name="content" id="container">${announcement.content}</textarea>
                 <input type="hidden" name="createDate" value="${announcement.createDate}">

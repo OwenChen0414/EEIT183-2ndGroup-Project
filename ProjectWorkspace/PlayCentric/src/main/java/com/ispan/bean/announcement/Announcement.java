@@ -11,6 +11,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.hibernate.cache.spi.support.TimestampsRegionTemplate;
 import org.hibernate.type.descriptor.jdbc.TimestampJdbcType;
+import org.springframework.stereotype.Component;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -20,6 +21,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.PrimaryKeyJoinColumn;
@@ -29,6 +31,7 @@ import jakarta.persistence.TemporalType;
 import jakarta.persistence.Transient;
 
 @Entity @Table(name = "announcement")
+@Component
 public class Announcement implements Serializable{
 	private static final long serialVersionUID = 1L;
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -39,8 +42,8 @@ public class Announcement implements Serializable{
 	private Integer categoryId;
 	private Date createDate = new Date(System.currentTimeMillis());
 	private Timestamp lastEditTime = new Timestamp(System.currentTimeMillis());
-	@OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
-    @PrimaryKeyJoinColumn
+	@ManyToOne
+	@JoinColumn(name = "categoryId",insertable=false, updatable=false)
 	private AnnouncementCategory announcementCategory;
 	
 	

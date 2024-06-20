@@ -66,7 +66,7 @@
     <main>
         <article>
             <section id="announcement">
-                <form action="${pageContext.request.contextPath}/InsertAnnouncement" method="post">
+                <form action="${pageContext.request.contextPath}/insertAnnouncement.con" method="post">
                     <h1 class="title2">標題：<input class="text" type="text" name="title"></h1>
                     <h2 class="title2">內容：</h2><textarea name="content" id="container"></textarea><br><br>
                     <h2 class="title2">分類：

@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/mainStyle.css?v=1.0">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/announcement/back-announcement.css?v=1.0">
-    <title>公告管理</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/homepage.css?v=1.0">
+    <title>首頁</title>
 </head>
 
 <body>
@@ -18,16 +18,27 @@
             <img src="${pageContext.request.contextPath}/images/logo3.png" alt="" id="logo1">
             <span id="navText">Game Fighter</span>
             <ul class="menu1">
+                <c:if test="${empty loginMember}">
                 <li>會員中心<i class="fa-solid fa-caret-down"></i>
                     <ul class="menu2">
-                        <li>遊戲發表會</li>
+                        <li><a href="${pageContext.request.contextPath}/view/members/login.html">會員登入</a></li>
                         <li>功能介紹</li>
                         <li>你在哪哩拉哈哈</li>
                     </ul>
                 </li>
+            </c:if>
+            <c:if test="${not empty loginMember}">
+                <li>${loginMember.memName}<i class="fa-solid fa-caret-down"></i>
+                    <ul class="menu2">
+                        <li>個人資料</li>
+                        <li>購物車</li>
+                        <li>遊戲庫</li>
+                    </ul>
+                </li>
+            </c:if>
                 <li>遊戲商店<i class="fa-solid fa-caret-down"></i>
                     <ul class="menu2">
-                        <li>遊戲發表會</li>
+                        <li><a href="${pageContext.request.contextPath}/GameStore" target="_blank">遊戲總覽</a></li>
                         <li>功能介紹</li>
                         <li>你在哪哩拉哈哈</li>
                     </ul>
@@ -60,38 +71,29 @@
                         <li>你在哪哩拉哈哈</li>
                     </ul>
                 </li>
+                <li>後台管理<i class="fa-solid fa-caret-down"></i>
+                    <ul class="menu2">
+                        <li><a href="${pageContext.request.contextPath}/backAnnouncement.con" target="_blank">公告管理</a></li>
+                        <li><a href="${pageContext.request.contextPath}/BackGames" target="_blank">遊戲管理</a></li>
+                        <li>你在哪哩拉哈哈</li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </header>
-        <aside id="contentTag">
-            <ul id="leftList">
-                <li id="selected"><a href="${pageContext.request.contextPath}/backAnnouncement.con">公告管理</a></li>
-                <li>會員管理</li>
-                <li>討論區文章管理</li>
-                <li>討論區留言管理</li>
-                <li><a href="${pageContext.request.contextPath}/BackGames">遊戲商店管理</a></li>
-                <li>遊戲物品交易管理</li>
-                <li>尋找玩伴管理</li>
-                <li>活動管理</li>
-            </ul>
-        </aside>
     <main>
         <article>
             <section id="announcement">
-            <div id="content">
-                    <table>
+                <h1 id="title1">公告</h1>
+                    <table id="content">
                         <c:forEach var="anno" items="${announcements}">
                         <c:set var="key" value="${anno.categoryId}" />
-                        <tr style="line-height: 2;">
-                            <td><a href="${pageContext.request.contextPath}/showAnnouncement.con?id=${anno.announcementId}">[${anno.announcementCategory.categoryName}]${anno.title}</a></td>
-                            <td class="right">建立時間：${anno.createDate}</td>
-                            <td class="right"><a href="${pageContext.request.contextPath}/getUpdateAnnouncement.con?id=${anno.announcementId}">修改</a></td>
-                            <td class="right"><a href="${pageContext.request.contextPath}/deleteAnnouncement.con?id=${anno.announcementId}">刪除</a></td>
-                            </tr>
+                        <tr style="line-height: 1.5;">
+                            <td><a href="${pageContext.request.contextPath}/showAnnouncement.con?id=${anno.announcementId}" style="text-decoration: none;">[${anno.announcementCategory.categoryName}]${anno.title}</a></td>
+                            <td style="text-align:right;">${anno.createDate}<td>
+                        </tr>
                         </c:forEach>
                     </table>
-                    </div>
-                    <a href="${pageContext.request.contextPath}/getInsertAnnouncement.con" id="plus"><i class="fa-solid fa-plus"></i></a>
             </section>
         </article>
     </main>
