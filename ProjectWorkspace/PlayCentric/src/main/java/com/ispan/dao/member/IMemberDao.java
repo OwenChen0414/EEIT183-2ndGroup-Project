@@ -1,12 +1,13 @@
 package com.ispan.dao.member;
 
+import java.io.Closeable;
 import java.util.List;
 import java.util.Map;
 
 import com.ispan.bean.member.MemView;
 import com.ispan.bean.member.Member;
 
-public interface IMemberDao {
+public interface IMemberDao extends Closeable {
 
 	public int saveMember(Member member);
 	

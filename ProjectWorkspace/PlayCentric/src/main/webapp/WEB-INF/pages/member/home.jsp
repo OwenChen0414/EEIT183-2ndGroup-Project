@@ -5,17 +5,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="/PlayCentric/css/member/home.css">
-<link rel="stylesheet" media="screen and  (max-width: 780px)" href="/PlayCentric/css/member/home780.css" />
+<link rel="stylesheet" href="css/member/home.css">
+<link rel="stylesheet" media="screen and  (max-width: 780px)" href="css/member/home780.css" />
 <title>首頁</title>
 </head>
 <body>
     <main id="allpage">
         <header>
-            <img class="logo-img" src="/PlayCentric/images/member/logo.jpg" title="logo" alt="logo">
+            <img class="logo-img" src="images/member/logo.jpg" title="logo" alt="logo">
             <nav>
                 <ul class="menu">
-                    <li><a href="/PlayCentric/dynamicView/member/Home.jsp">首頁</a></li>
+                    <li><a href="/Home">首頁</a></li>
                     <li><a href="">遊戲</a></li>
                     <li><a href="">交易</a></li>
                     <li><a href="">論壇</a></li>

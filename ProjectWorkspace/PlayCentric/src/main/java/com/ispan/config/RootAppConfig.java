@@ -34,7 +34,7 @@ public class RootAppConfig {
 	public LocalSessionFactoryBean sessionFactory() throws IllegalArgumentException, NamingException {
 		LocalSessionFactoryBean factoryBean = new LocalSessionFactoryBean();
 		factoryBean.setDataSource(dataSource());
-		factoryBean.setPackagesToScan("com.ispan.model");
+		factoryBean.setPackagesToScan("com.ispan");
 		factoryBean.setHibernateProperties(additionalProperties());
 		return factoryBean;
 	}

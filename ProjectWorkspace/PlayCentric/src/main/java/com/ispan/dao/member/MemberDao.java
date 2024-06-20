@@ -1,5 +1,7 @@
 package com.ispan.dao.member;
 
+import java.io.Closeable;
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
@@ -8,23 +10,33 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import com.ispan.bean.member.MemView;
 import com.ispan.bean.member.Member;
 
-public class MemberDao implements IMemberDao {
+import jakarta.transaction.Transactional;
+
+@Repository @Transactional
+public class MemberDao implements Closeable {
+	
+	@Autowired
+	private SessionFactory factory;
 	private Session session;
 	private static final String[] columes = { "memId", "account", "password", "email", "nickname", "memName",
 			"birthday", "phone", "addres", "sso", "accomAcnt", "consumption", "registDate", "lastLoginTime",
 			"roles", "levels" };
 
-	public MemberDao(Session session) {
-		this.session = session;
+//	@Autowired
+	public MemberDao(SessionFactory factory) {
+		this.session = factory.openSession();
 	}
 
 	// 新增方法
-	@Override
+	
 	public int saveMember(Member member) {
 		int count = 0;
 		session.persist(member);
@@ -34,7 +46,7 @@ public class MemberDao implements IMemberDao {
 	}
 
 	// 刪除特定條件下的資料
-	@Override
+	
 	public int deleteMember(int id) {
 		int count = 0;
 		Member originMember = session.get(Member.class, id);
@@ -47,7 +59,7 @@ public class MemberDao implements IMemberDao {
 	}
 
 	// 更新單筆資料
-	@Override
+	
 	public int updateMember(Member member) {
 		int count = 0;
 		Member originMember = session.get(Member.class, member.getMemId());
@@ -60,7 +72,7 @@ public class MemberDao implements IMemberDao {
 	}
 
 	// 查詢單筆資料
-	@Override
+	
 	public MemView selectMember(int Id) {
 		Query<MemView> query = session.createQuery("from MemView Where memId = ?1", MemView.class);
 		query.setParameter(1, Id);
@@ -68,7 +80,7 @@ public class MemberDao implements IMemberDao {
 	}
 	// 多條件查詢
 	@SuppressWarnings("unchecked")
-	@Override
+	
 	public List<MemView> selectMembers(Map<String, String> searchList) {
 		String hqlCommon = "FROM memview WHERE";
 		List<String> list = Arrays.asList("account","email","nickname","mem_name","phone","addres");
@@ -105,14 +117,14 @@ public class MemberDao implements IMemberDao {
 	}
 
 	// 查詢整張表
-	@Override
+	
 	public List<MemView> findAllMembers() {
 		Query<MemView> query = session.createQuery("from MemView ORDER BY memId", MemView.class);
 		return query.list();
 	}
 	
 	//登入確認
-	@Override
+	
 	public Member checkLogin(Member member) {
 		String hqlCommon = "From Member Where %s = ?1 AND %s = ?2";
 		hqlCommon = String.format(hqlCommon, columes[1], columes[2]);
@@ -128,5 +140,10 @@ public class MemberDao implements IMemberDao {
         DateTimeFormatter formatDateTime = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss.SSS");
 		member.setLastLoginTime(now.format(formatDateTime));
 		return member;
+	}
+
+	@Override
+	public void close() throws IOException {
+		session.close();
 	}
 }
