@@ -24,7 +24,7 @@ public class GameReviews {
 	
 	private int reviewsScore;
 	
-	private LocalDateTime reviewsAt;
+	private LocalDateTime reviewsAt = LocalDateTime.now();
 	
 	private LocalDateTime lastEditAt;
 	
