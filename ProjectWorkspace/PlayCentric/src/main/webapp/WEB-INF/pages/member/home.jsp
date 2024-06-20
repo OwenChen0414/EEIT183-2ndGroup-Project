@@ -16,7 +16,7 @@
             <nav>
                 <ul class="menu">
                     <li><a href="/Home">首頁</a></li>
-                    <li><a href="">遊戲</a></li>
+                    <li><a href="/homepage.con">遊戲</a></li>
                     <li><a href="">交易</a></li>
                     <li><a href="">論壇</a></li>
                     <li><a href="">陪玩</a></li>
