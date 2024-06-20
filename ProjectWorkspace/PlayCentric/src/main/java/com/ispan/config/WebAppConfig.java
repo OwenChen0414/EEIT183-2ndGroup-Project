@@ -23,7 +23,7 @@ import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 //相當於mvc-servlet.xml程式組態類別
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = {"tw.leonchen"})
+@ComponentScan(basePackages = {"com.ispan"})
 public class WebAppConfig implements WebMvcConfigurer {
 	
 	@Bean
@@ -44,8 +44,8 @@ public class WebAppConfig implements WebMvcConfigurer {
 	
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry) {
-		registry.addRedirectViewController("/", "checklogin.controller");
-		registry.addViewController("/playforfun.do").setViewName("uploadFile123");
+		registry.addRedirectViewController("/", "Home");
+//		registry.addViewController("/playforfun.do").setViewName("uploadFile123");
 	}
 	
 	@Override

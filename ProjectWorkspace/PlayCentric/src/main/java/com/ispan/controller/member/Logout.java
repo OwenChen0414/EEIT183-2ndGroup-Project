@@ -2,25 +2,21 @@ package com.ispan.controller.member;
 
 import java.io.IOException;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.support.SessionStatus;
+
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
 
-@WebServlet("/Logout")
-public class Logout extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+@Controller
+@SessionAttributes(names = "member")
+public class Logout {
        
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession session = request.getSession();
-		session.removeAttribute("member");
-		response.sendRedirect("/PlayCentric/dynamicView/member/Home.jsp");
-	}
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doGet(request, response);
+	@GetMapping("/Logout")
+	protected String doGet(SessionStatus sessionStatus) throws ServletException, IOException {
+		sessionStatus.setComplete();
+		return "redirect:member/home";
 	}
 
 }

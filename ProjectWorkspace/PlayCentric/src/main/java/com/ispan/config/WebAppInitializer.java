@@ -20,26 +20,23 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
 		return new Class[] {WebAppConfig.class};
-//		return null;
 	}
 
 	//用來設定ServletMappings的url-pattern
 	@Override
 	protected String[] getServletMappings() {
 		return new String[] {"/"};
-//		return null;
 	}
 	
 	@Override
 	protected Filter[] getServletFilters() {
 		CharacterEncodingFilter cef = new CharacterEncodingFilter("UTF-8", true);
 		return new Filter[] {cef};
-//		return null;
 	}
 	
 	@Override
 	protected void customizeRegistration(Dynamic registration) {
-		registration.setMultipartConfig(new MultipartConfigElement("C:/temp/upload/"));
+		registration.setMultipartConfig(new MultipartConfigElement("D:\\EEIT183-2ndGroup-Project\\ProjectWorkspace\\PlayCentric\\src\\main\\webapp\\WEB-INF\\resources\\images"));
 	}
 
 }

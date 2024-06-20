@@ -15,7 +15,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 //相當於beans.config.xml的java程式組態
 @Configuration
-@ComponentScan(basePackages = "tw.leonchen")
+@ComponentScan(basePackages = "com.ispan")
 @EnableTransactionManagement
 @SuppressWarnings("unused")
 public class RootAppConfig {
@@ -34,7 +34,7 @@ public class RootAppConfig {
 	public LocalSessionFactoryBean sessionFactory() throws IllegalArgumentException, NamingException {
 		LocalSessionFactoryBean factoryBean = new LocalSessionFactoryBean();
 		factoryBean.setDataSource(dataSource());
-		factoryBean.setPackagesToScan("tw.leonchen.model");
+		factoryBean.setPackagesToScan("com.ispan.model");
 		factoryBean.setHibernateProperties(additionalProperties());
 		return factoryBean;
 	}
