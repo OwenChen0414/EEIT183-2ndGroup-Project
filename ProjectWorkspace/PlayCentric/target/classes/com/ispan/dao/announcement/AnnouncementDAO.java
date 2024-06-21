@@ -17,23 +17,29 @@ import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.cache.spi.support.TimestampsRegionTemplate;
 import org.hibernate.query.Query;
 import org.hibernate.type.descriptor.jdbc.TimestampJdbcType;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.ispan.bean.announcement.Announcement;
 import com.ispan.bean.announcement.AnnouncementCategory;
 import com.ispan.bean.games.Game;
 
+@Repository
+@Transactional
 public class AnnouncementDAO {
 	
 	private Session session;
 	
-	public AnnouncementDAO() {
-	}
-
-	public AnnouncementDAO(Session session) {
-		this.session = session;
+	@Autowired
+	private SessionFactory factory;
+	
+	public AnnouncementDAO(SessionFactory factory) {
+		this.session = factory.openSession();
 	}
 
 	public int insert(Announcement announcement) {

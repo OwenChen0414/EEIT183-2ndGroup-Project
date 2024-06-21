@@ -15,42 +15,40 @@ import com.ispan.bean.game.GameDiscountSet;
 @Transactional
 public class GameDiscountSetDao implements GameDiscountSetDaoIf{
 	
+	private Session session;
+	
 	@Autowired
 	private SessionFactory factory;
 	
+	public GameDiscountSetDao(SessionFactory factory) {
+		this.session = factory.openSession();
+	}
+	
 	@Override
 	public void insert(GameDiscountSet discountSet) {
-		Session session = factory.openSession();
 		session.persist(discountSet);
 		session.flush();
-		session.close();
 	}
 
 	@Override
 	public void delete(int id) {
-		Session session = factory.openSession();
 		GameDiscountSet result = findOne(id);
 		session.remove(result);
 		session.flush();
-		session.close();
 	}
 
 	@Override
 	public List<GameDiscountSet> findAll() {
-		Session session = factory.openSession();
 		String hql = "from GameDiscountSet";
 		Query<GameDiscountSet> query = session.createQuery(hql,GameDiscountSet.class);
-		session.close();
 		return query.list();
 	}
 
 	@Override
 	public GameDiscountSet findOne(int id) {
-		Session session = factory.openSession();
 		String hql = "from GameDiscountSet where gameDiscountId = :id";
 		Query<GameDiscountSet> query = session.createQuery(hql,GameDiscountSet.class );
 		query.setParameter("id", id);
-		session.close();
 		return query.uniqueResult();
 	}
 

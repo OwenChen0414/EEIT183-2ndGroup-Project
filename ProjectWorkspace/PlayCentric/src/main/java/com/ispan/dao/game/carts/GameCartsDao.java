@@ -1,5 +1,7 @@
 package com.ispan.dao.game.carts;
 
+import java.io.Closeable;
+import java.io.IOException;
 import java.util.List;
 
 import org.hibernate.Session;
@@ -13,14 +15,19 @@ import com.ispan.bean.game.GameCarts;
 
 @Repository
 @Transactional
-public class GameCartsDao implements GameCartsDaoIf{
+public class GameCartsDao implements GameCartsDaoIf,Closeable{
+	
+	private Session session;
 	
 	@Autowired
 	private SessionFactory factory;
+	
+	public GameCartsDao(SessionFactory factory) {
+		this.session = factory.openSession();
+	}
 
 	@Override
 	public void insert(GameCarts gameCarts) {
-		Session session = factory.openSession();
 		session.persist(gameCarts);
 		session.flush();
 		session.close();
@@ -28,7 +35,6 @@ public class GameCartsDao implements GameCartsDaoIf{
 
 	@Override
 	public void delete(int id) {
-		Session session = factory.openSession();
 		GameCarts result = findOne(id);
 		session.remove(result);
 		session.flush();
@@ -37,7 +43,6 @@ public class GameCartsDao implements GameCartsDaoIf{
 
 	@Override
 	public List<GameCarts> findAll() {
-		Session session = factory.openSession();
 		Query<GameCarts> query = session.createQuery("from GameCarts",GameCarts.class);
 		session.close();
 		return query.list();
@@ -45,11 +50,14 @@ public class GameCartsDao implements GameCartsDaoIf{
 
 	@Override
 	public GameCarts findOne(int id) {
-		Session session = factory.openSession();
 		Query<GameCarts> query = session.createQuery("from GameCarts where gameCatId = :id",GameCarts.class);
 		query.setParameter("id", id);
 		return query.uniqueResult();
 	}
 	
+	@Override
+	public void close() throws IOException {
+		session.close();
+	}
 
 }
