@@ -1,20 +1,15 @@
 package com.ispan.controller.member;
 
-import java.io.IOException;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.ispan.bean.member.Member;
 
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/GenerateMemberBean")
-public class GenerateMemberBean extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+public class GenerateMemberBean {
        
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	@RequestMapping("/GenerateMemberBean")
+	protected String processAction(HttpServletRequest request) {
 		Member member = new Member();
 		member.setMemId(request.getParameter("id"));
 		member.setAccount(request.getParameter("account"));
@@ -53,10 +48,8 @@ public class GenerateMemberBean extends HttpServlet {
 		}
 		
 		request.setAttribute("member",member);
-	}
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doGet(request, response);
+		
+		return (String) request.getAttribute("function");
 	}
 
 }

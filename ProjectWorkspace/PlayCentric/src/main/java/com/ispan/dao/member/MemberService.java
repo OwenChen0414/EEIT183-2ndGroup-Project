@@ -18,37 +18,32 @@ public class MemberService {
 	private MemberDao memberDao;
 	
 	public int saveMember(Member member) {
-		return 0;
+		return memberDao.saveMember(member);
 	}
 
 	
 	public int deleteMember(int id) {
-		// TODO Auto-generated method stub
-		return 0;
+		return memberDao.deleteMember(id);
 	}
 
 	
 	public int updateMember(Member member) {
-		// TODO Auto-generated method stub
-		return 0;
+		return memberDao.updateMember(member);
 	}
 
 	
 	public MemView selectMember(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return memberDao.selectMember(id);
 	}
 
 	
 	public List<MemView> selectMembers(Map<String, String> searchList) {
-		// TODO Auto-generated method stub
-		return null;
+		return memberDao.selectMembers(searchList);
 	}
 
 	
 	public List<MemView> findAllMembers() {
-		// TODO Auto-generated method stub
-		return null;
+		return memberDao.findAllMembers();
 	}
 
 	

@@ -23,22 +23,23 @@ import jakarta.transaction.Transactional;
 @Repository @Transactional
 public class MemberDao implements Closeable {
 	
-	@Autowired
-	private SessionFactory factory;
 	private Session session;
 	private static final String[] columes = { "memId", "account", "password", "email", "nickname", "memName",
 			"birthday", "phone", "addres", "sso", "accomAcnt", "consumption", "registDate", "lastLoginTime",
 			"roles", "levels" };
 
-//	@Autowired
+	@Autowired
 	public MemberDao(SessionFactory factory) {
 		this.session = factory.openSession();
 	}
 
 	// 新增方法
-	
 	public int saveMember(Member member) {
 		int count = 0;
+		LocalDateTime now = LocalDateTime.now();
+        DateTimeFormatter formatDateTime = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss.SSS");
+		member.setRegistDate(now.format(formatDateTime));
+		member.setLastLoginTime(now.format(formatDateTime));
 		session.persist(member);
 		session.flush();
 		count++;
@@ -46,7 +47,6 @@ public class MemberDao implements Closeable {
 	}
 
 	// 刪除特定條件下的資料
-	
 	public int deleteMember(int id) {
 		int count = 0;
 		Member originMember = session.get(Member.class, id);
@@ -59,7 +59,6 @@ public class MemberDao implements Closeable {
 	}
 
 	// 更新單筆資料
-	
 	public int updateMember(Member member) {
 		int count = 0;
 		Member originMember = session.get(Member.class, member.getMemId());
@@ -72,7 +71,6 @@ public class MemberDao implements Closeable {
 	}
 
 	// 查詢單筆資料
-	
 	public MemView selectMember(int Id) {
 		Query<MemView> query = session.createQuery("from MemView Where memId = ?1", MemView.class);
 		query.setParameter(1, Id);
@@ -80,7 +78,6 @@ public class MemberDao implements Closeable {
 	}
 	// 多條件查詢
 	@SuppressWarnings("unchecked")
-	
 	public List<MemView> selectMembers(Map<String, String> searchList) {
 		String hqlCommon = "FROM memview WHERE";
 		List<String> list = Arrays.asList("account","email","nickname","mem_name","phone","addres");
@@ -117,14 +114,12 @@ public class MemberDao implements Closeable {
 	}
 
 	// 查詢整張表
-	
 	public List<MemView> findAllMembers() {
 		Query<MemView> query = session.createQuery("from MemView ORDER BY memId", MemView.class);
 		return query.list();
 	}
 	
 	//登入確認
-	
 	public Member checkLogin(Member member) {
 		String hqlCommon = "From Member Where %s = ?1 AND %s = ?2";
 		hqlCommon = String.format(hqlCommon, columes[1], columes[2]);
