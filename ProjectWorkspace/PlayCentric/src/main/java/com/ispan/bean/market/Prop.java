@@ -2,6 +2,8 @@ package com.ispan.bean.market;
 import java.io.Serializable;
 import java.util.Date;
 
+import org.springframework.stereotype.Component;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -15,6 +17,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "prop")
+@Component
 public class Prop implements Serializable  {
 	private static final long serialVersionUID = 1L;
 

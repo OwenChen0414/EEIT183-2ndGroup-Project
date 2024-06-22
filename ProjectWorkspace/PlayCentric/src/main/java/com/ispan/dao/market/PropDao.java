@@ -1,74 +1,63 @@
 package com.ispan.dao.market;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.ispan.bean.market.Prop;
 
-public class PropDao implements IPropDao{
-	private Session session;				
+@Repository
+@Transactional
+public class PropDao {
 
-	public PropDao(Session session) {
-		this.session= session;
-	
-	}
-	
+    @Autowired
+    private SessionFactory sessionFactory;
 
-	
-	@Override
-	public List<Prop> findSelectedProps(int gameId) {
-	    Query<Prop> query = session.createQuery("FROM Prop WHERE gameId = :gameId", Prop.class);
-	    query.setParameter("gameId", gameId);
-	    System.out.println(query.list());
-	    return query.list();
-	}
-	@Override
-	public Prop findById(int id) {
-		return session.get(Prop.class, id);
-	}
-	
-	@Override
-	public Prop insert(Prop insertBean) {
-		session.persist(insertBean);
-		session.flush();
-		return insertBean;
-	}
+    private Session getCurrentSession() {
+        return sessionFactory.getCurrentSession();
+    }
 
-	@Override
-	public Prop update(Prop updateBean) {
-	    Prop resultBean = session.get(Prop.class, updateBean.getPropId());
-	    if (resultBean != null) {
-	        // 將 updateBean 的屬性值複製到 resultBean
-	    	updateBean.setCreatedTime(resultBean.getCreatedTime());
-			session.merge(updateBean);
-			session.flush();
+    // 搜尋遊戲後顯示道具
+    @Transactional(readOnly = true)
+    public List<Prop> findSelectedProps(int gameId) {
+        Query<Prop> query = getCurrentSession().createQuery("FROM Prop WHERE gameId = :gameId", Prop.class);
+        query.setParameter("gameId", gameId);
+        return query.list();
+    }
 
-	        // 打印更新後的屬性
-	        System.out.println("看這裡2");
-	        System.out.println(updateBean.getGameId());
-	        System.out.println(updateBean.getGame2());
-	        System.out.println(updateBean.getPropDescription());
-	        System.out.println(updateBean.getPropId());
-	        System.out.println(updateBean.getPropImageName());
-	        System.out.println(updateBean.getPropName());
-	        System.out.println(updateBean.getPropRarity());
-	        System.out.println(updateBean.getPropType());
-	    }
-	    return resultBean;
-	}
+    @Transactional(readOnly = true)
+    public Prop findById(int id) {
+        return getCurrentSession().get(Prop.class, id);
+    }
 
+    @Transactional
+    public Prop insert(Prop insertBean) {
+        getCurrentSession().persist(insertBean);
+        return insertBean;
+    }
 
-	@Override
-	public boolean deleteById(int id) {
-		Prop deleteBean = session.get(Prop.class, id);
-		if(deleteBean!=null) {
-			session.remove(deleteBean);
-			session.flush();
-			return true;
-		}
-		return false;
-	}	
+    @Transactional
+    public Prop update(Prop updateBean) {
+        Prop resultBean = getCurrentSession().get(Prop.class, updateBean.getPropId());
+        if (resultBean != null) {
+            updateBean.setCreatedTime(resultBean.getCreatedTime());
+            getCurrentSession().merge(updateBean);
+        }
+        return resultBean;
+    }
+
+    @Transactional
+    public boolean deleteById(int id) {
+        Prop deleteBean = getCurrentSession().get(Prop.class, id);
+        if (deleteBean != null) {
+            getCurrentSession().remove(deleteBean);
+            return true;
+        }
+        return false;
+    }
 }

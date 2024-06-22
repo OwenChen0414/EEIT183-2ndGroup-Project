@@ -3,28 +3,25 @@ package com.ispan.dao.market;
 import java.util.List;
 
 import org.hibernate.Session;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.ispan.bean.market.Game2;
 
+import jakarta.transaction.Transactional;
 
-public class Game2Service implements IGame2Service{
-	private Game2Dao gDao;
+@Service @Transactional
+public class Game2Service{
 	
-	public Game2Service(Session session) {
-		gDao = new Game2Dao(session);
-	}
+	@Autowired
+	private Game2Dao gDao;
 
-
-	@Override
 	public List<Game2> findAll() {
 		return gDao.findAll();
 	}
 
-
-	@Override
 	public Game2 findById(int id) {
 		return gDao.findById(id);
-
 	}
 
 }
