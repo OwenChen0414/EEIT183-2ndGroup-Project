@@ -19,8 +19,8 @@ public class PropService{
 	
 
 	
-	public List<Prop> findSelectedProps(int gameId) {
-		return pDao.findSelectedProps(gameId);
+	public List<Prop> findPropsByGameId(int gameId) {
+		return pDao.findPropsByGameId(gameId);
 	}
 
 	

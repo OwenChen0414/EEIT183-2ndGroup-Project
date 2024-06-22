@@ -36,7 +36,7 @@ public class FuzzySearchProp {
 	@GetMapping("/FuzzySearchProp")
 	public String fuzzySearchProp(@RequestParam("selectedGameId") int selectedGameId,
 			@RequestParam(value = "searchPropName", required = false) String searchPropName, Model model) {
-		List<Prop> props = propService.findSelectedProps(selectedGameId);
+		List<Prop> props = propService.findPropsByGameId(selectedGameId);
 		List<Prop> searchOKprops;
 		boolean noResults = false;
 

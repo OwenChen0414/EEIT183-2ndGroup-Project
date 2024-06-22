@@ -12,12 +12,12 @@
 </head>
 <body>
     <h2 class="center">新增道具</h2>
-    <form method="post" action="../../CreateProp" class="center" enctype="multipart/form-data">
+    <form method="post" action="../../DemoInsertPropServletAction" class="center" enctype="multipart/form-data">
         <label for="SelectGame">遊戲:</label>
         <select id="SelectGame" name="gameId" required>
             <option value=""></option>
-            <c:forEach items="${games}" var="game">
-                <option value="${game.id}">${game.name}</option>
+            <c:forEach items="${sessionScope.games}" var="game">
+                <option value="${game.gameId}">${game.gameName}</option>
             </c:forEach>
         </select>
 

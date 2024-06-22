@@ -41,7 +41,7 @@ public class ShowPropsByGameId {
     public String selectProps(@RequestParam("gameId") int gameId, Model model) {
         List<Game2> games = game2Service.findAll();
         
-    	List<Prop> props = propService.findSelectedProps(gameId);
+    	List<Prop> props = propService.findPropsByGameId(gameId);
         model.addAttribute("props", props);
         model.addAttribute("games", games);
         model.addAttribute("selectedGameId", gameId);

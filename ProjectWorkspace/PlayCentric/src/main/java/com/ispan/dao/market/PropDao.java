@@ -24,12 +24,12 @@ public class PropDao {
 
     // 搜尋遊戲後顯示道具
     @Transactional(readOnly = true)
-    public List<Prop> findSelectedProps(int gameId) {
+    public List<Prop> findPropsByGameId(int gameId) {
         Query<Prop> query = getCurrentSession().createQuery("FROM Prop WHERE gameId = :gameId", Prop.class);
         query.setParameter("gameId", gameId);
         return query.list();
     }
-
+    
     @Transactional(readOnly = true)
     public Prop findById(int id) {
         return getCurrentSession().get(Prop.class, id);

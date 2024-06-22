@@ -36,7 +36,7 @@
 				<input type="submit" value="確認" />
 			</form>
 			
-			<a id="create" href="${pageContext.request.contextPath}/dynamicView/market/insertProp.jsp">新增道具</a>
+			<a id="create" href="${pageContext.request.contextPath}/insertPropForm">新增道具</a>
 		</div>
 		<nav>
 			<ul>

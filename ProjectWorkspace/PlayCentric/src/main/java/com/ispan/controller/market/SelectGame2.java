@@ -13,7 +13,7 @@ import com.ispan.dao.market.Game2Service;
 
 @Controller
 @SessionAttributes(names = "game2")
-public class DemoGameServletAction {
+public class SelectGame2 {
 
     @Autowired
     private Game2Service game2Service;
