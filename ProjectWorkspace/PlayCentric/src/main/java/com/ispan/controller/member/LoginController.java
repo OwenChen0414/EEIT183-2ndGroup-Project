@@ -13,7 +13,7 @@ import com.ispan.dao.member.MemberService;
 
 @Controller
 @SessionAttributes(names = "member")
-public class Login{
+public class LoginController{
 	
 	@Autowired
 	private MemberService memberService;

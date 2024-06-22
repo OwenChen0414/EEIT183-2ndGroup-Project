@@ -63,7 +63,8 @@ public class MemberDao implements Closeable {
 		int count = 0;
 		Member originMember = session.get(Member.class, member.getMemId());
 		if (originMember != null) {
-			session.merge(member);
+			Member mergeMember = session.merge(member);
+			System.out.println(mergeMember);
 			session.flush();
 			count++;
 		}
@@ -79,35 +80,36 @@ public class MemberDao implements Closeable {
 	// 多條件查詢
 	@SuppressWarnings("unchecked")
 	public List<MemView> selectMembers(Map<String, String> searchList) {
-		String hqlCommon = "FROM memview WHERE";
-		List<String> list = Arrays.asList("account","email","nickname","mem_name","phone","addres");
-		int n = 1;
+		String hqlCommon = "FROM MemView WHERE";
+		List<String> list = Arrays.asList("account","email","nickName","memName","phone","address");
+		boolean hasParams = false;
 		for(Object entry : searchList.entrySet()) {
 			Entry<String, String> e = (Entry<String, String>) entry;
 			if (e.getValue() == null || e.getValue().equals("")) {
 				continue;
 			} else if (list.contains(e.getKey())) {
-				hqlCommon += String.format(" %s LIKE(?%d) AND", e.getKey(),n++);
+				hqlCommon += String.format(" %s LIKE :%s AND", e.getKey(), e.getKey());
+				hasParams = true;
 				continue;
 			}
-			hqlCommon += String.format(" %s = ?%d AND", e.getKey(), n++);
+			hqlCommon += String.format(" %s = :%s AND", e.getKey(), e.getKey());
+			hasParams = true;
 		}
-		hqlCommon = hqlCommon.substring(0,hqlCommon.lastIndexOf(n>0?"AND":"WHERE"));
+		hqlCommon = hqlCommon.substring(0,hqlCommon.lastIndexOf(hasParams?"AND":"WHERE"));
 		hqlCommon += " ORDER BY memId";
 		System.out.println(hqlCommon);
 		
 		Query<MemView> query = session.createQuery(hqlCommon, MemView.class);
 		
-		n = 1;
 		for (Object entry : searchList.entrySet()) {
 			Entry<String, String> e = (Entry<String, String>) entry;
 			if (e.getValue() == null || e.getValue().equals("")) {
 				continue;
 			} else if (list.contains(e.getKey())) {
-				query.setParameter(n++, "%" + (String) e.getValue() + "%");
+				query.setParameter(e.getKey(), "%" + e.getValue() + "%");
 				continue;
 			}
-			query.setParameter(n++, (String) e.getValue());
+			query.setParameter(e.getKey(), e.getValue());
 		}
 
 		return query.list();

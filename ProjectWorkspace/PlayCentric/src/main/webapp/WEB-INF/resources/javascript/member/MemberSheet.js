@@ -87,17 +87,17 @@ $(function(){
         <td><input type="text" name="password" size="5"></td>
         <td><input type="text" name="email" size="10"></td>
         <td>--<input type="text" name="registDate" size="7" style="display: none;"></td>
-        <td>--<input type="text" name="lastLogin" size="15" style="display: none;"></td>
+        <td>--<input type="text" name="lastLoginTime" size="15" style="display: none;"></td>
         <td><input type="text" name="role" size="7"></td>
         <td>--<input type="text" name="consumption" size="5" style="display: none;"></td>
-        <td>--<input type="text" name="level" size="2" style="display: none;"></td>
+        <td>--<input type="text" name="levels" size="2" style="display: none;"></td>
         <td><input type="text" name="nickName" size="5"></td>
         <td><input type="text" name="memName" size="5"></td>
         <td><input type="date" name="birthday" size="7"></td>
         <td><input type="text" name="phone" size="7"></td>
         <td><input type="text" name="address" size="20"></td>
         <td><input type="text" name="sso" size="2"></td>
-        <td><input type="text" name="accomAccount" size="2"></td>
+        <td><input type="text" name="accomAcnt" size="2"></td>
             </tr>`);
             $('form').attr('action','InsertMember')
     })
@@ -106,22 +106,22 @@ $(function(){
         hideCRUDButton();
         showSubmit();
         let contain = `<tr class="editing">
-            <td><input type="text" name="id" style="display: none;"></td>
+            <td><input type="text" name="memId" style="display: none;"></td>
             <td><input type="text" name="account" size="5"></td>
             <td><input type="text" name="password" size="5"></td>
             <td><input type="text" name="email" size="10"></td>
             <td><input type="date" name="registDate" size="7"></td>
-            <td><input type="text" name="lastLogin" style="display: none;"></td>
+            <td><input type="text" name="lastLoginTime" style="display: none;"></td>
             <td><input type="text" name="role" size="7"></td>
             <td><input type="text" name="consumption" size="5"></td>
-            <td><input type="text" name="level" style="display: none;"></td>
+            <td><input type="text" name="levels" style="display: none;"></td>
             <td><input type="text" name="nickName" size="5"></td>
             <td><input type="text" name="memName" size="5"></td>
             <td><input type="date" name="birthday" size="7"></td>
             <td><input type="text" name="phone" size="7"></td>
             <td><input type="text" name="address" size="20"></td>
             <td><input type="text" name="sso" size="2"></td>
-            <td><input type="text" name="accomAccount" size="2"></td>
+            <td><input type="text" name="accomAcnt" size="2"></td>
             </tr>`;
         $('.selected').hide();
         $('.selected').after(contain);
