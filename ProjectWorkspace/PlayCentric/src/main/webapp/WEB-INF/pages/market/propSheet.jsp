@@ -11,13 +11,14 @@
 <title>遊戲道具交易後台</title>
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/market/style.css" />
+<script src="/PlayCentric/javascript/market/propSheet.js"></script>
 </head>
 <body>
 	<header>
 		<div class="search">
 			<h1>遊戲道具交易後台</h1>
 			<form id="myForm"
-				action="${pageContext.request.contextPath}/ShowPropsByGameId">
+				action="${pageContext.request.contextPath}/ShowPropsByGameId" onsubmit="return validateSelectGameForm()">
 				<label for="SelectGame">遊戲選單:</label> 
 				<select id="SelectGame" name="gameId">
 					<option value="" disabled selected></option>
@@ -80,7 +81,7 @@
 							<td><fmt:formatDate value="${prop.createdTime}" pattern="yyyy-MM-dd HH:mm:ss" /></td>
 							<td><fmt:formatDate value="${prop.updatedTime}" pattern="yyyy-MM-dd HH:mm:ss" /></td>
 							<td>
-								<form action="${pageContext.request.contextPath}/DemoUpdateServletAction1">
+								<form action="${pageContext.request.contextPath}/showUpdatePropForm">
 									<input type="hidden" name="gameId" value="${prop.gameId}" />
 									<input type="hidden" name="propId" value="${prop.propId}" />
 									<input type="hidden" name="propName" value="${prop.propName}" />
@@ -92,7 +93,7 @@
 								</form>
 							</td>
 							<td>
-								<form action="${pageContext.request.contextPath}/DemoDeletePropServletAction">
+								<form action="${pageContext.request.contextPath}/DeleteProp">
 									<input type="hidden" name="gameId" value="${prop.gameId}" />
 									<input type="hidden" name="propId" value="${prop.propId}" />
 									<input type="submit" name="delete" value="delete" />

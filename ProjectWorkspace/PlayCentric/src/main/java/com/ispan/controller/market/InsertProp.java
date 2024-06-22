@@ -57,7 +57,7 @@ public class InsertProp {
 
 			// 上傳圖片
 			String filename = propImage.getOriginalFilename();
-			String uploadDir = "D:\\EEIT183-2ndGroup-Project\\ProjectWorkspace\\PlayCentric\\src\\main\\webapp\\images\\market\\";
+            String uploadDir = "D:\\EEIT183-2ndGroup-Project\\ProjectWorkspace\\PlayCentric\\src\\main\\webapp\\WEB-INF\\resources\\images\\market\\";
 			Path uploadPath = Paths.get(uploadDir);
 			if (!Files.exists(uploadPath)) {
 				Files.createDirectories(uploadPath);
