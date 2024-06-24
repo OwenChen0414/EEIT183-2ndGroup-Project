@@ -1,5 +1,6 @@
 package com.ispan.controller.playWithOthers;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.time.LocalDate;
@@ -9,6 +10,11 @@ import java.util.UUID;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.ispan.bean.playWithOthers.PwUser;
 import com.ispan.dao.playWithOthers.PwUserService;
@@ -20,35 +26,66 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.Part;
+import jakarta.websocket.server.PathParam;
+import java.util.Map;
 
-@WebServlet("/DemoInsertPwUser")
-@MultipartConfig(location = "D:\\EEIT183-2ndGroup-Project\\ProjectWorkspace\\PlayCentric\\src\\main\\webapp\\images\\playWithOthers")
-public class DemoInsertPwUser extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+//@WebServlet("/DemoInsertPwUser")
+//@MultipartConfig(location = "D:\\EEIT183-2ndGroup-Project\\ProjectWorkspace\\PlayCentric\\src\\main\\webapp\\images\\playWithOthers")
+@Controller
+public class DemoInsertPwUser {
+//public class DemoInsertPwUser extends HttpServlet {
+//	private static final long serialVersionUID = 1L;
+	@Autowired
+	PwUserService pwUserService;
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		Part photo = request.getPart("photo");
-		String nickname = request.getParameter("nickname");
-		String gameId = request.getParameter("gameId");
-		String pricingCategory = request.getParameter("pricingCategory");
-		String amount = request.getParameter("amount");
-		String onlineTime = request.getParameter("onlineTime");
-		String offlineTime = request.getParameter("offlineTime");
-		String transactionStatus = request.getParameter("transactionStatus");
-		String description = request.getParameter("description");
-		// 取照片用的
-		
+//	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+//			throws ServletException, IOException {
+//	@PostMapping("/insert")
+//	public String insertPwUser(
 	
-		
+	// 以下是笨的方式 比較累
+//		@RequestParam(name = "photo")Part photo, 
+//		@RequestParam(name = "nickname")String nickname,
+//		@RequestParam(name = "gameId")String gameId,
+//		@RequestParam(name = "pricingCategory")String pricingCategory,
+//		@RequestParam(name = "amount")String amount,
+//		@RequestParam(name = "onlineTime")String onlineTime,
+//		@RequestParam(name = "offlineTime")String offlineTime,
+//		@RequestParam(name = "transactionStatus")String transactionStatus,
+//		@RequestParam(name = "description")String description) {
 
+	// map方式
+	@PostMapping("/insert")
+	public String insertPwUser(@RequestParam Map<String, String> pwuser, @RequestParam("photo") MultipartFile photo)
+			throws IOException {
+		String nickname = pwuser.get("nickname");
+		String gameId = pwuser.get("gameId");
+		String pricingCategory = pwuser.get("pricingCategory");
+		String amount = pwuser.get("amount");
+		String onlineTime = pwuser.get("onlineTime");
+		String offlineTime = pwuser.get("offlineTime");
+		String transactionStatus = pwuser.get("transactionStatus");
+		String description = pwuser.get("description");
+
+//		Part photo = request.getPart("photo");
+//		String nickname = request.getParameter("nickname");
+//		String gameId = request.getParameter("gameId");
+//		String pricingCategory = request.getParameter("pricingCategory");
+//		String amount = request.getParameter("amount");
+//		String onlineTime = request.getParameter("onlineTime");
+//		String offlineTime = request.getParameter("offlineTime");
+//		String transactionStatus = request.getParameter("transactionStatus");
+//		String description = request.getParameter("description");
+
+		// 取照片用的
 		String filename = getFileName();
-		photo.write(filename);
+//		photo.write(filename);
+		photo.transferTo(new File(
+				"D:\\EEIT183-2ndGroup-Project\\ProjectWorkspace\\PlayCentric\\src\\main\\webapp\\WEB-INF\\resources\\images\\playWithOthers\\"
+						+ filename));
+
 		PwUser user = new PwUser();
-		
-		
-		
-		
+
 		user.setNickname(nickname);
 		user.setGameId(Integer.parseInt(gameId));
 		user.setPricingCategory(pricingCategory);
@@ -58,35 +95,36 @@ public class DemoInsertPwUser extends HttpServlet {
 		user.setPlayerPhoto(filename);
 		user.setTransactionStatus(transactionStatus);
 		user.setDescription(description);
-		
+
 		// 創建時間
 		LocalDateTime now = LocalDateTime.now();
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 		String formattedDateTime = now.format(formatter);
 		user.setEditedTime(formattedDateTime);
 
-		SessionFactory facotry = HibernateSession.getFactory();
-		Session session = facotry.getCurrentSession();
-		PwUserService pwUserService = new PwUserService(session);
+//		SessionFactory facotry = HibernateSession.getFactory();
+//		Session session = facotry.getCurrentSession();
+//		PwUserService pwUserService = new PwUserService(session);
 		pwUserService.insert(user);
 
-		request.getRequestDispatcher("/DemoPwFindAll").forward(request, response);
+//		request.getRequestDispatcher("/DemoPwFindAll").forward(request, response);
+//        pwUserService.setSession(session);
+
+	    return "redirect:/Pw";
+
 	}
 
 	public String getFileName() {
-	    String randomString = UUID.randomUUID().toString();
+		String randomString = UUID.randomUUID().toString();
 		String newFileName = randomString + ".jpg";
 		return newFileName;
 	}
-	 
-	
-	
-	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		doGet(request, response);
-	}
 }
+//	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+//			throws ServletException, IOException {
+//		doGet(request, response);
+//	}
+//}
 //	@Override
 //	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //		processAction(request, response);

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>伴遊</title>
+<style>
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	background-color: #f2f2f2;
+	background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+
+.sidebar {
+	background-color: #fff;
+	width: 200px;
+	height: 100vh;
+	position: fixed;
+	left: 0;
+	top: 0;
+	transition: margin-left 0.3s ease;
+}
+
+.sidebar ul {
+	list-style-type: none;
+	padding: 0;
+	margin-top: 50px;
+}
+
+.sidebar li {
+	margin: 5px;
+	padding: 10px;
+	border-radius: 15px;
+	border: 2px solid #fff;
+}
+
+.sidebar li a {
+	display: block;
+	width: 150px;
+	height: 20px;
+	text-decoration: none;
+	color: inherit;
+	/* border: solid red */
+}
+
+.sidebar li:hover {
+	/* margin: 5px; */
+	/* padding: 10px; */
+	border: 2px solid rgba(144, 144, 144, 0.5);
+	transition: 1.5s ease;
+}
+
+.content {
+	margin-left: 200px;
+	margin-right: 50px;
+	padding: 20px;
+}
+
+.toggle-button {
+	position: absolute;
+	top: 10px;
+	left: 5px;
+	cursor: pointer;
+	transition: margin-left 0.9s ease;
+	border-radius: 25px;
+}
+
+.toggle-button:hover {
+	background-color: rgba(169, 169, 169, 0.138)
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+th, td {
+	padding: 8px;
+	text-align: center;
+	border: 1px solid #ddd;
+}
+
+tr {
+	border-radius: 10px;
+}
+
+th {
+	background-color: #f2f2f2;
+}
+
+#selectText {
+	height: 25px;
+	width: 250px;
+	margin-top: 10px;
+	margin-bottom: 6px;
+	border-radius: 5px;
+}
+
+#selectText:hover {
+	border-color: rgba(0, 0, 0, 0.496);
+}
+
+.createButton {
+	right: 10px;
+	height: 31px;
+	width: 50px;
+	border-radius: 6px;
+	background-color: rgb(0, 255, 213);
+	border-color: rgba(0, 255, 255, 0.594);
+}
+
+.createButton:hover {
+	border-color: rgba(0, 0, 0, 0.496);
+}
+
+.outside {
+	padding: 20px;
+	/* 	border: 1px solid red; */
+	border-radius: 25px;
+	background-color: #fff;
+}
+
+.buttonTool {
+	display: flex;
+	justify-content: space-between;
+}
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+	<script>
+		$(function() {
+			const toggleButton = $('.toggle-button');
+			const bar = $('.sidebar');
+			const content = $('.content')
+			toggleButton.on('click', function() {
+				bar.toggleClass('hidden');
+				if (bar.hasClass('hidden')) {
+					bar.css('marginLeft', '-150px');
+					toggleButton.css('marginLeft', '+140px');
+					content.css('margin-left', '+50px')
+				} else {
+					bar.css('marginLeft', '0');
+					toggleButton.css('marginLeft', '0');
+					content.css('margin-left', '+200px')
+				}
+			});
+		});
+	</script>
+	<div class="topbar"></div>
+
+	<div class="sidebar">
+		<div class="toggle-button">
+			<svg xmlns="http://www.w3.org/2000/svg" height="20"
+				viewBox="0 0 24 24" width="50">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path d="M3 18h18v-2H3v2zM3 6v2h18V6H3zm0 7h18v-2H3v2z" />
+            </svg>
+		</div>
+		<ul>
+			<li><a href="">遊戲商城</a></li>
+			<li><a href="">道具交易平台</a></li>
+			<li><a href="">論壇</a></li>
+			<li><a href="">線下活動資訊</a></li>
+			<li><a href="">會員中心</a></li>
+			<li><a href="cms.jsp">前往後台</a></li>
+			
+		</ul>
+	</div>
+	<div class="content">
+
+		<h1>遊戲伴遊</h1>
+		<div class="outside">
+			<div class="buttonTool">
+				<div class="selectButtonDiv"></div>
+				<div class="createButtonDiv"></div>
+			</div>
+			<div align="center"></div>
+		</div>
+	</div>
+</body>
+
+</html>

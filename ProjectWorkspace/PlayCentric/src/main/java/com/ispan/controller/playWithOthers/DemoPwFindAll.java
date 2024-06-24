@@ -6,6 +6,12 @@ import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.ispan.bean.playWithOthers.PwUser;
 import com.ispan.dao.playWithOthers.PwUserService;
@@ -17,26 +23,38 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/DemoPwFindAll")
-public class DemoPwFindAll extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+//@WebServlet("/DemoPwFindAll")
+//controller&呈現的網址路徑名
+@Controller
+@RequestMapping("/Pw")
+public class DemoPwFindAll {
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		response.setContentType("text/html;charset=UTF-8");
-		SessionFactory facotry = HibernateSession.getFactory();
-		Session session = facotry.getCurrentSession();
+	@Autowired
+	PwUserService pwUserService;
+	// 內容運行 自動找service
 
-		PwUserService pwUserService = new PwUserService(session);
+	@GetMapping
+	public String findAllPwUsers(Model model) {
+//	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+//			throws ServletException, IOException {
 		List<PwUser> pwUsers = pwUserService.findAll();
-		request.setAttribute("pwUsers", pwUsers);
-		request.getRequestDispatcher("/dynamicView/playWithOthers/GetAllUser.jsp").forward(request, response);
-	}
+		model.addAttribute("pwUsers", pwUsers);
+//		response.setContentType("text/html;charset=UTF-8");
+//		SessionFactory facotry = HibernateSession.getFactory();
+//		Session session = facotry.getCurrentSession();
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		doGet(request, response);
+//		request.setAttribute("pwUsers", pwUsers);
+//		request.getRequestDispatcher("/dynamicView/playWithOthers/GetAllUser.jsp").forward(request, response);
+		return "/playWithOthers/GetAllUser";
+		// 想要導向的畫面
 	}
+}
+//
+//	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+//			throws ServletException, IOException {
+//		doGet(request, response);
+//	}
+//}
 
 //	@Override
 //	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -67,4 +85,4 @@ public class DemoPwFindAll extends HttpServlet {
 //		out.close();
 //	}
 
-}
+//}
