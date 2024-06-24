@@ -18,7 +18,6 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "games")
-@Component
 public class Game2 implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
