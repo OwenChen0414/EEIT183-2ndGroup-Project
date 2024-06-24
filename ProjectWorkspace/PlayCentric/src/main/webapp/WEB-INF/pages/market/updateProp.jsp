@@ -19,14 +19,14 @@ uri="http://java.sun.com/jsp/jstl/core" %>
       class="center"
       enctype="multipart/form-data"
     >
-	  <input type="hidden"  name="propId" value="${propId}"/> 
+	  <input type="hidden"  name="propId" value="${prop.propId}"/> 
       <label for="propName">名稱 :</label>
-      <input type="text" name="propName" id="propName" value="${propName}" required/>
+      <input type="text" name="propName" id="propName" value="${prop.propName}" required/>
       <br />
       <label for="propType">種類 :</label>
-      <input type="text" name="propType" id="propType"  value="${propType}" required/>
+      <input type="text" name="propType" id="propType"  value="${prop.propType}" required/>
       <label for="propRarity">稀有度 :</label>
-      <input type="text" name="propRarity" id="propRarity" value="${propRarity}" required/>
+      <input type="text" name="propRarity" id="propRarity" value="${prop.propRarity}" required/>
       <p>
         <label for="propDescription">描述 :</label>
         <textarea
@@ -35,12 +35,11 @@ uri="http://java.sun.com/jsp/jstl/core" %>
           rows="2"
           cols="30"
           required
-        >${propDescription}</textarea>
+        >${prop.propDescription}</textarea>
       </p>
-      <input type="hidden"  name="gameId" value="${gameId}" required/> 
-      <input type="hidden"  name="defaultPropImageName" value="${propImageName}" required/> 
+      <input type="hidden"  name="propImageName" value="${prop.propImageName}" required/> 
       <label for="propImageName">上傳圖片 :</label>
-      <input type="file" name="propImageName" id="propImageName" required/>
+      <input type="file" name="propImage" id="propImage" />
       <input type="submit" value="確定修改" />
     </form>
   </body>

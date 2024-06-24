@@ -82,13 +82,7 @@
 							<td><fmt:formatDate value="${prop.updatedTime}" pattern="yyyy-MM-dd HH:mm:ss" /></td>
 							<td>
 								<form action="${pageContext.request.contextPath}/showUpdatePropForm">
-									<input type="hidden" name="gameId" value="${prop.gameId}" />
 									<input type="hidden" name="propId" value="${prop.propId}" />
-									<input type="hidden" name="propName" value="${prop.propName}" />
-									<input type="hidden" name="propType" value="${prop.propType}" />
-									<input type="hidden" name="propRarity" value="${prop.propRarity}" />
-									<input type="hidden" name="propDescription" value="${prop.propDescription}" />
-									<input type="hidden" name="propImageName" value="${prop.propImageName}" />
 									<input type="submit" value="update" />
 								</form>
 							</td>
