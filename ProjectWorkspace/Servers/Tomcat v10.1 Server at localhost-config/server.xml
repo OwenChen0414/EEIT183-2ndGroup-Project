@@ -38,6 +38,8 @@
     <!-- Editable user database that can also be used by
          UserDatabaseRealm to authenticate users
     -->
+	<Resource auth="Container" driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver" initialSize="5" maxIdle="5" maxTotal="8" maxWaitMills="-1" name="jdbc/servdb" password="ts8582" poolPreparedStatements="true" type="javax.sql.DataSource" url="jdbc:sqlserver://35.221.179.33:1433;DatabaseName=db16;encrypt=false" username="ts16" validationQuery="select 1"/>
+	
     <Resource auth="Container" description="User database that can be updated and saved" factory="org.apache.catalina.users.MemoryUserDatabaseFactory" name="UserDatabase" pathname="conf/tomcat-users.xml" type="org.apache.catalina.UserDatabase"/>
   </GlobalNamingResources>
 
@@ -129,7 +131,7 @@
         <Realm className="org.apache.catalina.realm.UserDatabaseRealm" resourceName="UserDatabase"/>
       </Realm>
 
-      <Host appBase="webapps" autoDeploy="true" name="localhost" unpackWARs="true">
+      <Host appBase="myapps" autoDeploy="true" name="localhost" unpackWARs="true">
 
         <!-- SingleSignOn valve, share authentication between web applications
              Documentation at: /docs/config/valve.html -->
@@ -141,7 +143,7 @@
              Documentation at: /docs/config/valve.html
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
-
+		<context docbase="D:\Servlet\apache-tomcat-10.1.24\myapps" path=""/>
       <Context docBase="PlayCentric" path="/PlayCentric" reloadable="true" source="org.eclipse.jst.jee.server:PlayCentric"/></Host>
     </Engine>
   </Service>
