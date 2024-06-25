@@ -66,7 +66,7 @@
         <aside id="contentTag">
             <ul id="leftList">
                 <li id="selected"><a href="${pageContext.request.contextPath}/backAnnouncement.con">公告管理</a></li>
-                <li>會員管理</li>
+                <li>會員管理</li> 
                 <li>討論區文章管理</li>
                 <li>討論區留言管理</li>
                 <li>遊戲商店管理</li>
