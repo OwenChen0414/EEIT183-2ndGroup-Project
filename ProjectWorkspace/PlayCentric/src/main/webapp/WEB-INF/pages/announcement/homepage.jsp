@@ -16,7 +16,7 @@
     <header>
         <nav>
             <img src="${pageContext.request.contextPath}/images/logo3.png" alt="" id="logo1">
-            <span id="navText">Game Fighter</span>
+            <span id="navText">Game Fighter</span> 
             <ul class="menu1">
                 <c:if test="${empty loginMember}">
                 <li>會員中心<i class="fa-solid fa-caret-down"></i>
