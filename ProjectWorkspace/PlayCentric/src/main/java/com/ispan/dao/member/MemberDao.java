@@ -136,6 +136,8 @@ public class MemberDao implements Closeable {
         LocalDateTime now = LocalDateTime.now();
         DateTimeFormatter formatDateTime = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss.SSS");
 		member.setLastLoginTime(now.format(formatDateTime));
+		session.merge(member);
+		session.flush();
 		return member;
 	}
 

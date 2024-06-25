@@ -45,7 +45,7 @@
                     <li><a target="_blank" href="/PlayCentric/view/texts/GetText.html">論壇管理</a></li>
                     <li><a target="_blank" href="/PlayCentric/AllUsers">伴遊管理</a></li>
                     <li><a target="_blank" href="/PlayCentric/GetAllAct">活動管理</a></li>
-                    <li class="right"><a href="/PlayCentric/dynamicView/member/Home.jsp">回到首頁</a></li>
+                    <li class="right"><a href="/PlayCentric/Home">回到首頁</a></li>
                 </ul>
             </nav>
         </header>
