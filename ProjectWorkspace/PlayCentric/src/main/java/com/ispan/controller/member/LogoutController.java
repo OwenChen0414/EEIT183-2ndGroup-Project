@@ -11,7 +11,7 @@ import jakarta.servlet.ServletException;
 
 @Controller
 @SessionAttributes(names = "member")
-public class Logout {
+public class LogoutController {
        
 	@GetMapping("/Logout")
 	protected String doGet(SessionStatus sessionStatus) throws ServletException, IOException {

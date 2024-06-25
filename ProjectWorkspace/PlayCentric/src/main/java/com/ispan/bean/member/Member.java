@@ -166,4 +166,13 @@ public class Member implements Serializable {
 		this.levels = level;
 	}
 
+	@Override
+	public String toString() {
+		return "Member [memId=" + memId + ", account=" + account + ", password=" + password + ", email=" + email
+				+ ", nickName=" + nickName + ", memName=" + memName + ", birthday=" + birthday + ", phone=" + phone
+				+ ", address=" + address + ", sso=" + sso + ", accomAcnt=" + accomAcnt + ", consumption=" + consumption
+				+ ", registDate=" + registDate + ", lastLoginTime=" + lastLoginTime + ", role=" + role + ", levels="
+				+ levels + "]";
+	}
+
 }

@@ -15,8 +15,8 @@
 <body>
     <dialog>
         <h3>查詢</h3>
-        <form action="SearchMember" method="post">
-            id: <input type="text" name="id"><br>
+        <form action="MemberManage/search" method="get">
+            id: <input type="text" name="memId"><br>
             帳號: <input type="text" name="account"><br>
             密碼: <input type="text" name="password"><br>
             email: <input type="text" name="email"><br>
@@ -27,9 +27,9 @@
             地址: <input type="text" name="address"><br>
             消費金額: <input type="number" name="consumption"><br>
             註冊日期: <input type="date" name="registDate"><br>
-            上次登入: <input type="datetime-local" name="lastLogin"><br>
+            上次登入: <input type="datetime-local" name="lastLoginTime"><br>
             身分: <input type="text" name="role"><br>
-            等級: <input type="text" name="level"><br>
+            等級: <input type="text" name="levels"><br>
             <button type="submit" class="button">查詢</button>
             <button type="reset" class="button">清空</button>
             <button type="button" class="button hideDialog">取消</button>
