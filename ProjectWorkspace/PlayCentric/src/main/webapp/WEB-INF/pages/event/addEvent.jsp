@@ -20,18 +20,15 @@
       <!-- 其他功能的連結 -->
       <div class="box">
      	<div class="btn-group">
-            <a href="/PlayCentric/GetAllEvent">所有活動</a>
-     		<a href="/PlayCentric/AddEvent">新增活動</a>
-            <a href="/PlayCentric/UpdateEvent">修改活動</a>
-            <a href="/PlayCentric/DeleteEvent">刪除活動</a>
-            <a href="/PlayCentric/GetEvent">查詢活動</a>
+            <a href="/PlayCentric/event/getAllEvent">所有活動</a>
+     		<a href="/PlayCentric/event/add">新增活動</a>
+            <a href="/PlayCentric/event/delete">刪除活動</a>
+            <a href="/PlayCentric/event/getOne">查詢活動</a>
         </div>
       </div>
     <div class="container">
     	<h2 style="animation: pulse 1s infinite alternate;">新增活動</h2>
-        <form action="/PlayCentric/AddEvent" method="post">
-            <input type="text" name="eventno" placeholder="活動編號">
-            <br>
+        <form action="/PlayCentric/event/addEvent" method="post">
             <input type="text" name="name" placeholder="活動名稱">
             <br>
             <input type="text" name="description" placeholder="活動描述">
@@ -47,3 +44,4 @@
     </div>
 </body>
 </html>
+

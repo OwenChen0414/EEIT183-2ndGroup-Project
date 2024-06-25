@@ -1,30 +1,39 @@
 package com.ispan.dao.event;
 
+import java.io.Closeable;
+import java.io.IOException;
 import java.util.List;
 
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.ispan.bean.event.EventBean;
 
-public class EventDAOImlp implements EventDAO {
-	
+@Repository
+@Transactional
+public class EventDAOImlp implements Closeable {
+
 	private Session session;
 	
-	public EventDAOImlp(Session session) {
-		this.session = session;
+	@Autowired
+	public EventDAOImlp(SessionFactory factory) {
+		this.session = factory.openSession();
 	}
-
-	@Override
-	public int addEvent(EventBean event) throws Exception {
+	
+	
+	public int addEvent(EventBean event) {
 		int count = 0;
 		session.persist(event);
 		session.flush();
 		return ++count;
 	}	
 
-	@Override
-	public int deleteEvent(String eventNo) throws Exception {
+	
+	public int deleteEvent(String eventNo) {
 		int count = 0;
 		EventBean eventBean = session.get(EventBean.class, eventNo);
 		if (eventBean!=null) {
@@ -35,13 +44,13 @@ public class EventDAOImlp implements EventDAO {
 		return count;
 	}
 
-	@Override
-	public EventBean getEvent(String eventNo) throws Exception {
+	
+	public EventBean getEvent(String eventNo) {
 		return session.get(EventBean.class, eventNo);
 	}
 
-	@Override
-	public List<EventBean> getEventsByName(String name) throws Exception {
+	
+	public List<EventBean> getEventsByName(String name) {
 		String hql = "from EventBean where name like :name";
 		Query<EventBean> query = session.createQuery(hql,EventBean.class);
 		query.setParameter("name", "%" + name + "%");
@@ -49,8 +58,8 @@ public class EventDAOImlp implements EventDAO {
 		return event;
 	}
 
-	@Override
-	public List<EventBean> getEventsByDescription(String description) throws Exception {
+	
+	public List<EventBean> getEventsByDescription(String description) {
 		String hql = "from EventBean where description like :description";
 		Query<EventBean> query = session.createQuery(hql,EventBean.class);
 		query.setParameter("description", "%" + description + "%");
@@ -58,8 +67,8 @@ public class EventDAOImlp implements EventDAO {
 		return event;
 	}
 
-	@Override
-	public List<EventBean> getEventsByDate(String date) throws Exception {
+	
+	public List<EventBean> getEventsByDate(String date) {
 		String hql = "from EventBean where date like :date";
 		Query<EventBean> query = session.createQuery(hql,EventBean.class);
 		query.setParameter("date", "%" + date + "%");
@@ -67,8 +76,8 @@ public class EventDAOImlp implements EventDAO {
 		return event;
 	}
 
-	@Override
-	public List<EventBean> getEventsByLocation(String location) throws Exception {
+	
+	public List<EventBean> getEventsByLocation(String location) {
 		String hql = "from EventBean where location like :location";
 		Query<EventBean> query = session.createQuery(hql,EventBean.class);
 		query.setParameter("location", "%" + location + "%");
@@ -76,8 +85,8 @@ public class EventDAOImlp implements EventDAO {
 		return event;
 	}
 
-	@Override
-	public List<EventBean> getEventsByOrganizer(String organizer) throws Exception {
+	
+	public List<EventBean> getEventsByOrganizer(String organizer) {
 		String hql = "from EventBean where organizer like :organizer";
 		Query<EventBean> query = session.createQuery(hql,EventBean.class);
 		query.setParameter("organizer", "%" + organizer + "%");
@@ -85,14 +94,14 @@ public class EventDAOImlp implements EventDAO {
 		return event;
 	}
 
-	@Override
-	public List<EventBean> getAllEvents() throws Exception {
+	
+	public List<EventBean> getAllEvents() {
 		Query<EventBean> query = session.createQuery("from EventBean ORDER BY eventno",EventBean.class);
 		return query.list();
 	}
 
-	@Override
-	public int updateEvent(EventBean event) throws Exception {
+	
+	public int updateEvent(EventBean event) {
 		int count = 0;
 		EventBean originevent = session.get(EventBean.class, event.getEventno());
 		if (originevent != null) {
@@ -101,7 +110,11 @@ public class EventDAOImlp implements EventDAO {
 		}
 		return count;
 	}
+
 	
+	public void close() throws IOException {
+		session.close();
+	}
 	
 	
 }
