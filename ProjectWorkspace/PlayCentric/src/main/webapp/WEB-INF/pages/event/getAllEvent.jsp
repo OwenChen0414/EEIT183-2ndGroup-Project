@@ -27,11 +27,10 @@
       <!-- 其他功能的連結 -->
       <div class="box">
      	<div class="btn-group">
-            <a href="/PlayCentric/GetAllEvent">所有活動</a>
-     		<a href="/PlayCentric/AddEvent">新增活動</a>
-            <a href="/PlayCentric/UpdateEvent">修改活動</a>
-            <a href="/PlayCentric/DeleteEvent">刪除活動</a>
-            <a href="/PlayCentric/GetEvent">查詢活動</a>
+            <a href="/PlayCentric/event/getAllEvent">所有活動</a>
+     		<a href="/PlayCentric/event/add">新增活動</a>
+            <a href="/PlayCentric/event/delete">刪除活動</a>
+            <a href="/PlayCentric/event/getOne">查詢活動</a>
         </div>
       </div>
     <div class="container">
@@ -45,6 +44,7 @@
                     <th>活動日期</th>
                     <th>活動地點</th>
                     <th>主辦單位</th>
+                    <th></th>
                 </tr>
                 <c:forEach var="event" items="${events}">
                     <tr>
@@ -54,6 +54,12 @@
                         <td><input type="text" disabled value="${event.date}" style="width: auto;"></td>
                         <td><input type="text" disabled value="${event.location}" style="width: auto;"></td>
                         <td><input type="text" disabled value="${event.organizer}" style="width: auto;"></td>
+                        <td>
+                        	<div class="btn-group">
+                        		<a href="/PlayCentric/event/update${event.eventno}">修改</a>
+                        		<a href="/PlayCentric/event/deleteEvent?eventno=${event.eventno}">刪除</a>
+                        	</div>
+                        </td>
                     </tr>
                 </c:forEach>
             </table>

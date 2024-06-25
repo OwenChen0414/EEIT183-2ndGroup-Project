@@ -6,11 +6,12 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-@Entity @Table(name = "event")
+@Entity 
+@Table(name = "event")
 public class EventBean implements java.io.Serializable {
 	private static final long serialVersionUID = 1L;
 	
-	@Id	
+	@Id	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private String eventno;
 	private String name;
 	private String description;
