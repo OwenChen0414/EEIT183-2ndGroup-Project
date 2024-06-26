@@ -16,7 +16,7 @@ import com.ispan.bean.announcement.AnnouncementCategory;
 @Repository
 @Transactional
 public class AnnouncementCategoryDAO implements Closeable{
-	
+	 
 	private Session session;
 	
 	@Autowired
