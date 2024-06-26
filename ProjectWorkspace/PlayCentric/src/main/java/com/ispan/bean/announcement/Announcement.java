@@ -31,7 +31,6 @@ import jakarta.persistence.TemporalType;
 import jakarta.persistence.Transient;
 
 @Entity @Table(name = "announcement")
-@Component
 public class Announcement implements Serializable{
 	private static final long serialVersionUID = 1L;
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
