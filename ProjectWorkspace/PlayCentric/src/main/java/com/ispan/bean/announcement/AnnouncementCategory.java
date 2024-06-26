@@ -19,7 +19,6 @@ import jakarta.persistence.PrimaryKeyJoinColumn;
 import jakarta.persistence.Table;
 
 @Entity @Table(name = "announcementCategory")
-@Component
 public class AnnouncementCategory {
 
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
