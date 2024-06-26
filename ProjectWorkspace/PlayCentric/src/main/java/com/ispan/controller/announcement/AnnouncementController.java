@@ -62,7 +62,7 @@ public class AnnouncementController {
 		return "announcement/get-insert-announcement";
 	}
 	
-	@PostMapping("/insertAnnouncement.con")
+	@PostMapping("/insertAnnouncement.con") 
 	public String insertAnnouncement(Model m,@RequestParam("title")String title,
 			@RequestParam("content")String content,
 			@RequestParam("categoryId")Integer categoryId) {

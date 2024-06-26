@@ -19,7 +19,7 @@ import jakarta.persistence.PrimaryKeyJoinColumn;
 import jakarta.persistence.Table;
 
 @Entity @Table(name = "announcementCategory")
-public class AnnouncementCategory {
+public class AnnouncementCategory { 
 
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int categoryId;

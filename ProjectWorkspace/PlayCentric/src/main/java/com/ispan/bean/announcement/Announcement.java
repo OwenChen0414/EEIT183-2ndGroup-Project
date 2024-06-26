@@ -30,7 +30,7 @@ import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 import jakarta.persistence.Transient;
 
-@Entity @Table(name = "announcement")
+@Entity @Table(name = "announcement") 
 public class Announcement implements Serializable{
 	private static final long serialVersionUID = 1L;
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
