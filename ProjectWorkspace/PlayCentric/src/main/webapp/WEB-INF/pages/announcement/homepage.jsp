@@ -21,7 +21,7 @@
                 <c:if test="${empty loginMember}">
                 <li>會員中心<i class="fa-solid fa-caret-down"></i>
                     <ul class="menu2">
-                        <li><a href="${pageContext.request.contextPath}/view/members/login.html">會員登入</a></li>
+                        <li>會員登入</li>
                         <li>功能介紹</li>
                         <li>你在哪哩拉哈哈</li>
                     </ul>
@@ -74,7 +74,7 @@
                 <li>後台管理<i class="fa-solid fa-caret-down"></i>
                     <ul class="menu2">
                         <li><a href="${pageContext.request.contextPath}/backAnnouncement.con" target="_blank">公告管理</a></li>
-                        <li><a href="${pageContext.request.contextPath}/BackGames" target="_blank">遊戲管理</a></li>
+                        <li>遊戲管理</li>
                         <li>你在哪哩拉哈哈</li>
                     </ul>
                 </li>
