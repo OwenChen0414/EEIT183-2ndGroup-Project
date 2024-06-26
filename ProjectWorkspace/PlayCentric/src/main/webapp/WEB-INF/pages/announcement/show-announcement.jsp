@@ -21,7 +21,7 @@
                 <c:if test="${empty Member}">
                 <li>會員中心<i class="fa-solid fa-caret-down"></i>
                     <ul class="menu2">
-                        <li><a href="${pageContext.request.contextPath}/view/members/login.html">會員登入</a></li>
+                        <li>會員登入</li>
                         <li>功能介紹</li>
                         <li>你在哪哩拉哈哈</li>
                     </ul>
@@ -38,7 +38,7 @@
             </c:if>
                 <li>遊戲商店<i class="fa-solid fa-caret-down"></i>
                     <ul class="menu2">
-                        <li><a href="${pageContext.request.contextPath}/GameStore" target="_blank">遊戲總覽</a></li>
+                        <li>遊戲總覽</li>
                         <li>功能介紹</li>
                         <li>你在哪哩拉哈哈</li>
                     </ul>

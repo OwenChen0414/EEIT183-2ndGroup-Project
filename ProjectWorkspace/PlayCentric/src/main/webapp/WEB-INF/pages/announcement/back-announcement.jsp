@@ -69,7 +69,7 @@
                 <li>會員管理</li> 
                 <li>討論區文章管理</li>
                 <li>討論區留言管理</li>
-                <li><a href="${pageContext.request.contextPath}/BackGames">遊戲商店管理</a></li>
+                <li>遊戲商店管理</li>
                 <li>遊戲物品交易管理</li>
                 <li>尋找玩伴管理</li>
                 <li>活動管理</li>
