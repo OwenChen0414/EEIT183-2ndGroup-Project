@@ -32,6 +32,7 @@ public class AnnouncementDAO implements Closeable{
 	public int insert(Announcement announcement) {
 		int count = 0;
 		session.persist(announcement);
+		session.flush();
 		count++;
 		return count;
 	}
