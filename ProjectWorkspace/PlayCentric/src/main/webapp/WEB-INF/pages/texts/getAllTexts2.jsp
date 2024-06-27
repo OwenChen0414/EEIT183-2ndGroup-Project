@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    import="java.util.*,com.ispan.bean.texts.Texts"%>
+    import="java.util.*,java.time.LocalDateTime, java.time.format.DateTimeFormatter,com.ispan.bean.texts.Texts"%>
 <%!@SuppressWarnings("unchecked")%>
 <!DOCTYPE html>
 <html>
@@ -135,6 +135,7 @@
             </thead>
             <tbody>
                 <% List<Texts> txts = (ArrayList<Texts>) request.getAttribute("txts");
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
                    for (int i = 0; i < txts.size(); i++) { %>
                 <tr data-index="<%= i %>">
                     <td><%= txts.get(i).getTextsId() %></td>
@@ -142,8 +143,8 @@
                     <td><%= txts.get(i).getMemId() %></td>
                     <td><%= txts.get(i).getTitle() %></td>
                     <td><%= txts.get(i).getTextsContent() %></td>
-                    <td><%= txts.get(i).getDoneTime() %></td>
-                    <td><%= txts.get(i).getUpdatedTime() %></td>
+                    <td><%= txts.get(i).getDoneTime().format(formatter) %></td>
+                    <td><%= txts.get(i).getUpdatedTime().format(formatter) %></td>
                     <td><%= txts.get(i).getTextsLikeNum() %></td>
                     <td><%= txts.get(i).isHideTexts() ? "是" : "否" %></td>
                 </tr>
