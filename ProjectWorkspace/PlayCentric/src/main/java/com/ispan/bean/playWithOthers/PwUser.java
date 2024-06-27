@@ -7,13 +7,12 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-@Entity
-@Table(name = "PwUser")
+@Entity@Table(name = "pwUser")
 public class PwUser implements java.io.Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@Column(name = "pwUserId")
+	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	@Column(name = "nickname")
@@ -26,7 +25,7 @@ public class PwUser implements java.io.Serializable {
 	private int amount;
 	@Column(name = "onlineTime")
 	private String onlineTime;
-	@Column(name = "offlineTime")
+	@Column(name = "offlineTime") 
 	private String offlineTime;
 	@Column(name = "playerPhoto")
 	private String playerPhoto;
