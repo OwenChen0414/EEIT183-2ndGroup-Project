@@ -100,20 +100,20 @@ body {
                 <td><input class="form-group" type="text" disabled value="<%= txt.getMemId() %>">
             <tr>
                 <td style="color: #34ff44;">標題:
-                <td><input class="form-group" type="text" disabled value="<%= txt.getTitle() %>">
+                <td><textarea id="t2" class="form-group" disabled rows="5"
+                        cols="50"><%= txt.getTitle() %></textarea>
             <tr>
                 <td style="color: #34ff44;">內文:
-                <td><input class="form-group" type="text" disabled value="<%= txt.getTextsContent() %>">
+                <td><textarea id="t1" class="form-group" disabled cols="15"><%= txt.getTextsContent() %></textarea>
             <tr>
                 <td style="color: #34ff44;">創作時間:
                 <td><input class="form-group" type="text" disabled value="<%= txt.getDoneTime() %>">
             <tr>
                 <td style="color: #34ff44;">最後編輯時間:
-                <td><textarea id="t1" class="form-group" disabled cols="15"><%= txt.getUpdatedTime() %></textarea>
+                <td><input class="form-group" type="text" disabled value="<%= txt.getUpdatedTime() %>">
             <tr>
                 <td style="color: #34ff44;">按讚數:
-                <td><textarea id="t2" class="form-group" disabled rows="5"
-                        cols="50"><%= txt.getTextsLikeNum() %></textarea>
+                <td><input class="form-group" type="text" disabled value="<%= txt.getTextsLikeNum() %>">
             <tr>
                 <td style="color: #34ff44;">文章有無受隱藏:
                 <td><input type="text" class="form-group" disabled value="<%= txt.isHideTexts() %>">

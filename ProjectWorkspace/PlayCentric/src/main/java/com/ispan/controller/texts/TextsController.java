@@ -25,7 +25,7 @@ public class TextsController {
 	public String listTexts(Model model) {
 		List<Texts> txts = textsService.getAllTexts();
 		model.addAttribute("txts", txts);
-		return "texts/getAllTexts";
+		return "texts/getAllTexts2";
 	}
 
 	@GetMapping("/addTexts")
@@ -74,7 +74,7 @@ public class TextsController {
 		Texts txt = textsService.getTextsById(textsId);
 		System.out.println(txt);
 		model.addAttribute("txt", txt);
-		return "texts/getText";
+		return "texts/getText3";
 	}
 
 	@GetMapping("/editTexts")
