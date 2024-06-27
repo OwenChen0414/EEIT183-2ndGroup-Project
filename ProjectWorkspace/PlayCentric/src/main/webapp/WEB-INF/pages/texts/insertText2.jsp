@@ -233,22 +233,7 @@
             <div id="d6" class="form-group">
                 <label for="textsContent">輸入內文 :</label>
                 <textarea id="t8" name="textsContent" cols="50" rows="10"></textarea>
-            </div>
-            <p>
-            <div id="d7" class="form-group">
-                <label for="doneTime">創作時間 :</label>
-                <input id="t10" type="datetime-local" name="doneTime" />
-            </div>
-            <p>
-            <div id="d8" class="form-group">
-                <label for="updatedTime">最後編輯時間:</label>
-                <input id="t9" type="datetime-local" name="updatedTime" />
-            </div>
-            <p>
-            <div id="d9" class="form-group">
-                <label for="textsLikeNum">按讚數 :</label>
-                <input id="t5" type="text" name="textsLikeNum" />
-            </div>
+            </div>            
             <p>
             <div id="d10" class="form-group" style="color: #34ff44">
                 <label for="hideTexts">文章是否受隱藏 :</label>
