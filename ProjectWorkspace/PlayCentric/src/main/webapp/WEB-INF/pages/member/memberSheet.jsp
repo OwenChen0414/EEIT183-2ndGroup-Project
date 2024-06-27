@@ -41,10 +41,10 @@
                 <ul class="menu">
                     <li><a href="/PlayCentric/MemberManage" class="active">會員管理</a></li>
                     <li><a target="_blank" href="/PlayCentric/homepage.con">公告管理</a></li>
-                    <li><a target="_blank" href="/PlayCentric/GetAllGames">交易管理</a></li>
-                    <li><a target="_blank" href="/PlayCentric/view/texts/GetText.html">論壇管理</a></li>
-                    <li><a target="_blank" href="/PlayCentric/AllUsers">伴遊管理</a></li>
-                    <li><a target="_blank" href="/PlayCentric/GetAllAct">活動管理</a></li>
+                    <li><a target="_blank" href="/PlayCentric/ShowPropsByGameId?gameId=1">交易管理</a></li>
+                    <li><a target="_blank" href="/PlayCentric/findTexts">論壇管理</a></li>
+                    <li><a target="_blank" href="/PlayCentric/Pw">伴遊管理</a></li>
+                    <li><a target="_blank" href="/PlayCentric/event/getAllEvent">活動管理</a></li>
                     <li class="right"><a href="/PlayCentric/Home">回到首頁</a></li>
                 </ul>
             </nav>
