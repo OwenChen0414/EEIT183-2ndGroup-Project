@@ -3,69 +3,64 @@ package com.ispan.dao.texts;
 import java.util.List;
 
 import org.hibernate.Session;
-import org.hibernate.query.Query;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
-import com.ispan.bean.texts.TextsBean;
+import com.ispan.bean.texts.Texts;
 
-public class TextsDAO implements ITextsDao{
+@Repository
+@Transactional
+public class TextsDAO {
 
-	private Session session;
+	@Autowired
+	private SessionFactory factory;
+
 	
-	public TextsDAO(Session session) {
-		this.session = session;
-	}
+	public Texts insert(Texts txt) {
+        Session session = factory.openSession();
+        if (txt != null) {
+            session.persist(txt);
+            session.flush();
+        }
+        session.close();
+        return txt;
+    }
 
-	@Override
-	public TextsBean insert(TextsBean insertTxt) {
-		session.persist(insertTxt);
-		session.flush();
-		return insertTxt;
-	}
+    public Texts update(Texts txt) {
+        Session session = factory.openSession();
+        if (txt != null) {
+            session.merge(txt);
+            session.flush();
+        }
+        session.close();
+        return txt;
+    }
 
-	@Override
-	public TextsBean get(String textsId) {		
-		return session.get(TextsBean.class, textsId);
-	}
+    public void delete(Integer textsId) {
+        Session session = factory.openSession();
+        Texts txt = session.get(Texts.class, textsId);
+        if (txt != null) {
+            session.remove(txt);
+            session.flush();
+        }
+        session.close();
+    }
 
-	@Override
-	public TextsBean update(TextsBean updateTxt) {
-		TextsBean resultBean = session.get(TextsBean.class, updateTxt.getTextsId());
-		if (resultBean != null) {
-			resultBean.setTextsReportId(updateTxt.getTextsReportId());
-			resultBean.setMembersId(updateTxt.getMembersId());
-			resultBean.setTalkId(updateTxt.getTalkId());
-			resultBean.setTagId(updateTxt.getTagId());
-			resultBean.setForumId(updateTxt.getForumId());
-			resultBean.setTitle(updateTxt.getTitle());
-			resultBean.setTextContent(updateTxt.getTextContent());
-			resultBean.setUpdatedTime(updateTxt.getUpdatedTime());
-			resultBean.setDoneTime(updateTxt.getDoneTime());
-		}
-		return resultBean;
-	}
+    public Texts findById(Integer textsId) {
+        Session session = factory.openSession();
+        Texts txt = session.get(Texts.class, textsId);
+        System.out.println(txt);
+        session.close();
+        return txt;
+    }
 
-	@Override
-	public boolean delete(String textsId) {
-		TextsBean deleteTxt = session.get(TextsBean.class, textsId);
-		if (deleteTxt != null) {
-			session.remove(deleteTxt);
-			session.flush();
-			return true;
-		}
-		return false;
-	}
-
-	@Override
-	public List<TextsBean> getAll() {
-		Query<TextsBean> query = session.createQuery("from TextsBean", TextsBean.class);
-		return query.list();
-	}
-
-	public boolean existsById(String textsId) {       
-		
-        Query<TextsBean> query = session.createQuery("from TextsBean where textsId = :textsId", TextsBean.class);
-        query.setParameter("textsId", textsId);
-        return query.uniqueResult() != null;
-            
+    
+    public List<Texts> findAll() {
+        Session session = factory.openSession();
+        List<Texts> textsList = session.createQuery("from Texts", Texts.class).getResultList();
+        session.close();
+        return textsList;
     }
 }

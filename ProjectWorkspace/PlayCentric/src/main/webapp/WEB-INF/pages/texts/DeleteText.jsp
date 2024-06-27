@@ -48,7 +48,7 @@ body {
 <body style="background-color: #fdf5e6">
 <div align="center">
 <h1>勇者<br>這裡不存在你所尋之物...<br><br>( ´･･)ﾉ(._.`)</h1>
-<jsp:useBean id="txt" scope="request" class="com.ispan.bean.texts.TextsBean" />
+<jsp:useBean id="txt" scope="request" class="com.ispan.bean.texts.Texts" />
 
 </div>
 <button onclick="goBack()">返回</button>

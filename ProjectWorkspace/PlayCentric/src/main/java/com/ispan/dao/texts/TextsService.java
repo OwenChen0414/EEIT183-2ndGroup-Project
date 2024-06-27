@@ -2,41 +2,36 @@ package com.ispan.dao.texts;
 
 import java.util.List;
 
-import org.hibernate.Session;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import com.ispan.bean.texts.TextsBean;
+import com.ispan.bean.texts.Texts;
 
-public class TextsService implements ITextsService{
-	
+@Service
+@Transactional
+public class TextsService {
+
+	@Autowired
 	private TextsDAO textsDao;
-	
-	public TextsService(Session session) {
-		textsDao = new TextsDAO(session);
-	}
-	
-	@Override
-	public TextsBean get(String textsId) {
-		return textsDao.get(textsId);
-	}
-	
-	@Override
-	public List<TextsBean> getAll() {
-		return textsDao.getAll();
-	}
-	
-	@Override
-	public TextsBean insert(TextsBean insertTxt) {
-		return textsDao.insert(insertTxt);
-	}
-	
-	@Override
-	public TextsBean update(TextsBean updateTxt) {
-		return textsDao.update(updateTxt);
-	}
-	
-	@Override
-	public boolean delete(String textsId) {
-		return textsDao.delete(textsId);
+
+	public Texts insertTexts(Texts txt) {
+		return textsDao.insert(txt);
 	}
 
+	public Texts updateTexts(Texts txt) {
+		return textsDao.update(txt);
+	}
+
+	public void deleteTexts(Integer textsId) {
+		textsDao.delete(textsId);
+	}
+
+	public Texts getTextsById(Integer textsId) {
+		return textsDao.findById(textsId);
+	}
+
+	public List<Texts> getAllTexts() {
+		return textsDao.findAll();
+	}
 }

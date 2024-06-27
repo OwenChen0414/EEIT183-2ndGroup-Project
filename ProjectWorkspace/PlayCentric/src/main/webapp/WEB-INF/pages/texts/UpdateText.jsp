@@ -9,7 +9,7 @@
 <body style="background-color: #fdf5e6">
 <div align="center">
 <h2>更新大成功!!!</h2>
-<jsp:useBean id="txt" scope="request" class="com.ispan.bean.texts.TextsBean" />
+<jsp:useBean id="txt" scope="request" class="com.ispan.bean.texts.Texts" />
 </div>
 <button onclick="goBack()">返回</button>
 <script type="text/javascript">
