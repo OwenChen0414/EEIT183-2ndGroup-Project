@@ -50,7 +50,7 @@
 <body>
 <div align="center">
 <h1>魔法詠唱失敗...<br><br>編號重複了啊~<br><br>(っ・Д・)っ</h1>
-<jsp:useBean id="txt" scope="request" class="com.ispan.bean.texts.TextsBean" />
+<jsp:useBean id="txt" scope="request" class="com.ispan.bean.texts.Texts" />
 </div>
 <button onclick="goBack()">返回</button>
 <script type="text/javascript">

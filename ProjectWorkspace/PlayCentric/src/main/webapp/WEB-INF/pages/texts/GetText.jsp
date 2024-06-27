@@ -7,7 +7,7 @@
 <title>單筆文章詳細資料(管理員)</title>
 <style type="text/css">
 body {
-            background-image: url('${pageContext.request.contextPath}/images/texts/123.jpg');
+            background-image: url('/PlayCentric/images/texts/123.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
@@ -87,39 +87,37 @@ body {
 <body>
 <div id="d0">
         <h1 style="color: #34ff44;">單筆文章詳細資料(管理員)</h1>
-        <jsp:useBean id="txt" scope="request" class="com.ispan.bean.texts.TextsBean" />
+        <jsp:useBean id="txt" scope="request" class="com.ispan.bean.texts.Texts" />
         <table>
             <tr>
                 <td style="color: #34ff44;">文章編號:
                 <td><input class="form-group" type="text" disabled value="<%= txt.getTextsId() %>">
             <tr>
-                <td style="color: #34ff44;">受檢舉種類編號:
-                <td><input class="form-group" type="text" disabled value="<%= txt.getTextsReportId() %>">
-            <tr>
-                <td style="color: #34ff44;">作者(會員)編號:
-                <td><input class="form-group" type="text" disabled value="<%= txt.getMembersId() %>">
-            <tr>
-                <td style="color: #34ff44;">留言區編號:
-                <td><input class="form-group" type="text" disabled value="<%= txt.getTalkId() %>">
-            <tr>
-                <td style="color: #34ff44;">遊戲類型分類編號:
-                <td><input class="form-group" type="text" disabled value="<%= txt.getTagId() %>">
-            <tr>
                 <td style="color: #34ff44;">討論區編號:
                 <td><input class="form-group" type="text" disabled value="<%= txt.getForumId() %>">
             <tr>
+                <td style="color: #34ff44;">作者(會員)編號:
+                <td><input class="form-group" type="text" disabled value="<%= txt.getMemId() %>">
+            <tr>
                 <td style="color: #34ff44;">標題:
-                <td><textarea id="t1" class="form-group" disabled cols="15"><%= txt.getTitle() %></textarea>
+                <td><input class="form-group" type="text" disabled value="<%= txt.getTitle() %>">
             <tr>
                 <td style="color: #34ff44;">內文:
+                <td><input class="form-group" type="text" disabled value="<%= txt.getTextsContent() %>">
+            <tr>
+                <td style="color: #34ff44;">創作時間:
+                <td><input class="form-group" type="text" disabled value="<%= txt.getDoneTime() %>">
+            <tr>
+                <td style="color: #34ff44;">最後編輯時間:
+                <td><textarea id="t1" class="form-group" disabled cols="15"><%= txt.getUpdatedTime() %></textarea>
+            <tr>
+                <td style="color: #34ff44;">按讚數:
                 <td><textarea id="t2" class="form-group" disabled rows="5"
-                        cols="50"><%= txt.getTextContent() %></textarea>
+                        cols="50"><%= txt.getTextsLikeNum() %></textarea>
             <tr>
-                <td style="color: #34ff44;">更新時間:
-                <td><input type="text" class="form-group" disabled value="<%= txt.getUpdatedTime() %>">
+                <td style="color: #34ff44;">文章有無受隱藏:
+                <td><input type="text" class="form-group" disabled value="<%= txt.isHideTexts() %>">
             <tr>
-                <td style="color: #34ff44;">文章建立時間:
-                <td><input type="text" class="form-group" disabled value="<%= txt.getDoneTime() %>">
         </table>
         <button onclick="goBack()">返回</button>
     </div>
